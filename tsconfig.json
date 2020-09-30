@@ -1,10 +1,12 @@
 {
 	"compilerOptions": {
+		"baseUrl": "./src/",
+		"importsNotUsedAsValues": "error",
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
 		"skipLibCheck": true,
-		"strict": false,
+		"strict": true,
 		"forceConsistentCasingInFileNames": true,
 		"noEmit": true,
 		"esModuleInterop": true,
