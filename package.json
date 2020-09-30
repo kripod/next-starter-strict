@@ -1,18 +1,18 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "next build",
+	"private": true,
+	"scripts": {
+		"build": "next build",
 		"dev": "next dev",
 		"fix:prettier": "npm run lint:prettier -- --write",
 		"lint:prettier": "prettier --check --ignore-path ./.gitignore .",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "^9.5.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
-    "prettier": "^2.1.2"
-  }
+		"start": "next start"
+	},
+	"dependencies": {
+		"next": "^9.5.3",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	},
+	"devDependencies": {
+		"prettier": "^2.1.2"
+	}
 }
