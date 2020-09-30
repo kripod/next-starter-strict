@@ -3,7 +3,7 @@
   "scripts": {
     "build": "next build",
 		"dev": "next dev",
-		"fix:prettier": "npm run lint:prettier --write",
+		"fix:prettier": "npm run lint:prettier -- --write",
 		"lint:prettier": "prettier --check --ignore-path ./.gitignore .",
     "start": "next start"
   },
