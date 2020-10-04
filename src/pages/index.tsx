@@ -1,7 +1,8 @@
 import Head from "next/head";
+
 import styles from "../../styles/Home.module.css";
 
-export default function Page() {
+export default function Page(): React.ReactElement | null {
 	return (
 		<div className={styles.container}>
 			<Head>

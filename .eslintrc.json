@@ -1,0 +1,69 @@
+{
+	"root": true,
+	"parserOptions": { "project": "./tsconfig.json" },
+	"extends": [
+		"airbnb-typescript",
+		"airbnb/hooks",
+		"plugin:@typescript-eslint/recommended",
+		"prettier",
+		"prettier/@typescript-eslint",
+		"prettier/react"
+	],
+	"plugins": ["simple-import-sort"],
+
+	"rules": {
+		/* Auto-sort imports */
+		"sort-imports": "off",
+		"import/order": "off",
+		"simple-import-sort/sort": "error",
+
+		/* Custom preferences */
+		"@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
+		"@typescript-eslint/consistent-type-assertions": [
+			"error",
+			{
+				"assertionStyle": "as", // Improve consistency with JSX
+				"objectLiteralTypeAssertions": "allow-as-parameter" // Force type safety
+			}
+		],
+		"@typescript-eslint/method-signature-style": "error", // Force type safety
+		"@typescript-eslint/no-dynamic-delete": "error",
+		"@typescript-eslint/no-invalid-void-type": "error", // Force type safety
+		"@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
+		"import/no-anonymous-default-export": "error", // For named React components
+		"import/no-default-export": "error", // Default exports are confusing
+		"import/prefer-default-export": "off",
+		"jsx-a11y/anchor-is-valid": "off", // Doesn't play well with Next `<Link>`
+		"prefer-exponentiation-operator": "error", // Auto-fix for an inherited rule
+		"react/react-in-jsx-scope": "off" // React is always in scope with Next
+	},
+
+	"overrides": [
+		{
+			"files": ["*.js"],
+			"rules": {
+				"@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
+			}
+		},
+		{
+			"files": ["*.tsx"],
+			"rules": {
+				"@typescript-eslint/consistent-type-definitions": ["error", "type"],
+				"react/jsx-props-no-spreading": "off" // TypeScript makes this safe
+			}
+		},
+		{
+			"files": ["./src/pages/**"],
+			"rules": {
+				"import/no-default-export": "off",
+				"import/prefer-default-export": "error"
+			}
+		},
+		{
+			"files": ["./src/pages/api/**"],
+			"rules": {
+				"import/no-anonymous-default-export": "off"
+			}
+		}
+	]
+}
