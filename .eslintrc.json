@@ -19,6 +19,10 @@
 
 		/* Custom preferences */
 		"@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
+		"@typescript-eslint/consistent-indexed-object-style": [
+			"error",
+			"index-signature" // Prevent ambiguity with Records & Tuples
+		],
 		"@typescript-eslint/consistent-type-assertions": [
 			"error",
 			{
@@ -35,7 +39,8 @@
 		"import/prefer-default-export": "off",
 		"jsx-a11y/anchor-is-valid": "off", // Doesn't play well with Next `<Link>`
 		"prefer-exponentiation-operator": "error", // Auto-fix for an inherited rule
-		"react/react-in-jsx-scope": "off" // React is always in scope with Next
+		"react/react-in-jsx-scope": "off", // React is always in scope with Next
+		"react/require-default-props": "off" // React `defaultProps` are deprecated
 	},
 
 	"overrides": [
