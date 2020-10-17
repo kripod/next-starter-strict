@@ -2,6 +2,7 @@
 	"private": true,
 	"scripts": {
 		"build": "next build",
+		"clean": "git clean -fdx -e node_modules",
 		"dev": "next dev",
 		"fix": "run-s fix:*",
 		"fix:eslint": "npm run lint:eslint -- --fix",
