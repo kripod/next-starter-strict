@@ -20,7 +20,7 @@
 		}
 	},
 	"lint-staged": {
-		"*.{js,ts,tsx,css,md}": "prettier --write",
+		"*": "prettier --write --ignore-unknown",
 		"*.{js,ts,tsx}": "eslint --fix"
 	},
 	"dependencies": {
