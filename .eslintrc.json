@@ -48,7 +48,8 @@
 			"files": ["*.js"],
 			"rules": {
 				"@typescript-eslint/explicit-module-boundary-types": "off",
-				"@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
+				"@typescript-eslint/no-var-requires": "off", // Allow CommonJS imports
+				"global-require": "off" // Allow dynamic imports for Node
 			}
 		},
 		{
