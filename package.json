@@ -1,4 +1,5 @@
 {
+	"name": "next-starter-strict",
 	"private": true,
 	"scripts": {
 		"build": "next build",
