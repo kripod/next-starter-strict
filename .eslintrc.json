@@ -6,6 +6,7 @@
 		"airbnb/hooks",
 		"plugin:@next/next/recommended",
 		"plugin:@typescript-eslint/recommended",
+		"plugin:eslint-comments/recommended",
 		"prettier",
 		"prettier/@typescript-eslint",
 		"prettier/react"
