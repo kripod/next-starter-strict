@@ -4,7 +4,7 @@
 	"scripts": {
 		"build": "next build",
 		"build:analyze": "cross-env ANALYZE=true npm run build",
-		"clean": "git clean -fdx -e node_modules",
+		"clean": "git clean --force -dx --exclude node_modules/",
 		"dev": "next dev",
 		"fix": "run-s fix:*",
 		"fix:eslint": "npm run lint:eslint -- --fix",
