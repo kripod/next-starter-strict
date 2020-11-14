@@ -36,7 +36,6 @@
 		"@typescript-eslint/method-signature-style": "error", // Force type safety
 		"@typescript-eslint/no-dynamic-delete": "error",
 		"@typescript-eslint/no-invalid-void-type": "error", // Force type safety
-		"@typescript-eslint/prefer-optional-chain": "error", // Embrace simplicity
 		"@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
 		"import/no-anonymous-default-export": "error", // For named React components
 		"import/no-default-export": "error", // Default exports are confusing
