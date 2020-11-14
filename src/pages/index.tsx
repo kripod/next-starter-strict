@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 
-export default function Page(): React.ReactElement | null {
+export default function Page(): React.ReactElement {
 	const [inverted, setInverted] = useState(false);
 
 	return (
