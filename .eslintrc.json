@@ -14,10 +14,11 @@
 	"plugins": ["simple-import-sort"],
 
 	"rules": {
-		/* Auto-sort imports */
+		/* Auto-sort imports and exports */
 		"sort-imports": "off",
 		"import/order": "off",
-		"simple-import-sort/sort": "error",
+		"simple-import-sort/imports": "error",
+		"simple-import-sort/exports": "error",
 
 		/* Custom preferences */
 		"@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
