@@ -11,6 +11,7 @@
 		"plugin:react-etc/recommended",
 		"prettier",
 		"prettier/@typescript-eslint",
+		"prettier/prettier",
 		"prettier/react"
 	],
 	"plugins": ["simple-import-sort"],
