@@ -24,21 +24,14 @@
 		"simple-import-sort/exports": "error",
 
 		/* Custom preferences */
-		"@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
+		"@typescript-eslint/array-type": "error",
 		"@typescript-eslint/consistent-indexed-object-style": [
 			"error",
 			"index-signature" // Prevent ambiguity with Records & Tuples
 		],
-		"@typescript-eslint/consistent-type-assertions": [
-			"error",
-			{
-				"assertionStyle": "as", // Improve consistency with JSX
-				"objectLiteralTypeAssertions": "allow-as-parameter" // Force type safety
-			}
-		],
+		"@typescript-eslint/consistent-type-assertions": "error",
 		"@typescript-eslint/explicit-module-boundary-types": "off", // Reduce bloat
 		"@typescript-eslint/method-signature-style": "error", // Force type safety
-		"@typescript-eslint/no-dynamic-delete": "error",
 		"@typescript-eslint/no-invalid-void-type": "error", // Force type safety
 		"@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
 		"import/no-anonymous-default-export": "error", // For named React components
