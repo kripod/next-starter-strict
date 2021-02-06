@@ -1,5 +1,3 @@
-import clsx from "clsx";
-
 import { Button } from "@/components/Button";
 
 type ThemingShowcaseProps = {
@@ -17,22 +15,14 @@ function ThemingShowcase({ children }: ThemingShowcaseProps) {
 }
 
 type CanvasProps = {
-	orientation?: "horizontal" | "vertical";
 	children?: React.ReactNode;
 };
 
-function Canvas({ orientation = "horizontal", children }: CanvasProps) {
+function Canvas({ children }: CanvasProps) {
 	return (
-		<div className="p-8 space-y-3">
+		<div className="p-8 space-y-4">
 			<p>Sample text to visualize average contrast to the background</p>
-			<div
-				className={clsx({
-					"space-x-4": orientation === "horizontal",
-					"space-y-4": orientation === "vertical",
-				})}
-			>
-				{children}
-			</div>
+			{children}
 		</div>
 	);
 }
@@ -42,13 +32,17 @@ export default function Page() {
 		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-500">
 			<ThemingShowcase>
 				<Canvas>
-					<Button size="sm">Neutral</Button>
-					<Button>Neutral</Button>
+					<div className="space-x-3">
+						<Button size="sm">Neutral</Button>
+						<Button intent="danger" size="sm">
+							Danger
+						</Button>
+					</div>
 
-					<Button intent="danger" size="sm">
-						Danger
-					</Button>
-					<Button intent="danger">Danger</Button>
+					<div className="space-x-4">
+						<Button>Neutral</Button>
+						<Button intent="danger">Danger</Button>
+					</div>
 				</Canvas>
 			</ThemingShowcase>
 		</div>
