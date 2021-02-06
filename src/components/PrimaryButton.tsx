@@ -2,8 +2,8 @@ import clsx from "clsx";
 import * as React from "react";
 
 export type PrimaryButtonOwnProps = {
-	intent?: "neutral" | "danger";
 	size?: "sm" | "md";
+	intent?: "neutral" | "danger";
 };
 
 export type PrimaryButtonProps = React.ComponentPropsWithRef<"button"> &
@@ -11,8 +11,8 @@ export type PrimaryButtonProps = React.ComponentPropsWithRef<"button"> &
 
 export const PrimaryButton = React.forwardRef(function PrimaryButton(
 	{
-		intent = "neutral",
 		size = "md",
+		intent = "neutral",
 		className,
 		...restProps
 	}: PrimaryButtonProps,
@@ -24,6 +24,10 @@ export const PrimaryButton = React.forwardRef(function PrimaryButton(
 			type="button"
 			className={clsx(
 				"font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
+				{
+					"px-2.5 h-8": size === "sm",
+					"px-5 h-11": size === "md",
+				},
 				[
 					"text-white dark:text-gray-900",
 					{
@@ -33,10 +37,6 @@ export const PrimaryButton = React.forwardRef(function PrimaryButton(
 							intent === "danger",
 					},
 				],
-				{
-					"px-2.5 h-8": size === "sm",
-					"px-5 h-11": size === "md",
-				},
 				className,
 			)}
 			{...restProps}

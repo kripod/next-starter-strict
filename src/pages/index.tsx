@@ -34,7 +34,7 @@ export default function Page() {
 				<Canvas>
 					<div className="space-x-3">
 						<PrimaryButton size="sm">Neutral</PrimaryButton>
-						<PrimaryButton intent="danger" size="sm">
+						<PrimaryButton size="sm" intent="danger">
 							Danger
 						</PrimaryButton>
 					</div>
