@@ -20,7 +20,7 @@ export const Button = React.forwardRef(function Button(
 			className={clsx(
 				"font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
 				[
-					"text-white dark:text-black",
+					"text-white dark:text-gray-900",
 					{
 						"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300 ring-gray-400":
 							intent === "neutral",
