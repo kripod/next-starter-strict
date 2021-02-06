@@ -18,12 +18,14 @@ export const Button = React.forwardRef(function Button(
 			ref={ref}
 			type="button"
 			className={clsx(
-				"font-semibold leading-tight rounded focus:outline-none focus-visible:ring-4",
+				"font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
 				[
 					"text-white dark:text-black",
 					{
-						"bg-black dark:bg-gray-50 ring-gray-400": intent === "neutral",
-						"bg-red-500 dark:bg-red-400 ring-red-300": intent === "danger",
+						"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300 ring-gray-400":
+							intent === "neutral",
+						"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500 ring-red-300":
+							intent === "danger",
 					},
 				],
 				{
