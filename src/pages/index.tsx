@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { useState } from "react";
 
+import { Button } from "@/components/Button";
+
 export default function Page() {
 	const [inverted, setInverted] = useState(false);
 
@@ -11,18 +13,12 @@ export default function Page() {
 				inverted && "bg-black",
 			)}
 		>
-			<button
+			<Button
 				type="button"
-				className={clsx(
-					"p-3 border-4 border-current",
-					inverted && "text-white",
-				)}
-				onClick={() => {
-					setInverted((prevValue) => !prevValue);
-				}}
+				onClick={() => setInverted((prevValue) => !prevValue)}
 			>
 				Invert colors
-			</button>
+			</Button>
 		</div>
 	);
 }
