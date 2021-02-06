@@ -28,6 +28,7 @@
 		"@next/bundle-analyzer": "^10.0.6",
 		"babel-plugin-optimize-clsx": "^2.6.1",
 		"clsx": "^1.1.1",
+		"focus-visible": "^5.2.0",
 		"next": "^10.0.6",
 		"next-compose-plugins": "^2.2.1",
 		"postcss-import": "^14.0.0",

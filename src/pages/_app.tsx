@@ -1,4 +1,5 @@
 import "@/styles.css";
+import "@/polyfills";
 
 import type { AppProps } from "next/app";
 

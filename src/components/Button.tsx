@@ -18,7 +18,7 @@ export const Button = React.forwardRef(function Button(
 			ref={ref}
 			type="button"
 			className={clsx(
-				"font-semibold leading-tight rounded focus:outline-none focus:ring-4",
+				"font-semibold leading-tight rounded focus:outline-none focus-visible:ring-4",
 				[
 					"text-white dark:text-black",
 					{
