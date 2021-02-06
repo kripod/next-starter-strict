@@ -39,7 +39,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 			className={clsx(
 				"font-semibold leading-tight rounded",
 				[
-					"dark:text-black text-white",
+					"text-white dark:text-black",
 					{
 						"bg-black dark:bg-gray-50": intent === "neutral",
 						"bg-red-500 dark:bg-red-400": intent === "danger",
