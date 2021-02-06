@@ -42,10 +42,8 @@ export default function Page() {
 		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-500">
 			<ThemingShowcase>
 				<Canvas>
-					<Button type="button">Neutral</Button>
-					<Button type="button" intent="danger">
-						Danger
-					</Button>
+					<Button>Neutral</Button>
+					<Button intent="danger">Danger</Button>
 				</Canvas>
 			</ThemingShowcase>
 		</div>

@@ -1,41 +1,22 @@
 import clsx from "clsx";
 import * as React from "react";
-import type {
-	PolymorphicForwardRefExoticComponent,
-	PolymorphicPropsWithoutRef,
-	PolymorphicPropsWithRef,
-} from "react-polymorphic-types";
-
-export const ButtonDefaultElement = "button";
 
 export type ButtonOwnProps = {
 	intent?: "neutral" | "danger";
 	size?: "md";
 };
 
-export type ButtonProps<
-	T extends React.ElementType = typeof ButtonDefaultElement
-> = PolymorphicPropsWithRef<ButtonOwnProps, T>;
+export type ButtonProps = React.ComponentPropsWithRef<"button"> &
+	ButtonOwnProps;
 
-export const Button: PolymorphicForwardRefExoticComponent<
-	ButtonOwnProps,
-	typeof ButtonDefaultElement
-> = React.forwardRef(function Button<
-	T extends React.ElementType = typeof ButtonDefaultElement
->(
-	{
-		as,
-		intent = "neutral",
-		size = "md",
-		className,
-		...restProps
-	}: PolymorphicPropsWithoutRef<ButtonOwnProps, T>,
-	ref: React.ForwardedRef<React.ElementRef<T>>,
+export const Button = React.forwardRef(function Button(
+	{ intent = "neutral", size = "md", className, ...restProps }: ButtonProps,
+	ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
-	const Element: React.ElementType = as || ButtonDefaultElement;
 	return (
-		<Element
+		<button
 			ref={ref}
+			type="button"
 			className={clsx(
 				"font-semibold leading-tight rounded",
 				[
