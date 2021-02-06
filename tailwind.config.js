@@ -9,5 +9,8 @@ module.exports = {
 			ringWidth: ["focus-visible"],
 		},
 	},
+	corePlugins: {
+		animation: false,
+	},
 	plugins: [],
 };
