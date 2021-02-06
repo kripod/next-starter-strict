@@ -23,7 +23,7 @@ export const PrimaryButton = React.forwardRef(function PrimaryButton(
 			ref={ref}
 			type="button"
 			className={clsx(
-				"font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
+				"inline-flex items-center font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
 				{
 					"px-2.5 h-8": size === "sm",
 					"px-5 h-11": size === "md",
