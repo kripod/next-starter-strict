@@ -9,29 +9,35 @@ export type ButtonOwnProps = {
 export type ButtonProps = React.ComponentPropsWithRef<"button"> &
 	ButtonOwnProps;
 
+export function buttonClassNames({
+	size = "md",
+	intent = "neutral",
+}: ButtonOwnProps = {}) {
+	return clsx(
+		"inline-flex items-center font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
+		{
+			"h-8": size === "sm",
+			"h-11": size === "md",
+		},
+		[
+			"text-white dark:text-gray-900",
+			{
+				"ring-gray-400": intent === "neutral",
+				"ring-red-300 dark:ring-red-700": intent === "danger",
+			},
+		],
+	);
+}
+
 export const Button = React.forwardRef(function Button(
-	{ size = "md", intent = "neutral", className, ...restProps }: ButtonProps,
+	{ className, ...restProps }: ButtonProps,
 	ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
 	return (
 		<button
 			ref={ref}
 			type="button"
-			className={clsx(
-				"inline-flex items-center font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
-				{
-					"h-8": size === "sm",
-					"h-11": size === "md",
-				},
-				[
-					"text-white dark:text-gray-900",
-					{
-						"ring-gray-400": intent === "neutral",
-						"ring-red-300 dark:ring-red-700": intent === "danger",
-					},
-				],
-				className,
-			)}
+			className={clsx(buttonClassNames(restProps), className)}
 			{...restProps}
 		/>
 	);
