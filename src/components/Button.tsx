@@ -3,7 +3,7 @@ import * as React from "react";
 
 export type ButtonOwnProps = {
 	intent?: "neutral" | "danger";
-	size?: "md";
+	size?: "sm" | "md";
 };
 
 export type ButtonProps = React.ComponentPropsWithRef<"button"> &
@@ -27,6 +27,7 @@ export const Button = React.forwardRef(function Button(
 					},
 				],
 				{
+					"px-2.5 h-8": size === "sm",
 					"px-5 h-11": size === "md",
 				},
 				className,
