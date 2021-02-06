@@ -1,4 +1,4 @@
-import { Button } from "@/components/Button";
+import { PrimaryButton } from "@/components/PrimaryButton";
 
 type ThemingShowcaseProps = {
 	children?: React.ReactNode;
@@ -33,15 +33,15 @@ export default function Page() {
 			<ThemingShowcase>
 				<Canvas>
 					<div className="space-x-3">
-						<Button size="sm">Neutral</Button>
-						<Button intent="danger" size="sm">
+						<PrimaryButton size="sm">Neutral</PrimaryButton>
+						<PrimaryButton intent="danger" size="sm">
 							Danger
-						</Button>
+						</PrimaryButton>
 					</div>
 
 					<div className="space-x-4">
-						<Button>Neutral</Button>
-						<Button intent="danger">Danger</Button>
+						<PrimaryButton>Neutral</PrimaryButton>
+						<PrimaryButton intent="danger">Danger</PrimaryButton>
 					</div>
 				</Canvas>
 			</ThemingShowcase>

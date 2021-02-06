@@ -1,16 +1,21 @@
 import clsx from "clsx";
 import * as React from "react";
 
-export type ButtonOwnProps = {
+export type PrimaryButtonOwnProps = {
 	intent?: "neutral" | "danger";
 	size?: "sm" | "md";
 };
 
-export type ButtonProps = React.ComponentPropsWithRef<"button"> &
-	ButtonOwnProps;
+export type PrimaryButtonProps = React.ComponentPropsWithRef<"button"> &
+	PrimaryButtonOwnProps;
 
-export const Button = React.forwardRef(function Button(
-	{ intent = "neutral", size = "md", className, ...restProps }: ButtonProps,
+export const PrimaryButton = React.forwardRef(function PrimaryButton(
+	{
+		intent = "neutral",
+		size = "md",
+		className,
+		...restProps
+	}: PrimaryButtonProps,
 	ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
 	return (
