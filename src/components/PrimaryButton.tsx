@@ -1,13 +1,11 @@
 import clsx from "clsx";
 import * as React from "react";
 
-export type PrimaryButtonOwnProps = {
-	size?: "sm" | "md";
-	intent?: "neutral" | "danger";
-};
+import { Button, ButtonOwnProps, ButtonProps } from "./Button";
 
-export type PrimaryButtonProps = React.ComponentPropsWithRef<"button"> &
-	PrimaryButtonOwnProps;
+export type PrimaryButtonOwnProps = ButtonOwnProps;
+
+export type PrimaryButtonProps = ButtonProps;
 
 export const PrimaryButton = React.forwardRef(function PrimaryButton(
 	{
@@ -19,24 +17,21 @@ export const PrimaryButton = React.forwardRef(function PrimaryButton(
 	ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
 	return (
-		<button
+		<Button
 			ref={ref}
-			type="button"
+			size={size}
+			intent={intent}
 			className={clsx(
-				"inline-flex items-center font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
 				{
-					"px-2.5 h-8": size === "sm",
-					"px-5 h-11": size === "md",
+					"px-2.5": size === "sm",
+					"px-5": size === "md",
 				},
-				[
-					"text-white dark:text-gray-900",
-					{
-						"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300 ring-gray-400":
-							intent === "neutral",
-						"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500 ring-red-300 dark:ring-red-700":
-							intent === "danger",
-					},
-				],
+				{
+					"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300":
+						intent === "neutral",
+					"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500":
+						intent === "danger",
+				},
 				className,
 			)}
 			{...restProps}
