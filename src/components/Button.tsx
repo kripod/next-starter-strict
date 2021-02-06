@@ -24,7 +24,7 @@ export const Button = React.forwardRef(function Button(
 					{
 						"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300 ring-gray-400":
 							intent === "neutral",
-						"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500 ring-red-300":
+						"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500 ring-red-300 dark:ring-red-700":
 							intent === "danger",
 					},
 				],
