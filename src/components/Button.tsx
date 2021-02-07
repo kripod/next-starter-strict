@@ -14,7 +14,7 @@ export function buttonClassNames({
 	intent = "neutral",
 }: ButtonOwnProps = {}) {
 	return clsx(
-		"inline-flex items-center font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
+		"inline-flex items-center text-center font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
 		{
 			"h-8": size === "sm",
 			"h-11": size === "md",
