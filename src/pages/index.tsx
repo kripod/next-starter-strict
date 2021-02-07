@@ -1,7 +1,7 @@
 import {
 	PrimaryButton,
 	primaryButtonClassNames,
-} from "@/components/PrimaryButton";
+} from "@/components/buttons/PrimaryButton";
 
 type ThemingShowcaseProps = {
 	children?: React.ReactNode;
