@@ -59,6 +59,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 					"rounded-full": shape === "pill" || shape === "circle",
 				},
 				{
+					/* Ring colors match background colors of a hovered `PrimaryButton` */
 					"ring-gray-700 dark:ring-gray-300": intent === "neutral",
 					"ring-red-400": intent === "danger",
 				},

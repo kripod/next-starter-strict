@@ -38,6 +38,7 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 			intent={intent}
 			className={clsx(
 				{
+					/* Text colors match the background colors in `PrimaryButton` */
 					"text-black dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700":
 						intent === "neutral",
 					"text-red-500 dark:text-red-300 hover:bg-red-100 dark:hover:bg-red-900":
