@@ -3,17 +3,20 @@ import * as React from "react";
 import type {
 	PolymorphicForwardRefExoticComponent,
 	PolymorphicPropsWithoutRef,
+	PolymorphicPropsWithRef,
 } from "react-polymorphic-types";
 
-import {
-	Button,
-	ButtonOwnProps as SecondaryButtonOwnProps,
-	ButtonProps as SecondaryButtonProps,
-} from "./_Button";
+import { Button, ButtonOwnProps } from "./_Button";
 
 const SecondaryButtonDefaultElement = "button";
 
-export type { SecondaryButtonOwnProps, SecondaryButtonProps };
+export type SecondaryButtonOwnProps = ButtonOwnProps & {
+	outline?: boolean;
+};
+
+export type SecondaryButtonProps<
+	T extends React.ElementType = typeof SecondaryButtonDefaultElement
+> = PolymorphicPropsWithRef<SecondaryButtonOwnProps, T>;
 
 export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 	SecondaryButtonOwnProps,
@@ -23,6 +26,7 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 >(
 	{
 		intent = "neutral",
+		outline,
 		className,
 		...restProps
 	}: PolymorphicPropsWithoutRef<SecondaryButtonOwnProps, T>,
@@ -33,13 +37,13 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 			ref={ref}
 			intent={intent}
 			className={clsx(
-				"border-gray-400 dark:border-gray-500",
 				{
 					"text-black dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700":
 						intent === "neutral",
 					"text-red-500 dark:text-red-300 hover:bg-red-100 dark:hover:bg-red-900":
 						intent === "danger",
 				},
+				outline ? "border-gray-400 dark:border-gray-500" : "border-transparent",
 				className,
 			)}
 			{...restProps}

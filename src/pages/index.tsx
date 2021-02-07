@@ -139,11 +139,25 @@ export default function Page() {
 							as="a"
 							href="https://github.com/kripod"
 							size="sm"
-							shape="pill"
+							outline
 						>
 							Neutral link
 						</SecondaryButton>
-						<SecondaryButton size="sm" shape="pill" intent="danger">
+						<SecondaryButton size="sm" intent="danger" outline>
+							Danger
+						</SecondaryButton>
+					</div>
+					<div className="space-x-3">
+						<SecondaryButton
+							as="a"
+							href="https://github.com/kripod"
+							size="sm"
+							shape="pill"
+							outline
+						>
+							Neutral link
+						</SecondaryButton>
+						<SecondaryButton size="sm" shape="pill" intent="danger" outline>
 							Danger
 						</SecondaryButton>
 					</div>
@@ -166,11 +180,26 @@ export default function Page() {
 							as="a"
 							href="https://github.com/kripod"
 							size="sm"
-							shape="circle"
+							shape="square"
+							outline
 						>
 							N
 						</SecondaryButton>
-						<SecondaryButton size="sm" shape="circle" intent="danger">
+						<SecondaryButton size="sm" shape="square" intent="danger" outline>
+							D
+						</SecondaryButton>
+					</div>
+					<div className="space-x-3">
+						<SecondaryButton
+							as="a"
+							href="https://github.com/kripod"
+							size="sm"
+							shape="circle"
+							outline
+						>
+							N
+						</SecondaryButton>
+						<SecondaryButton size="sm" shape="circle" intent="danger" outline>
 							D
 						</SecondaryButton>
 					</div>
@@ -182,14 +211,23 @@ export default function Page() {
 						<SecondaryButton intent="danger">Danger</SecondaryButton>
 					</div>
 					<div className="space-x-4">
+						<SecondaryButton as="a" href="https://github.com/kripod" outline>
+							Neutral link
+						</SecondaryButton>
+						<SecondaryButton intent="danger" outline>
+							Danger
+						</SecondaryButton>
+					</div>
+					<div className="space-x-4">
 						<SecondaryButton
 							as="a"
 							href="https://github.com/kripod"
 							shape="pill"
+							outline
 						>
 							Neutral link
 						</SecondaryButton>
-						<SecondaryButton shape="pill" intent="danger">
+						<SecondaryButton shape="pill" intent="danger" outline>
 							Danger
 						</SecondaryButton>
 					</div>
@@ -210,11 +248,25 @@ export default function Page() {
 						<SecondaryButton
 							as="a"
 							href="https://github.com/kripod"
-							shape="circle"
+							shape="square"
+							outline
 						>
 							N
 						</SecondaryButton>
-						<SecondaryButton shape="circle" intent="danger">
+						<SecondaryButton shape="square" intent="danger" outline>
+							D
+						</SecondaryButton>
+					</div>
+					<div className="space-x-4">
+						<SecondaryButton
+							as="a"
+							href="https://github.com/kripod"
+							shape="circle"
+							outline
+						>
+							N
+						</SecondaryButton>
+						<SecondaryButton shape="circle" intent="danger" outline>
 							D
 						</SecondaryButton>
 					</div>
