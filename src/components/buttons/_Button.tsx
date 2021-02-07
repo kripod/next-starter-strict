@@ -59,7 +59,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 					"rounded-full": shape === "pill" || shape === "circle",
 				},
 				{
-					"ring-gray-400": intent === "neutral",
+					"ring-gray-300 dark:ring-gray-400": intent === "neutral",
 					"ring-red-300 dark:ring-red-700": intent === "danger",
 				},
 				className,
