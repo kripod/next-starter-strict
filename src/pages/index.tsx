@@ -40,12 +40,83 @@ export default function Page() {
 							Danger
 						</PrimaryButton>
 					</div>
+					<div className="space-x-3">
+						<PrimaryButton
+							as="a"
+							href="https://github.com/kripod"
+							size="sm"
+							shape="pill"
+						>
+							Neutral link
+						</PrimaryButton>
+						<PrimaryButton size="sm" shape="pill" intent="danger">
+							Danger
+						</PrimaryButton>
+					</div>
+					<div className="space-x-3">
+						<PrimaryButton
+							as="a"
+							href="https://github.com/kripod"
+							size="sm"
+							shape="square"
+						>
+							N
+						</PrimaryButton>
+						<PrimaryButton size="sm" shape="square" intent="danger">
+							D
+						</PrimaryButton>
+					</div>
+					<div className="space-x-3">
+						<PrimaryButton
+							as="a"
+							href="https://github.com/kripod"
+							size="sm"
+							shape="circle"
+						>
+							N
+						</PrimaryButton>
+						<PrimaryButton size="sm" shape="circle" intent="danger">
+							D
+						</PrimaryButton>
+					</div>
 
 					<div className="space-x-4">
 						<PrimaryButton as="a" href="https://github.com/kripod">
 							Neutral link
 						</PrimaryButton>
 						<PrimaryButton intent="danger">Danger</PrimaryButton>
+					</div>
+					<div className="space-x-4">
+						<PrimaryButton as="a" href="https://github.com/kripod" shape="pill">
+							Neutral link
+						</PrimaryButton>
+						<PrimaryButton shape="pill" intent="danger">
+							Danger
+						</PrimaryButton>
+					</div>
+					<div className="space-x-4">
+						<PrimaryButton
+							as="a"
+							href="https://github.com/kripod"
+							shape="square"
+						>
+							N
+						</PrimaryButton>
+						<PrimaryButton shape="square" intent="danger">
+							D
+						</PrimaryButton>
+					</div>
+					<div className="space-x-4">
+						<PrimaryButton
+							as="a"
+							href="https://github.com/kripod"
+							shape="circle"
+						>
+							N
+						</PrimaryButton>
+						<PrimaryButton shape="circle" intent="danger">
+							D
+						</PrimaryButton>
 					</div>
 				</Canvas>
 			</ThemingShowcase>

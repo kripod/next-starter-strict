@@ -10,6 +10,7 @@ const ButtonDefaultElement = "button";
 
 export type ButtonOwnProps = {
 	size?: "sm" | "md";
+	shape?: "rectangle" | "pill" | "square" | "circle";
 	intent?: "neutral" | "danger";
 };
 
@@ -26,6 +27,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 	{
 		as,
 		size = "md",
+		shape = "rectangle",
 		intent = "neutral",
 		className,
 		...restProps
@@ -38,10 +40,23 @@ export const Button: PolymorphicForwardRefExoticComponent<
 			ref={ref}
 			type={Element === "button" ? "button" : undefined}
 			className={clsx(
-				"inline-flex items-center pb-0.5 text-center font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
+				"inline-flex items-center justify-center pb-0.5 text-center font-semibold leading-tight focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
 				{
-					"h-7 text-sm": size === "sm",
-					"h-11": size === "md",
+					[clsx(
+						"text-sm",
+						shape === "circle"
+							? "h-8 w-8"
+							: ["h-7", shape === "square" && "w-7"],
+					)]: size === "sm",
+					[clsx(
+						shape === "circle"
+							? "h-12 w-12"
+							: ["h-11", shape === "square" && "w-11"],
+					)]: size === "md",
+				},
+				{
+					rounded: shape === "rectangle" || shape === "square",
+					"rounded-full": shape === "pill" || shape === "circle",
 				},
 				[
 					"text-white dark:text-gray-900",

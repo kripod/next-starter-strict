@@ -23,6 +23,7 @@ export const TextualButton: PolymorphicForwardRefExoticComponent<
 >(
 	{
 		size = "md",
+		shape = "rectangle",
 		className,
 		...restProps
 	}: PolymorphicPropsWithoutRef<TextualButtonOwnProps, T>,
@@ -32,8 +33,9 @@ export const TextualButton: PolymorphicForwardRefExoticComponent<
 		<Button<React.ElementType>
 			ref={ref}
 			size={size}
+			shape={shape}
 			className={clsx(
-				{
+				(shape === "rectangle" || shape === "pill") && {
 					"px-2.5": size === "sm",
 					"px-5": size === "md",
 				},
