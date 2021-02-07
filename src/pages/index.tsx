@@ -1,4 +1,5 @@
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
+import { SecondaryButton } from "@/components/buttons/SecondaryButton";
 
 type ThemingShowcaseProps = {
 	children?: React.ReactNode;
@@ -119,6 +120,103 @@ export default function Page() {
 						<PrimaryButton shape="circle" intent="danger">
 							D
 						</PrimaryButton>
+					</div>
+				</Canvas>
+			</ThemingShowcase>
+
+			<ThemingShowcase>
+				<Canvas>
+					<div className="space-x-3">
+						<SecondaryButton as="a" href="https://github.com/kripod" size="sm">
+							Neutral link
+						</SecondaryButton>
+						<SecondaryButton size="sm" intent="danger">
+							Danger
+						</SecondaryButton>
+					</div>
+					<div className="space-x-3">
+						<SecondaryButton
+							as="a"
+							href="https://github.com/kripod"
+							size="sm"
+							shape="pill"
+						>
+							Neutral link
+						</SecondaryButton>
+						<SecondaryButton size="sm" shape="pill" intent="danger">
+							Danger
+						</SecondaryButton>
+					</div>
+
+					<div className="space-x-3">
+						<SecondaryButton
+							as="a"
+							href="https://github.com/kripod"
+							size="sm"
+							shape="square"
+						>
+							N
+						</SecondaryButton>
+						<SecondaryButton size="sm" shape="square" intent="danger">
+							D
+						</SecondaryButton>
+					</div>
+					<div className="space-x-3">
+						<SecondaryButton
+							as="a"
+							href="https://github.com/kripod"
+							size="sm"
+							shape="circle"
+						>
+							N
+						</SecondaryButton>
+						<SecondaryButton size="sm" shape="circle" intent="danger">
+							D
+						</SecondaryButton>
+					</div>
+
+					<div className="space-x-4">
+						<SecondaryButton as="a" href="https://github.com/kripod">
+							Neutral link
+						</SecondaryButton>
+						<SecondaryButton intent="danger">Danger</SecondaryButton>
+					</div>
+					<div className="space-x-4">
+						<SecondaryButton
+							as="a"
+							href="https://github.com/kripod"
+							shape="pill"
+						>
+							Neutral link
+						</SecondaryButton>
+						<SecondaryButton shape="pill" intent="danger">
+							Danger
+						</SecondaryButton>
+					</div>
+
+					<div className="space-x-4">
+						<SecondaryButton
+							as="a"
+							href="https://github.com/kripod"
+							shape="square"
+						>
+							N
+						</SecondaryButton>
+						<SecondaryButton shape="square" intent="danger">
+							D
+						</SecondaryButton>
+					</div>
+					<div className="space-x-4">
+						<SecondaryButton
+							as="a"
+							href="https://github.com/kripod"
+							shape="circle"
+						>
+							N
+						</SecondaryButton>
+						<SecondaryButton shape="circle" intent="danger">
+							D
+						</SecondaryButton>
 					</div>
 				</Canvas>
 			</ThemingShowcase>
