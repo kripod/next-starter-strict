@@ -1,43 +1,46 @@
 import clsx from "clsx";
 import * as React from "react";
+import type {
+	PolymorphicForwardRefExoticComponent,
+	PolymorphicPropsWithoutRef,
+} from "react-polymorphic-types";
 
 import {
 	TextualButton,
-	textualButtonClassNames,
-	TextualButtonOwnProps,
-	TextualButtonProps,
+	TextualButtonOwnProps as PrimaryButtonOwnProps,
+	TextualButtonProps as PrimaryButtonProps,
 } from "./_TextualButton";
 
-export type PrimaryButtonOwnProps = TextualButtonOwnProps;
+const PrimaryButtonDefaultElement = "button";
 
-export type PrimaryButtonProps = TextualButtonProps;
+export type { PrimaryButtonOwnProps, PrimaryButtonProps };
 
-function primaryButtonOwnClassNames({
-	intent = "neutral",
-}: PrimaryButtonOwnProps) {
-	return clsx({
-		"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300":
-			intent === "neutral",
-		"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500":
-			intent === "danger",
-	});
-}
-
-export function primaryButtonClassNames(props: PrimaryButtonOwnProps = {}) {
-	return clsx(
-		textualButtonClassNames(props),
-		primaryButtonOwnClassNames(props),
-	);
-}
-
-export const PrimaryButton = React.forwardRef(function PrimaryButton(
-	{ className, ...restProps }: PrimaryButtonProps,
-	ref: React.ForwardedRef<HTMLButtonElement>,
+export const PrimaryButton: PolymorphicForwardRefExoticComponent<
+	PrimaryButtonOwnProps,
+	typeof PrimaryButtonDefaultElement
+> = React.forwardRef(function PrimaryButton<
+	T extends React.ElementType = typeof PrimaryButtonDefaultElement
+>(
+	{
+		intent = "neutral",
+		className,
+		...restProps
+	}: PolymorphicPropsWithoutRef<PrimaryButtonOwnProps, T>,
+	ref: React.ForwardedRef<React.ElementRef<T>>,
 ) {
 	return (
-		<TextualButton
+		<TextualButton<React.ElementType>
 			ref={ref}
-			className={clsx(primaryButtonOwnClassNames(restProps), className)}
+			intent={intent}
+			className={clsx(
+				{
+					"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300":
+						intent === "neutral",
+					"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500":
+						intent === "danger",
+				},
+				className,
+			)}
 			{...restProps}
 		/>
 	);

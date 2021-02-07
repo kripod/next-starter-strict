@@ -1,36 +1,44 @@
 import clsx from "clsx";
 import * as React from "react";
+import type {
+	PolymorphicForwardRefExoticComponent,
+	PolymorphicPropsWithoutRef,
+} from "react-polymorphic-types";
 
 import {
 	Button,
-	buttonClassNames,
-	ButtonOwnProps,
-	ButtonProps,
+	ButtonOwnProps as TextualButtonOwnProps,
+	ButtonProps as TextualButtonProps,
 } from "./_Button";
 
-export type TextualButtonOwnProps = ButtonOwnProps;
+const TextualButtonDefaultElement = "button";
 
-export type TextualButtonProps = ButtonProps;
+export type { TextualButtonOwnProps, TextualButtonProps };
 
-function textualButtonOwnClassNames({ size = "md" }: TextualButtonOwnProps) {
-	return clsx({
-		"px-2.5": size === "sm",
-		"px-5": size === "md",
-	});
-}
-
-export function textualButtonClassNames(props: TextualButtonOwnProps = {}) {
-	return clsx(buttonClassNames(props), textualButtonOwnClassNames(props));
-}
-
-export const TextualButton = React.forwardRef(function TextualButton(
-	{ className, ...restProps }: TextualButtonProps,
-	ref: React.ForwardedRef<HTMLButtonElement>,
+export const TextualButton: PolymorphicForwardRefExoticComponent<
+	TextualButtonOwnProps,
+	typeof TextualButtonDefaultElement
+> = React.forwardRef(function TextualButton<
+	T extends React.ElementType = typeof TextualButtonDefaultElement
+>(
+	{
+		size = "md",
+		className,
+		...restProps
+	}: PolymorphicPropsWithoutRef<TextualButtonOwnProps, T>,
+	ref: React.ForwardedRef<React.ElementRef<T>>,
 ) {
 	return (
-		<Button
+		<Button<React.ElementType>
 			ref={ref}
-			className={clsx(textualButtonOwnClassNames(restProps), className)}
+			size={size}
+			className={clsx(
+				{
+					"px-2.5": size === "sm",
+					"px-5": size === "md",
+				},
+				className,
+			)}
 			{...restProps}
 		/>
 	);
