@@ -53,6 +53,7 @@ export default function Page() {
 							Danger
 						</PrimaryButton>
 					</div>
+
 					<div className="space-x-3">
 						<PrimaryButton
 							as="a"
@@ -94,6 +95,7 @@ export default function Page() {
 							Danger
 						</PrimaryButton>
 					</div>
+
 					<div className="space-x-4">
 						<PrimaryButton
 							as="a"
