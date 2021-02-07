@@ -40,7 +40,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 			ref={ref}
 			type={Element === "button" ? "button" : undefined}
 			className={clsx(
-				"inline-flex items-center justify-center text-center font-medium leading-tight border focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
+				"inline-flex items-center justify-center text-center font-medium leading-tight border focus:outline-none transition-colors motion-reduce:transition-none dark:ring-offset-black ring-offset-1 focus-visible:ring",
 				{
 					[clsx(
 						"text-sm",
@@ -59,8 +59,8 @@ export const Button: PolymorphicForwardRefExoticComponent<
 					"rounded-full": shape === "pill" || shape === "circle",
 				},
 				{
-					"ring-gray-400": intent === "neutral",
-					"ring-red-300 dark:ring-red-600": intent === "danger",
+					"ring-gray-700 dark:ring-gray-300": intent === "neutral",
+					"ring-red-400": intent === "danger",
 				},
 				className,
 			)}
