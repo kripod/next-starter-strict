@@ -35,9 +35,9 @@ export const PrimaryButton: PolymorphicForwardRefExoticComponent<
 			className={clsx(
 				"dark:text-gray-900 text-white border-transparent",
 				{
-					"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300":
+					"bg-black hover:bg-gray-700 dark:bg-gray-100 dark:hover:bg-gray-300":
 						intent === "neutral",
-					"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500":
+					"bg-red-500 hover:bg-red-400 dark:bg-red-300 dark:hover:bg-red-400":
 						intent === "danger",
 				},
 				className,

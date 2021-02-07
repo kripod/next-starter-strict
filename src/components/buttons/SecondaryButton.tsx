@@ -35,9 +35,9 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 			className={clsx(
 				"border-current",
 				{
-					"text-black dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-800":
+					"text-black dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700":
 						intent === "neutral",
-					"text-red-500 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900":
+					"text-red-500 dark:text-red-300 hover:bg-red-100 dark:hover:bg-red-900":
 						intent === "danger",
 				},
 				className,
