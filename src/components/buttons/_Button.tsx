@@ -16,7 +16,7 @@ export function buttonClassNames({
 	return clsx(
 		"inline-flex items-center pb-0.5 text-center font-semibold leading-tight rounded focus:outline-none transition-colors motion-reduce:transition-none focus-visible:ring-4",
 		{
-			"h-8": size === "sm",
+			"h-7 text-sm": size === "sm",
 			"h-11": size === "md",
 		},
 		[
