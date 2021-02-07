@@ -6,7 +6,7 @@ import {
 	buttonClassNames,
 	ButtonOwnProps,
 	ButtonProps,
-} from "./Button";
+} from "./_Button";
 
 export type TextualButtonOwnProps = ButtonOwnProps;
 
