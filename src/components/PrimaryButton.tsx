@@ -2,36 +2,32 @@ import clsx from "clsx";
 import * as React from "react";
 
 import {
-	Button,
-	buttonClassNames,
-	ButtonOwnProps,
-	ButtonProps,
-} from "./Button";
+	TextualButton,
+	textualButtonClassNames,
+	TextualButtonOwnProps,
+	TextualButtonProps,
+} from "./_TextualButton";
 
-export type PrimaryButtonOwnProps = ButtonOwnProps;
+export type PrimaryButtonOwnProps = TextualButtonOwnProps;
 
-export type PrimaryButtonProps = ButtonProps;
+export type PrimaryButtonProps = TextualButtonProps;
 
 function primaryButtonOwnClassNames({
-	size = "md",
 	intent = "neutral",
 }: PrimaryButtonOwnProps) {
-	return clsx(
-		{
-			"px-2.5": size === "sm",
-			"px-5": size === "md",
-		},
-		{
-			"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300":
-				intent === "neutral",
-			"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500":
-				intent === "danger",
-		},
-	);
+	return clsx({
+		"bg-black hover:bg-gray-700 dark:bg-gray-50 dark:hover:bg-gray-300":
+			intent === "neutral",
+		"bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500":
+			intent === "danger",
+	});
 }
 
 export function primaryButtonClassNames(props: PrimaryButtonOwnProps = {}) {
-	return clsx(buttonClassNames(props), primaryButtonOwnClassNames(props));
+	return clsx(
+		textualButtonClassNames(props),
+		primaryButtonOwnClassNames(props),
+	);
 }
 
 export const PrimaryButton = React.forwardRef(function PrimaryButton(
@@ -39,7 +35,7 @@ export const PrimaryButton = React.forwardRef(function PrimaryButton(
 	ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
 	return (
-		<Button
+		<TextualButton
 			ref={ref}
 			className={clsx(primaryButtonOwnClassNames(restProps), className)}
 			{...restProps}
