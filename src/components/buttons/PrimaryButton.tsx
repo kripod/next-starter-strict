@@ -6,10 +6,10 @@ import type {
 } from "react-polymorphic-types";
 
 import {
-	TextualButton,
-	TextualButtonOwnProps as PrimaryButtonOwnProps,
-	TextualButtonProps as PrimaryButtonProps,
-} from "./_TextualButton";
+	Button,
+	ButtonOwnProps as PrimaryButtonOwnProps,
+	ButtonProps as PrimaryButtonProps,
+} from "./_Button";
 
 const PrimaryButtonDefaultElement = "button";
 
@@ -29,7 +29,7 @@ export const PrimaryButton: PolymorphicForwardRefExoticComponent<
 	ref: React.ForwardedRef<React.ElementRef<T>>,
 ) {
 	return (
-		<TextualButton<React.ElementType>
+		<Button<React.ElementType>
 			ref={ref}
 			intent={intent}
 			className={clsx(

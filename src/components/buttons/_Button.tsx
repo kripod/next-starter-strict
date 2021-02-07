@@ -46,12 +46,12 @@ export const Button: PolymorphicForwardRefExoticComponent<
 						"text-sm",
 						shape === "circle"
 							? "h-8 w-8"
-							: ["h-7", shape === "square" && "w-7"],
+							: ["h-7", shape === "square" ? "w-7" : "px-2.5"],
 					)]: size === "sm",
 					[clsx(
 						shape === "circle"
 							? "h-12 w-12"
-							: ["h-11", shape === "square" && "w-11"],
+							: ["h-11", shape === "square" ? "w-11" : "px-5"],
 					)]: size === "md",
 				},
 				{
