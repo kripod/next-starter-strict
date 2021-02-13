@@ -35,8 +35,9 @@ export default function Page() {
 			<ThemingShowcase>
 				<Canvas>
 					<div className="flex flex-col space-y-4">
-						<Input />
-						<Input />
+						<Input placeholder="Regular inputs look like this" />
+						<Input placeholder="Read-only inputs look like this" readOnly />
+						<Input placeholder="Disabled inputs look like this" disabled />
 					</div>
 				</Canvas>
 			</ThemingShowcase>
