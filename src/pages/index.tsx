@@ -1,5 +1,6 @@
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/buttons/SecondaryButton";
+import { Input } from "@/components/inputs/Input";
 
 type ThemingShowcaseProps = {
 	children?: React.ReactNode;
@@ -31,6 +32,15 @@ function Canvas({ children }: CanvasProps) {
 export default function Page() {
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-500">
+			<ThemingShowcase>
+				<Canvas>
+					<div className="flex flex-col space-y-4">
+						<Input />
+						<Input />
+					</div>
+				</Canvas>
+			</ThemingShowcase>
+
 			<ThemingShowcase>
 				<Canvas>
 					<div className="space-x-3">
