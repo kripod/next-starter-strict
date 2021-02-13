@@ -12,6 +12,7 @@ module.exports = {
 	},
 	variants: {
 		extend: {
+			placeholderOpacity: ["dark"],
 			ringWidth: ["focus-visible"],
 			transitionProperty: ["motion-reduce"],
 		},
