@@ -20,7 +20,7 @@ export function Input({ invalid, className, style, ...restProps }: InputProps) {
 			{invalid && (
 				<ExclamationCircle
 					aria-hidden
-					className="col-start-1 row-start-1 justify-self-end px-3 h-6 dark:text-red-400 text-red-500 pointer-events-none"
+					className="col-start-1 row-start-1 justify-self-end px-3 h-6 dark:text-red-400 text-red-600 pointer-events-none"
 				/>
 			)}
 		</span>
