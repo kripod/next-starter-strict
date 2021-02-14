@@ -36,6 +36,7 @@ export default function Page() {
 				<Canvas>
 					<div className="flex flex-col space-y-4">
 						<Input placeholder="Regular inputs look like this" />
+						<Input placeholder="Invalid inputs look like this" invalid />
 						<PrimaryButton size="sm" intent="danger">
 							Danger
 						</PrimaryButton>
