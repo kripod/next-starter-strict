@@ -36,7 +36,7 @@ export const PrimaryButton: PolymorphicForwardRefExoticComponent<
 				"dark:text-black text-white border-transparent",
 				{
 					"bg-black dark:bg-gray-100": intent === "neutral",
-					"bg-red-500 dark:bg-red-300": intent === "danger",
+					"bg-red-500 dark:bg-red-400": intent === "danger",
 				},
 				className,
 			)}

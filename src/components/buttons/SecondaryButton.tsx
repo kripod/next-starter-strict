@@ -43,13 +43,14 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 			intent={intent}
 			className={clsx(
 				[
-					"dark:hover:bg-opacity-20",
-					intent === "neutral" ? "hover:bg-opacity-10" : "hover:bg-opacity-20",
+					intent === "neutral"
+						? "hover:bg-opacity-10 dark:hover:bg-opacity-20"
+						: "hover:bg-opacity-20 dark:hover:bg-opacity-30",
 				],
 				{
 					/* Text colors match the background colors in `PrimaryButton` */
 					"text-black dark:text-gray-100": intent === "neutral",
-					"text-red-500 dark:text-red-300": intent === "danger",
+					"text-red-500 dark:text-red-400": intent === "danger",
 				},
 				outline ? "border-gray-500" : "border-transparent",
 				className,
