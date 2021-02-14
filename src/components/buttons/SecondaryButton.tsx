@@ -48,10 +48,8 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 				],
 				{
 					/* Text colors match the background colors in `PrimaryButton` */
-					"text-black dark:text-gray-100 hover:bg-gray-700 dark:hover:bg-gray-300":
-						intent === "neutral",
-					"text-red-500 dark:text-red-300 hover:bg-red-400 dark:hover:bg-red-400":
-						intent === "danger",
+					"text-black dark:text-gray-100": intent === "neutral",
+					"text-red-500 dark:text-red-300": intent === "danger",
 				},
 				outline ? "border-gray-500" : "border-transparent",
 				className,

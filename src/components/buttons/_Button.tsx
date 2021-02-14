@@ -60,8 +60,10 @@ export const Button: PolymorphicForwardRefExoticComponent<
 				},
 				{
 					/* Ring colors match background colors of a `PrimaryButton` */
-					"ring-black dark:ring-gray-100": intent === "neutral",
-					"ring-red-500 dark:ring-red-300": intent === "danger",
+					"hover:bg-gray-700 dark:hover:bg-gray-300 ring-black dark:ring-gray-100":
+						intent === "neutral",
+					"hover:bg-red-400 dark:hover:bg-red-400 ring-red-500 dark:ring-red-300":
+						intent === "danger",
 				},
 				className,
 			)}
