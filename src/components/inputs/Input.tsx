@@ -10,7 +10,7 @@ export function Input({ invalid, className, ...restProps }: InputProps) {
 		<span className={clsx("inline-grid items-center", className)}>
 			<input
 				className={clsx(
-					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 px-3 h-11 bg-transparent rounded focus:outline-none appearance-none dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus:ring",
+					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 px-3 h-11 bg-transparent rounded focus:outline-none appearance-none dark:ring-offset-black ring-offset-1 ring-opacity-60 dark:ring-opacity-60 focus:ring",
 					invalid
 						? "pr-11 border-2 border-red-500 dark:border-red-400 ring-red-500 dark:ring-red-400"
 						: "border border-gray-500 focus:border-blue-500 dark:focus:border-blue-400 ring-blue-500 dark:ring-blue-400",
