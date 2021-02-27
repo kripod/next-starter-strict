@@ -5,9 +5,9 @@ export type InputProps = React.ComponentPropsWithoutRef<"input"> & {
 	invalid?: boolean;
 };
 
-export function Input({ invalid, className, style, ...restProps }: InputProps) {
+export function Input({ invalid, className, ...restProps }: InputProps) {
 	return (
-		<span className={clsx("inline-grid items-center", className)} style={style}>
+		<span className={clsx("inline-grid items-center", className)}>
 			<input
 				className={clsx(
 					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 px-3 h-11 bg-transparent rounded focus:outline-none appearance-none dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus:ring",
