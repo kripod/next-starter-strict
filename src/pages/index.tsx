@@ -1,3 +1,6 @@
+import { Cog as CogMd, Trash as TrashMd } from "heroicons/react/outline";
+import { Cog as CogSm, Trash as TrashSm } from "heroicons/react/solid";
+
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/buttons/SecondaryButton";
 import { Input } from "@/components/inputs/Input";
@@ -77,10 +80,10 @@ export default function Page() {
 							size="sm"
 							shape="square"
 						>
-							N
+							<CogSm aria-label="Settings" className="h-5" />
 						</PrimaryButton>
 						<PrimaryButton size="sm" shape="square" intent="danger">
-							D
+							<TrashSm aria-label="Delete" className="h-5" />
 						</PrimaryButton>
 					</div>
 					<div className="space-x-3">
@@ -90,10 +93,10 @@ export default function Page() {
 							size="sm"
 							shape="circle"
 						>
-							N
+							<CogSm aria-label="Settings" className="h-5" />
 						</PrimaryButton>
 						<PrimaryButton size="sm" shape="circle" intent="danger">
-							D
+							<TrashSm aria-label="Delete" className="h-5" />
 						</PrimaryButton>
 					</div>
 
@@ -118,10 +121,10 @@ export default function Page() {
 							href="https://github.com/kripod"
 							shape="square"
 						>
-							N
+							<CogMd aria-label="Settings" className="h-6" />
 						</PrimaryButton>
 						<PrimaryButton shape="square" intent="danger">
-							D
+							<TrashMd aria-label="Delete" className="h-6" />
 						</PrimaryButton>
 					</div>
 					<div className="space-x-4">
@@ -130,10 +133,10 @@ export default function Page() {
 							href="https://github.com/kripod"
 							shape="circle"
 						>
-							N
+							<CogMd aria-label="Settings" className="h-6" />
 						</PrimaryButton>
 						<PrimaryButton shape="circle" intent="danger">
-							D
+							<TrashMd aria-label="Delete" className="h-6" />
 						</PrimaryButton>
 					</div>
 				</Canvas>
@@ -184,10 +187,10 @@ export default function Page() {
 							size="sm"
 							shape="square"
 						>
-							N
+							<CogSm aria-label="Settings" className="h-5" />
 						</SecondaryButton>
 						<SecondaryButton size="sm" shape="square" intent="danger">
-							D
+							<TrashSm aria-label="Delete" className="h-5" />
 						</SecondaryButton>
 					</div>
 					<div className="space-x-3">
@@ -198,10 +201,10 @@ export default function Page() {
 							shape="square"
 							outline
 						>
-							N
+							<CogSm aria-label="Settings" className="h-5" />
 						</SecondaryButton>
 						<SecondaryButton size="sm" shape="square" intent="danger" outline>
-							D
+							<TrashSm aria-label="Delete" className="h-5" />
 						</SecondaryButton>
 					</div>
 					<div className="space-x-3">
@@ -212,10 +215,10 @@ export default function Page() {
 							shape="circle"
 							outline
 						>
-							N
+							<CogSm aria-label="Settings" className="h-5" />
 						</SecondaryButton>
 						<SecondaryButton size="sm" shape="circle" intent="danger" outline>
-							D
+							<TrashSm aria-label="Delete" className="h-5" />
 						</SecondaryButton>
 					</div>
 
@@ -253,10 +256,10 @@ export default function Page() {
 							href="https://github.com/kripod"
 							shape="square"
 						>
-							N
+							<CogMd aria-label="Settings" className="h-6" />
 						</SecondaryButton>
 						<SecondaryButton shape="square" intent="danger">
-							D
+							<TrashMd aria-label="Delete" className="h-6" />
 						</SecondaryButton>
 					</div>
 					<div className="space-x-4">
@@ -266,10 +269,10 @@ export default function Page() {
 							shape="square"
 							outline
 						>
-							N
+							<CogMd aria-label="Settings" className="h-6" />
 						</SecondaryButton>
 						<SecondaryButton shape="square" intent="danger" outline>
-							D
+							<TrashMd aria-label="Delete" className="h-6" />
 						</SecondaryButton>
 					</div>
 					<div className="space-x-4">
@@ -279,10 +282,10 @@ export default function Page() {
 							shape="circle"
 							outline
 						>
-							N
+							<CogMd aria-label="Settings" className="h-6" />
 						</SecondaryButton>
 						<SecondaryButton shape="circle" intent="danger" outline>
-							D
+							<TrashMd aria-label="Delete" className="h-6" />
 						</SecondaryButton>
 					</div>
 				</Canvas>
