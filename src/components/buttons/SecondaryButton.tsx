@@ -33,6 +33,7 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 		intent = "neutral",
 		outline,
 		className,
+		children,
 		...restProps
 	}: PolymorphicPropsWithoutRef<SecondaryButtonOwnProps, T>,
 	ref: React.ForwardedRef<React.ElementRef<T>>,
@@ -50,10 +51,12 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 					"text-red-500 dark:text-red-400 hover:bg-red-500 dark:hover:bg-red-400":
 						intent === "danger",
 				},
-				outline ? "border-gray-500" : "border-transparent",
+				outline && "border border-gray-500",
 				className,
 			)}
 			{...restProps}
-		/>
+		>
+			{outline ? <span className="-mx-px">{children}</span> : children}
+		</Button>
 	);
 });
