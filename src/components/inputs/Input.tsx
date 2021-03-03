@@ -1,18 +1,41 @@
 import clsx from "clsx";
-import { ExclamationCircle } from "heroicons/react/outline";
+import { ExclamationCircle as ExclamationCircleMd } from "heroicons/react/outline";
+import { ExclamationCircle as ExclamationCircleSm } from "heroicons/react/solid";
 
-export type InputProps = React.ComponentPropsWithoutRef<"input"> & {
+export type InputProps = Omit<
+	React.ComponentPropsWithoutRef<"input">,
+	"size"
+> & {
+	size?: "sm" | "md";
 	invalid?: boolean;
 };
 
-export function Input({ invalid, className, ...restProps }: InputProps) {
+export function Input({
+	size = "md",
+	invalid,
+	className,
+	...restProps
+}: InputProps) {
+	const ExclamationCircle =
+		size === "sm" ? ExclamationCircleSm : ExclamationCircleMd;
+
 	return (
 		<span className={clsx("inline-grid items-center", className)}>
 			<input
 				className={clsx(
-					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 px-3 h-11 bg-transparent rounded focus:outline-none appearance-none dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus:ring",
+					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 bg-transparent rounded focus:outline-none appearance-none dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus:ring",
+					{
+						"px-2 h-8 text-sm": size === "sm",
+						"px-3 h-11": size === "md",
+					},
 					invalid
-						? "pr-11 border-2 border-red-500 dark:border-red-400 ring-red-500 dark:ring-red-400"
+						? [
+								"border-2 border-red-500 dark:border-red-400 ring-red-500 dark:ring-red-400",
+								{
+									"pr-8": size === "sm",
+									"pr-11": size === "md",
+								},
+						  ]
 						: "border border-gray-500 focus:border-blue-500 dark:focus:border-blue-400 ring-blue-500 dark:ring-blue-400",
 				)}
 				{...restProps}
@@ -20,7 +43,13 @@ export function Input({ invalid, className, ...restProps }: InputProps) {
 			{invalid && (
 				<ExclamationCircle
 					aria-hidden
-					className="col-start-1 row-start-1 justify-self-end px-3 h-6 dark:text-red-400 text-red-500 pointer-events-none"
+					className={clsx(
+						"col-start-1 row-start-1 justify-self-end dark:text-red-400 text-red-500 pointer-events-none",
+						{
+							"px-2 h-5": size === "sm",
+							"px-3 h-6": size === "md",
+						},
+					)}
 				/>
 			)}
 		</span>
