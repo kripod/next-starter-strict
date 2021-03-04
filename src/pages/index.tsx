@@ -62,13 +62,13 @@ export default function Page() {
 				<Canvas>
 					<div className="space-x-3">
 						<PrimaryButton size="sm">Button</PrimaryButton>
-						<SecondaryButton outline size="sm">
+						<SecondaryButton outlined size="sm">
 							Button
 						</SecondaryButton>
 						<PrimaryButton size="sm" shape="pill">
 							Button
 						</PrimaryButton>
-						<SecondaryButton outline size="sm" shape="pill">
+						<SecondaryButton outlined size="sm" shape="pill">
 							Button
 						</SecondaryButton>
 					</div>
@@ -76,33 +76,33 @@ export default function Page() {
 						<PrimaryButton size="sm" intent="danger">
 							Button
 						</PrimaryButton>
-						<SecondaryButton outline size="sm" intent="danger">
+						<SecondaryButton outlined size="sm" intent="danger">
 							Button
 						</SecondaryButton>
 						<PrimaryButton size="sm" shape="pill" intent="danger">
 							Button
 						</PrimaryButton>
-						<SecondaryButton outline size="sm" shape="pill" intent="danger">
+						<SecondaryButton outlined size="sm" shape="pill" intent="danger">
 							Button
 						</SecondaryButton>
 					</div>
 					<div className="space-x-3">
 						<PrimaryButton>Button</PrimaryButton>
-						<SecondaryButton outline>Button</SecondaryButton>
+						<SecondaryButton outlined>Button</SecondaryButton>
 						<PrimaryButton shape="pill">Button</PrimaryButton>
-						<SecondaryButton outline shape="pill">
+						<SecondaryButton outlined shape="pill">
 							Button
 						</SecondaryButton>
 					</div>
 					<div className="space-x-3">
 						<PrimaryButton intent="danger">Button</PrimaryButton>
-						<SecondaryButton outline intent="danger">
+						<SecondaryButton outlined intent="danger">
 							Button
 						</SecondaryButton>
 						<PrimaryButton shape="pill" intent="danger">
 							Button
 						</PrimaryButton>
-						<SecondaryButton outline shape="pill" intent="danger">
+						<SecondaryButton outlined shape="pill" intent="danger">
 							Button
 						</SecondaryButton>
 					</div>
@@ -217,11 +217,11 @@ export default function Page() {
 							as="a"
 							href="https://github.com/kripod"
 							size="sm"
-							outline
+							outlined
 						>
 							Neutral link
 						</SecondaryButton>
-						<SecondaryButton size="sm" intent="danger" outline>
+						<SecondaryButton size="sm" intent="danger" outlined>
 							Danger
 						</SecondaryButton>
 					</div>
@@ -231,11 +231,11 @@ export default function Page() {
 							href="https://github.com/kripod"
 							size="sm"
 							shape="pill"
-							outline
+							outlined
 						>
 							Neutral link
 						</SecondaryButton>
-						<SecondaryButton size="sm" shape="pill" intent="danger" outline>
+						<SecondaryButton size="sm" shape="pill" intent="danger" outlined>
 							Danger
 						</SecondaryButton>
 					</div>
@@ -259,11 +259,11 @@ export default function Page() {
 							href="https://github.com/kripod"
 							size="sm"
 							shape="square"
-							outline
+							outlined
 						>
 							<CogSm aria-label="Settings" className="h-5" />
 						</SecondaryButton>
-						<SecondaryButton size="sm" shape="square" intent="danger" outline>
+						<SecondaryButton size="sm" shape="square" intent="danger" outlined>
 							<TrashSm aria-label="Delete" className="h-5" />
 						</SecondaryButton>
 					</div>
@@ -273,11 +273,11 @@ export default function Page() {
 							href="https://github.com/kripod"
 							size="sm"
 							shape="circle"
-							outline
+							outlined
 						>
 							<CogSm aria-label="Settings" className="h-5" />
 						</SecondaryButton>
-						<SecondaryButton size="sm" shape="circle" intent="danger" outline>
+						<SecondaryButton size="sm" shape="circle" intent="danger" outlined>
 							<TrashSm aria-label="Delete" className="h-5" />
 						</SecondaryButton>
 					</div>
@@ -289,10 +289,10 @@ export default function Page() {
 						<SecondaryButton intent="danger">Danger</SecondaryButton>
 					</div>
 					<div className="space-x-4">
-						<SecondaryButton as="a" href="https://github.com/kripod" outline>
+						<SecondaryButton as="a" href="https://github.com/kripod" outlined>
 							Neutral link
 						</SecondaryButton>
-						<SecondaryButton intent="danger" outline>
+						<SecondaryButton intent="danger" outlined>
 							Danger
 						</SecondaryButton>
 					</div>
@@ -301,11 +301,11 @@ export default function Page() {
 							as="a"
 							href="https://github.com/kripod"
 							shape="pill"
-							outline
+							outlined
 						>
 							Neutral link
 						</SecondaryButton>
-						<SecondaryButton shape="pill" intent="danger" outline>
+						<SecondaryButton shape="pill" intent="danger" outlined>
 							Danger
 						</SecondaryButton>
 					</div>
@@ -327,11 +327,11 @@ export default function Page() {
 							as="a"
 							href="https://github.com/kripod"
 							shape="square"
-							outline
+							outlined
 						>
 							<CogMd aria-label="Settings" className="h-6" />
 						</SecondaryButton>
-						<SecondaryButton shape="square" intent="danger" outline>
+						<SecondaryButton shape="square" intent="danger" outlined>
 							<TrashMd aria-label="Delete" className="h-6" />
 						</SecondaryButton>
 					</div>
@@ -340,11 +340,11 @@ export default function Page() {
 							as="a"
 							href="https://github.com/kripod"
 							shape="circle"
-							outline
+							outlined
 						>
 							<CogMd aria-label="Settings" className="h-6" />
 						</SecondaryButton>
-						<SecondaryButton shape="circle" intent="danger" outline>
+						<SecondaryButton shape="circle" intent="danger" outlined>
 							<TrashMd aria-label="Delete" className="h-6" />
 						</SecondaryButton>
 					</div>

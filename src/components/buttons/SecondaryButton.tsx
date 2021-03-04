@@ -16,7 +16,7 @@ import { Button, ButtonOwnProps } from "./_Button";
 const SecondaryButtonDefaultElement = "button";
 
 export type SecondaryButtonOwnProps = ButtonOwnProps & {
-	outline?: boolean;
+	outlined?: boolean;
 };
 
 export type SecondaryButtonProps<
@@ -31,7 +31,7 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 >(
 	{
 		intent = "neutral",
-		outline,
+		outlined: outline,
 		className,
 		children,
 		...restProps
