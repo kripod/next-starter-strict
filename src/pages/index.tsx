@@ -61,6 +61,57 @@ export default function Page() {
 			<ThemingShowcase>
 				<Canvas>
 					<div className="space-x-3">
+						<PrimaryButton size="sm">Button</PrimaryButton>
+						<SecondaryButton outline size="sm">
+							Button
+						</SecondaryButton>
+						<PrimaryButton size="sm" shape="pill">
+							Button
+						</PrimaryButton>
+						<SecondaryButton outline size="sm" shape="pill">
+							Button
+						</SecondaryButton>
+					</div>
+					<div className="space-x-3">
+						<PrimaryButton size="sm" intent="danger">
+							Button
+						</PrimaryButton>
+						<SecondaryButton outline size="sm" intent="danger">
+							Button
+						</SecondaryButton>
+						<PrimaryButton size="sm" shape="pill" intent="danger">
+							Button
+						</PrimaryButton>
+						<SecondaryButton outline size="sm" shape="pill" intent="danger">
+							Button
+						</SecondaryButton>
+					</div>
+					<div className="space-x-3">
+						<PrimaryButton>Button</PrimaryButton>
+						<SecondaryButton outline>Button</SecondaryButton>
+						<PrimaryButton shape="pill">Button</PrimaryButton>
+						<SecondaryButton outline shape="pill">
+							Button
+						</SecondaryButton>
+					</div>
+					<div className="space-x-3">
+						<PrimaryButton intent="danger">Button</PrimaryButton>
+						<SecondaryButton outline intent="danger">
+							Button
+						</SecondaryButton>
+						<PrimaryButton shape="pill" intent="danger">
+							Button
+						</PrimaryButton>
+						<SecondaryButton outline shape="pill" intent="danger">
+							Button
+						</SecondaryButton>
+					</div>
+				</Canvas>
+			</ThemingShowcase>
+
+			<ThemingShowcase>
+				<Canvas>
+					<div className="space-x-3">
 						<PrimaryButton as="a" href="https://github.com/kripod" size="sm">
 							Neutral link
 						</PrimaryButton>
