@@ -29,6 +29,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 		size = "md",
 		shape = "rectangle",
 		intent = "neutral",
+		disabled,
 		className,
 		...restProps
 	}: PolymorphicPropsWithoutRef<ButtonOwnProps, T>,
@@ -39,6 +40,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 		<Element
 			ref={ref}
 			type={Element === "button" ? "button" : undefined}
+			disabled={disabled}
 			className={clsx(
 				"inline-flex flex-col items-center justify-center text-center font-medium leading-tight focus:outline-none transition-colors motion-reduce:transition-none dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus-visible:ring",
 				{
@@ -63,6 +65,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 					"ring-gray-900 dark:ring-gray-100": intent === "neutral",
 					"ring-red-500 dark:ring-red-400": intent === "danger",
 				},
+				disabled ? "cursor-not-allowed" : "cursor-pointer",
 				className,
 			)}
 			{...restProps}
