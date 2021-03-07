@@ -14,7 +14,6 @@ module.exports = {
 	variants: {
 		extend: {
 			borderColor: ["group-focus-within"],
-			placeholderOpacity: ["dark"],
 			ringWidth: ["focus-visible"],
 			transitionProperty: ["motion-reduce"],
 		},
