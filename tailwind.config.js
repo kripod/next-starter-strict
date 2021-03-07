@@ -1,3 +1,4 @@
+const interactionVariantsPlugin = require("tailwindcss-interaction-variants");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -12,6 +13,7 @@ module.exports = {
 	},
 	variants: {
 		extend: {
+			borderColor: ["group-focus-within"],
 			placeholderOpacity: ["dark"],
 			ringWidth: ["focus-visible"],
 			transitionProperty: ["motion-reduce"],
@@ -20,5 +22,5 @@ module.exports = {
 	corePlugins: {
 		animation: false,
 	},
-	plugins: [],
+	plugins: [interactionVariantsPlugin],
 };
