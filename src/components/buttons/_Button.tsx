@@ -31,6 +31,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 		intent = "neutral",
 		disabled,
 		className,
+		children,
 		...restProps
 	}: PolymorphicPropsWithoutRef<ButtonOwnProps, T>,
 	ref: React.ForwardedRef<React.ElementRef<T>>,
@@ -42,7 +43,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 			type={Element === "button" ? "button" : undefined}
 			disabled={disabled}
 			className={clsx(
-				"inline-flex items-center justify-center text-center font-medium leading-tight focus:outline-none transition-colors motion-reduce:transition-none dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus-visible:ring",
+				"inline-flex items-center justify-center text-center font-medium leading-tight border focus:outline-none transition-colors motion-reduce:transition-none dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus-visible:ring",
 				{
 					[clsx(
 						"text-sm",
@@ -69,6 +70,8 @@ export const Button: PolymorphicForwardRefExoticComponent<
 				className,
 			)}
 			{...restProps}
-		/>
+		>
+			<span className="-mx-px">{children}</span>
+		</Element>
 	);
 });
