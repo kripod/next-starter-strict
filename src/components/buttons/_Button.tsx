@@ -18,6 +18,10 @@ export type ButtonProps<
 	T extends React.ElementType = typeof ButtonDefaultElement
 > = PolymorphicPropsWithRef<ButtonOwnProps, T>;
 
+export function equilateral(shape: ButtonOwnProps["shape"]) {
+	return shape === "square" || shape === "circle";
+}
+
 export const Button: PolymorphicForwardRefExoticComponent<
 	ButtonOwnProps,
 	typeof ButtonDefaultElement
@@ -49,12 +53,12 @@ export const Button: PolymorphicForwardRefExoticComponent<
 						"text-sm",
 						shape === "circle"
 							? "h-9 w-9"
-							: ["h-8", shape === "square" ? "w-8" : "px-3"],
+							: ["h-8", shape === "square" && "w-8"],
 					)]: size === "sm",
 					[clsx(
 						shape === "circle"
 							? "h-12 w-12"
-							: ["h-11", shape === "square" ? "w-11" : "px-4"],
+							: ["h-11", shape === "square" && "w-11"],
 					)]: size === "md",
 				},
 				{

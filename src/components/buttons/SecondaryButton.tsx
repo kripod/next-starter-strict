@@ -11,7 +11,7 @@ import type {
 	PolymorphicPropsWithRef,
 } from "react-polymorphic-types";
 
-import { Button, ButtonOwnProps } from "./_Button";
+import { Button, ButtonOwnProps, equilateral } from "./_Button";
 
 const SecondaryButtonDefaultElement = "button";
 
@@ -30,6 +30,8 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 	T extends React.ElementType = typeof SecondaryButtonDefaultElement
 >(
 	{
+		size = "md",
+		shape = "rectangle",
 		intent = "neutral",
 		outlined,
 		className,
@@ -40,9 +42,15 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 	return (
 		<Button<React.ElementType>
 			ref={ref}
+			size={size}
+			shape={shape}
 			intent={intent}
 			className={clsx(
 				"dark:hover:bg-opacity-20 hover:bg-opacity-20",
+				!equilateral(shape) && {
+					[clsx(outlined ? "px-3" : "px-2")]: size === "sm",
+					[clsx(outlined ? "px-4" : "px-2.5")]: size === "md",
+				},
 				{
 					/* Colors match or complement the backgrounds in `PrimaryButton` */
 					"text-gray-900 dark:text-gray-100 hover:bg-gray-500 dark:hover:bg-gray-400":
