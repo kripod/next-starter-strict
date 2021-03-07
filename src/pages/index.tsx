@@ -106,6 +106,26 @@ export default function Page() {
 							Button
 						</SecondaryButton>
 					</div>
+					<div className="space-x-3">
+						<SecondaryButton>Button</SecondaryButton>
+						<PrimaryButton>Button</PrimaryButton>
+					</div>
+					<div className="space-x-3">
+						<SecondaryButton shape="pill">Button</SecondaryButton>
+						<PrimaryButton shape="pill">Button</PrimaryButton>
+					</div>
+					<div className="space-x-3">
+						<SecondaryButton size="sm">Button</SecondaryButton>
+						<PrimaryButton size="sm">Button</PrimaryButton>
+					</div>
+					<div className="space-x-3">
+						<SecondaryButton size="sm" shape="pill">
+							Button
+						</SecondaryButton>
+						<PrimaryButton size="sm" shape="pill">
+							Button
+						</PrimaryButton>
+					</div>
 				</Canvas>
 			</ThemingShowcase>
 
