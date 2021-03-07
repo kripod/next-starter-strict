@@ -23,7 +23,7 @@ export function Input({
 		<span className={clsx("group inline-grid", className)}>
 			<input
 				className={clsx(
-					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 bg-transparent rounded focus:outline-none appearance-none dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus:ring",
+					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 bg-transparent rounded focus:outline-none appearance-none motion-reduce:transition-none transition-shadow duration-100 dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus:ring",
 					{
 						"px-2.5 h-8 text-sm": size === "sm",
 						"px-3.5 h-11": size === "md",
