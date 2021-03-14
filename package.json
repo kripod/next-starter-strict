@@ -4,7 +4,7 @@
 	"scripts": {
 		"build": "next build",
 		"build:analyze": "cross-env ANALYZE=true npm run build",
-		"clean": "git clean --force -dx --exclude node_modules/ --exclude .env.local --exclude .env.*.local",
+		"clean": "git clean --force -dx --exclude .env.local --exclude .env.*.local --exclude node_modules/ --exclude .husky/",
 		"dev": "next dev",
 		"fix": "run-s fix:*",
 		"fix:eslint": "npm run lint:eslint -- --fix",
