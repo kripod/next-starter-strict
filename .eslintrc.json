@@ -16,10 +16,10 @@
 
 	"rules": {
 		/* Auto-sort imports and exports */
-		"sort-imports": "off",
-		"import/order": "off",
 		"simple-import-sort/imports": "error",
 		"simple-import-sort/exports": "error",
+		"sort-imports": "off",
+		"import/order": "off",
 
 		/* Custom preferences */
 		"@typescript-eslint/array-type": "error",
@@ -28,6 +28,7 @@
 			"index-signature" // Prevent ambiguity with Records & Tuples
 		],
 		"@typescript-eslint/consistent-type-assertions": "error",
+		"@typescript-eslint/consistent-type-imports": "error",
 		"@typescript-eslint/explicit-module-boundary-types": "off", // Reduce bloat
 		"@typescript-eslint/method-signature-style": "error", // Force type safety
 		"@typescript-eslint/no-invalid-void-type": "error", // Force type safety
