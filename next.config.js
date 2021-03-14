@@ -9,5 +9,10 @@ module.exports = withPlugins(
 	],
 	{
 		reactStrictMode: true,
+		future: {
+			excludeDefaultMomentLocales: true,
+			strictPostcssConfiguration: true,
+			webpack5: true,
+		},
 	},
 );

@@ -9,11 +9,11 @@
 		"fix": "run-s fix:*",
 		"fix:eslint": "npm run lint:eslint -- --fix",
 		"fix:prettier": "npm run lint:prettier -- --write",
-		"postinstall": "husky install",
 		"lint": "run-p lint:*",
 		"lint:eslint": "eslint --ext .js,.ts,.tsx --ignore-path ./.gitignore .",
 		"lint:prettier": "prettier --check --ignore-path ./.gitignore .",
 		"lint:typescript": "tsc",
+		"prepare": "husky install",
 		"start": "next start"
 	},
 	"lint-staged": {
@@ -22,6 +22,7 @@
 	},
 	"dependencies": {
 		"@next/bundle-analyzer": "^10.0.7",
+		"autoprefixer": "^10.2.5",
 		"babel-plugin-optimize-clsx": "^2.6.1",
 		"clsx": "^1.1.1",
 		"focus-visible": "^5.2.0",
@@ -30,7 +31,6 @@
 		"next-compose-plugins": "^2.2.1",
 		"next-transpile-modules": "^6.3.0",
 		"postcss-import": "^14.0.0",
-		"postcss-preset-env": "^6.7.0",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-polymorphic-types": "^1.0.3",
