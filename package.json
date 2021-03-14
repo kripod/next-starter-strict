@@ -21,13 +21,13 @@
 		"*.{js,ts,tsx}": "eslint --fix"
 	},
 	"dependencies": {
-		"@next/bundle-analyzer": "^10.0.7",
+		"@next/bundle-analyzer": "^10.0.8",
 		"autoprefixer": "^10.2.5",
 		"babel-plugin-optimize-clsx": "^2.6.1",
 		"clsx": "^1.1.1",
 		"focus-visible": "^5.2.0",
 		"heroicons": "^0.4.2",
-		"next": "^10.0.7",
+		"next": "^10.0.8",
 		"next-compose-plugins": "^2.2.1",
 		"next-transpile-modules": "^6.3.0",
 		"postcss-import": "^14.0.0",
@@ -38,17 +38,17 @@
 		"tailwindcss-interaction-variants": "^5.0.0"
 	},
 	"devDependencies": {
-		"@next/eslint-plugin-next": "^10.0.7",
-		"@types/node": "^14.14.31",
-		"@types/react": "^17.0.2",
-		"@typescript-eslint/eslint-plugin": "^4.16.1",
-		"@typescript-eslint/parser": "^4.16.1",
+		"@next/eslint-plugin-next": "^10.0.8",
+		"@types/node": "^14.14.34",
+		"@types/react": "^17.0.3",
+		"@typescript-eslint/eslint-plugin": "^4.17.0",
+		"@typescript-eslint/parser": "^4.17.0",
 		"cross-env": "^7.0.3",
-		"eslint": "^7.21.0",
+		"eslint": "^7.22.0",
 		"eslint-config-airbnb-typescript": "^12.3.1",
 		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-eslint-comments": "^3.2.0",
-		"eslint-plugin-etc": "^1.3.3",
+		"eslint-plugin-etc": "^1.3.5",
 		"eslint-plugin-import": "^2.22.1",
 		"eslint-plugin-jsx-a11y": "^6.4.1",
 		"eslint-plugin-react": "^7.22.0",
@@ -59,7 +59,7 @@
 		"lint-staged": "^10.5.4",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.2.1",
-		"prettier-plugin-tailwind": "^2.2.9",
-		"typescript": "^4.2.2"
+		"prettier-plugin-tailwind": "^2.2.10",
+		"typescript": "^4.2.3"
 	}
 }
