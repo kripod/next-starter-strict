@@ -12,7 +12,7 @@ module.exports = withPlugins(
 		future: {
 			excludeDefaultMomentLocales: true,
 			strictPostcssConfiguration: true,
-			webpack5: true,
+			webpack5: false,
 		},
 	},
 );
