@@ -22,6 +22,7 @@
 	},
 	"dependencies": {
 		"@next/bundle-analyzer": "^10.0.8",
+		"@tailwindcss/jit": "^0.1.0",
 		"autoprefixer": "^10.2.5",
 		"babel-plugin-optimize-clsx": "^2.6.1",
 		"clsx": "^1.1.1",
