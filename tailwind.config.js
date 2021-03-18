@@ -10,6 +10,10 @@ module.exports = {
 				DEFAULT: defaultTheme.transitionTimingFunction.out,
 			},
 		},
+		margin: (theme, { negative }) => ({
+			auto: "auto",
+			...negative(theme("spacing")),
+		}),
 	},
 	plugins: [interactionVariantsPlugin],
 };
