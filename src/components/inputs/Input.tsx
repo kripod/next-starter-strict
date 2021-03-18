@@ -23,7 +23,7 @@ export function Input({
 		<span className={clsx("group inline-grid shadow-sm", className)}>
 			<span
 				className={clsx(
-					"col-start-1 row-start-1 rounded",
+					"col-start-1 row-start-1 rounded-md",
 					invalid
 						? "border-2 border-red-500 dark:border-red-400"
 						: "border border-gray-500 group-focus-within:border-blue-500 dark:group-focus-within:border-blue-400",
@@ -31,7 +31,7 @@ export function Input({
 			/>
 			<input
 				className={clsx(
-					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 bg-transparent rounded focus:outline-none appearance-none motion-reduce:transition-none transition-shadow duration-100 dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus:ring",
+					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 bg-transparent rounded-md focus:outline-none appearance-none motion-reduce:transition-none transition-shadow duration-100 dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus:ring",
 					{
 						"px-2.5 h-8 text-sm": size === "sm",
 						"px-3.5 h-11": size === "md",

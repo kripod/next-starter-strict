@@ -62,7 +62,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 					)]: size === "md",
 				},
 				{
-					rounded: shape === "rectangle" || shape === "square",
+					"rounded-md": shape === "rectangle" || shape === "square",
 					"rounded-full": shape === "pill" || shape === "circle",
 				},
 				{
