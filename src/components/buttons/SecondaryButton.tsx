@@ -58,7 +58,7 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 					"text-red-500 dark:text-red-400 hover:bg-red-500 dark:hover:bg-red-400":
 						intent === "danger",
 				},
-				outlined ? "border-gray-500" : "border-transparent",
+				outlined ? "border-gray-500 shadow-sm" : "border-transparent",
 				className,
 			)}
 			{...restProps}

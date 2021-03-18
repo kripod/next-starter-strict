@@ -20,7 +20,7 @@ export function Input({
 		size === "sm" ? ExclamationCircleSm : ExclamationCircleMd;
 
 	return (
-		<span className={clsx("group inline-grid", className)}>
+		<span className={clsx("group inline-grid shadow-sm", className)}>
 			<span
 				className={clsx(
 					"col-start-1 row-start-1 rounded",
