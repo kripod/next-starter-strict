@@ -37,7 +37,7 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 		className,
 		...restProps
 	}: PolymorphicPropsWithoutRef<SecondaryButtonOwnProps, T>,
-	ref: React.ForwardedRef<React.ElementRef<T>>,
+	ref: React.ForwardedRef<Element>,
 ) {
 	return (
 		<Button<React.ElementType>

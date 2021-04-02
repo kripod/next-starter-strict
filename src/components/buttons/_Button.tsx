@@ -38,7 +38,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 		children,
 		...restProps
 	}: PolymorphicPropsWithoutRef<ButtonOwnProps, T>,
-	ref: React.ForwardedRef<React.ElementRef<T>>,
+	ref: React.ForwardedRef<Element>,
 ) {
 	const Element: React.ElementType = as || ButtonDefaultElement;
 	return (
