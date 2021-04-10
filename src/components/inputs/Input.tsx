@@ -1,6 +1,6 @@
+import { ExclamationCircleIcon as ExclamationCircleIconMd } from "@heroicons/react/outline";
+import { ExclamationCircleIcon as ExclamationCircleIconSm } from "@heroicons/react/solid";
 import clsx from "clsx";
-import { ExclamationCircle as ExclamationCircleMd } from "heroicons/react/outline";
-import { ExclamationCircle as ExclamationCircleSm } from "heroicons/react/solid";
 
 export type InputProps = Omit<
 	React.ComponentPropsWithoutRef<"input">,
@@ -17,7 +17,7 @@ export function Input({
 	...restProps
 }: InputProps) {
 	const ExclamationCircle =
-		size === "sm" ? ExclamationCircleSm : ExclamationCircleMd;
+		size === "sm" ? ExclamationCircleIconSm : ExclamationCircleIconMd;
 
 	return (
 		<span className={clsx("group inline-grid", className)}>
