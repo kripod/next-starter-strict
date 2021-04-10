@@ -5,5 +5,10 @@ module.exports = withPlugins(
 	[withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" })],
 	{
 		reactStrictMode: true,
+		future: {
+			webpack5: true,
+			strictPostcssConfiguration: true,
+			excludeDefaultMomentLocales: true,
+		},
 	},
 );
