@@ -15,5 +15,15 @@ module.exports = {
 			...negative(theme("spacing")),
 		}),
 	},
+	variants: {
+		extend: {
+			borderColor: ["group-focus-within"],
+			ringWidth: ["focus-visible"],
+			transitionProperty: ["motion-reduce"],
+		},
+	},
+	corePlugins: {
+		animation: false,
+	},
 	plugins: [interactionVariantsPlugin],
 };
