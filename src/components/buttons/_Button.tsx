@@ -15,7 +15,7 @@ export type ButtonOwnProps = {
 };
 
 export type ButtonProps<
-	T extends React.ElementType = typeof ButtonDefaultElement
+	T extends React.ElementType = typeof ButtonDefaultElement,
 > = PolymorphicPropsWithRef<ButtonOwnProps, T>;
 
 export function equilateral(shape: ButtonOwnProps["shape"]) {
@@ -26,7 +26,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 	ButtonOwnProps,
 	typeof ButtonDefaultElement
 > = React.forwardRef(function Button<
-	T extends React.ElementType = typeof ButtonDefaultElement
+	T extends React.ElementType = typeof ButtonDefaultElement,
 >(
 	{
 		as,

@@ -20,7 +20,7 @@ export const PrimaryButton: PolymorphicForwardRefExoticComponent<
 	PrimaryButtonOwnProps,
 	typeof PrimaryButtonDefaultElement
 > = React.forwardRef(function PrimaryButton<
-	T extends React.ElementType = typeof PrimaryButtonDefaultElement
+	T extends React.ElementType = typeof PrimaryButtonDefaultElement,
 >(
 	{
 		size = "md",

@@ -20,14 +20,14 @@ export type SecondaryButtonOwnProps = ButtonOwnProps & {
 };
 
 export type SecondaryButtonProps<
-	T extends React.ElementType = typeof SecondaryButtonDefaultElement
+	T extends React.ElementType = typeof SecondaryButtonDefaultElement,
 > = PolymorphicPropsWithRef<SecondaryButtonOwnProps, T>;
 
 export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 	SecondaryButtonOwnProps,
 	typeof SecondaryButtonDefaultElement
 > = React.forwardRef(function SecondaryButton<
-	T extends React.ElementType = typeof SecondaryButtonDefaultElement
+	T extends React.ElementType = typeof SecondaryButtonDefaultElement,
 >(
 	{
 		size = "md",
