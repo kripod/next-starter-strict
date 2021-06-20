@@ -7,12 +7,10 @@ export type InputProps = Omit<
 	"size"
 > & {
 	size?: "sm" | "md";
-	invalid?: boolean;
 };
 
 export function Input({
 	size = "md",
-	invalid,
 	className,
 	style,
 	...restProps
@@ -21,46 +19,33 @@ export function Input({
 		size === "sm" ? ExclamationCircleIconSm : ExclamationCircleIconMd;
 
 	return (
-		<span className={clsx("group inline-grid", className)} style={style}>
-			<span
-				className={clsx(
-					"col-start-1 row-start-1 rounded-md",
-					invalid
-						? "border-2 border-red-500 dark:border-red-400"
-						: "border border-gray-500 group-focus-within:border-blue-500 dark:group-focus-within:border-blue-400",
-				)}
-			/>
+		<span className={clsx("inline-grid", className)} style={style}>
 			<input
 				className={clsx(
-					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 bg-transparent rounded-md focus:outline-none appearance-none motion-reduce:transition-none transition-shadow focus:ring ring-opacity-50 dark:ring-opacity-50 ring-offset-1 dark:ring-offset-black",
+					"peer placeholder-gray-600/80 dark:placeholder-gray-400/80 ring-blue-500/50 dark:ring-blue-400/50 invalid:ring-red-500/50 dark:invalid:ring-red-400/50 col-start-1 row-start-1 bg-transparent rounded-md focus:outline-none appearance-none motion-reduce:transition-none transition-shadow focus:ring ring-offset-1 dark:ring-offset-black",
 					{
-						"px-2.5 h-8 text-sm": size === "sm",
-						"px-3.5 h-11": size === "md",
+						"px-2.5 invalid:pr-8 h-8 text-sm": size === "sm",
+						"px-3.5 invalid:pr-11 h-11": size === "md",
 					},
-					invalid
-						? [
-								"ring-red-500 dark:ring-red-400",
-								{
-									"pr-8": size === "sm",
-									"pr-11": size === "md",
-								},
-						  ]
-						: "ring-blue-500 dark:ring-blue-400",
 				)}
 				{...restProps}
 			/>
-			{invalid && (
-				<ExclamationCircle
-					aria-hidden
-					className={clsx(
-						"col-start-1 row-start-1 self-center justify-self-end dark:text-red-400 text-red-500 pointer-events-none",
-						{
-							"px-2 h-5": size === "sm",
-							"px-3 h-6": size === "md",
-						},
-					)}
-				/>
-			)}
+			<span
+				className={clsx(
+					"dark:peer-invalid:border-red-400 dark:peer-focus:peer-valid:border-blue-400 peer-focus:peer-valid:border-blue-500 col-start-1 row-start-1 border peer-invalid:border-2 border-gray-500 peer-invalid:border-red-500 rounded-md pointer-events-none",
+				)}
+			/>
+
+			<ExclamationCircle
+				aria-hidden
+				className={clsx(
+					"col-start-1 row-start-1 self-center justify-self-end dark:text-red-400 text-red-500 invisible peer-invalid:visible pointer-events-none",
+					{
+						"px-2 h-5": size === "sm",
+						"px-3 h-6": size === "md",
+					},
+				)}
+			/>
 		</span>
 	);
 }

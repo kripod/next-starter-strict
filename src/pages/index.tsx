@@ -50,11 +50,14 @@ export default function Page() {
 						/>
 						<Input
 							size="sm"
-							placeholder="Small invalid inputs look like this"
-							invalid
+							placeholder="Small required inputs look like this"
+							required
 						/>
 						<Input placeholder="Medium regular inputs look like this" />
-						<Input placeholder="Medium invalid inputs look like this" invalid />
+						<Input
+							placeholder="Medium required inputs look like this"
+							required
+						/>
 						<PrimaryButton size="sm" intent="danger">
 							Danger
 						</PrimaryButton>
