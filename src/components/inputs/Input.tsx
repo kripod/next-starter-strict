@@ -31,7 +31,7 @@ export function Input({
 			/>
 			<input
 				className={clsx(
-					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 bg-transparent rounded-md focus:outline-none appearance-none motion-reduce:transition-none transition-shadow dark:ring-offset-black ring-offset-1 ring-opacity-50 dark:ring-opacity-50 focus:ring",
+					"placeholder-gray-600 dark:placeholder-gray-400 placeholder-opacity-80 dark:placeholder-opacity-80 col-start-1 row-start-1 bg-transparent rounded-md focus:outline-none appearance-none motion-reduce:transition-none transition-shadow focus:ring ring-opacity-50 dark:ring-opacity-50 ring-offset-1 dark:ring-offset-black",
 					{
 						"px-2.5 h-8 text-sm": size === "sm",
 						"px-3.5 h-11": size === "md",

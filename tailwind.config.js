@@ -1,4 +1,3 @@
-const interactionVariantsPlugin = require("tailwindcss-interaction-variants");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -19,5 +18,4 @@ module.exports = {
 	corePlugins: {
 		animation: false,
 	},
-	plugins: [interactionVariantsPlugin],
 };
