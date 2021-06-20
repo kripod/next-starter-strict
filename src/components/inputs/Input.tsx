@@ -14,13 +14,14 @@ export function Input({
 	size = "md",
 	invalid,
 	className,
+	style,
 	...restProps
 }: InputProps) {
 	const ExclamationCircle =
 		size === "sm" ? ExclamationCircleIconSm : ExclamationCircleIconMd;
 
 	return (
-		<span className={clsx("group inline-grid", className)}>
+		<span className={clsx("group inline-grid", className)} style={style}>
 			<span
 				className={clsx(
 					"col-start-1 row-start-1 rounded-md",
