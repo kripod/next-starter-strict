@@ -47,7 +47,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
 			type={Element === "button" ? "button" : undefined}
 			disabled={disabled}
 			className={clsx(
-				"inline-flex items-center justify-center text-center font-medium leading-tight border focus:outline-none transition motion-reduce:transition-none focus-visible:ring ring-opacity-50 dark:ring-opacity-50 ring-offset-1 dark:ring-offset-black",
+				"inline-flex items-center justify-center text-center font-medium leading-tight border focus:outline-none transition motion-reduce:transition-none focus-visible:ring ring-offset-1 dark:ring-offset-black",
 				{
 					[clsx(
 						"text-sm",
@@ -67,8 +67,8 @@ export const Button: PolymorphicForwardRefExoticComponent<
 				},
 				{
 					/* Ring colors match background colors of a `PrimaryButton` */
-					"ring-gray-900 dark:ring-gray-100": intent === "neutral",
-					"ring-red-500 dark:ring-red-400": intent === "danger",
+					"ring-gray-900/50 dark:ring-gray-100/50": intent === "neutral",
+					"ring-red-500/50 dark:ring-red-400/50": intent === "danger",
 				},
 				disabled ? "cursor-not-allowed" : "cursor-pointer",
 				className,

@@ -46,16 +46,15 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
 			shape={shape}
 			intent={intent}
 			className={clsx(
-				"dark:hover:bg-opacity-20 hover:bg-opacity-20",
 				!equilateral(shape) && {
 					[clsx(outlined ? "px-3" : "px-2")]: size === "sm",
 					[clsx(outlined ? "px-4" : "px-2.5")]: size === "md",
 				},
 				{
 					/* Colors match or complement the backgrounds in `PrimaryButton` */
-					"text-gray-900 dark:text-gray-100 hover:bg-gray-500 dark:hover:bg-gray-400":
+					"text-gray-900 dark:text-gray-100 hover:bg-gray-500/20 dark:hover:bg-gray-400/20":
 						intent === "neutral",
-					"text-red-500 dark:text-red-400 hover:bg-red-500 dark:hover:bg-red-400":
+					"text-red-500 dark:text-red-400 hover:bg-red-500/20 dark:hover:bg-red-400/20":
 						intent === "danger",
 				},
 				outlined ? "border-gray-500" : "border-transparent",
