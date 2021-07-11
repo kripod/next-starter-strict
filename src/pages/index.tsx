@@ -19,8 +19,8 @@ function ThemingShowcase({ children }: ThemingShowcaseProps) {
 	return (
 		<>
 			<div className="text-gray-700 bg-white">{children}</div>
-			<div className="dark text-gray-300 bg-gray-900">{children}</div>
-			<div className="dark text-gray-300 bg-black">{children}</div>
+			<div className="text-gray-300 bg-gray-900 dark">{children}</div>
+			<div className="text-gray-300 bg-black dark">{children}</div>
 		</>
 	);
 }
@@ -40,7 +40,7 @@ function Canvas({ children }: CanvasProps) {
 
 export default function Page() {
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-500">
+		<div className="flex flex-col justify-center items-center min-h-screen bg-gray-500">
 			<ThemingShowcase>
 				<Canvas>
 					<div className="flex flex-col space-y-4">

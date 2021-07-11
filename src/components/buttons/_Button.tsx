@@ -47,17 +47,17 @@ export const Button: PolymorphicForwardRefExoticComponent<
 			type={Element === "button" ? "button" : undefined}
 			disabled={disabled}
 			className={clsx(
-				"inline-flex items-center justify-center text-center font-medium leading-tight border focus:outline-none transition motion-reduce:transition-none focus-visible:ring ring-offset-1 dark:ring-offset-black",
+				"inline-flex justify-center items-center font-medium leading-tight text-center border focus-visible:ring ring-offset-1 dark:ring-offset-black transition motion-reduce:transition-none focus:outline-none",
 				{
 					[clsx(
 						"text-sm",
 						shape === "circle"
-							? "h-9 w-9"
+							? "w-9 h-9"
 							: ["h-8", shape === "square" && "w-8"],
 					)]: size === "sm",
 					[clsx(
 						shape === "circle"
-							? "h-12 w-12"
+							? "w-12 h-12"
 							: ["h-11", shape === "square" && "w-11"],
 					)]: size === "md",
 				},

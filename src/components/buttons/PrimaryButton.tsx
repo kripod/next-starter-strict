@@ -38,7 +38,7 @@ export const PrimaryButton: PolymorphicForwardRefExoticComponent<
 			shape={shape}
 			intent={intent}
 			className={clsx(
-				"dark:text-black text-white border-transparent",
+				"text-white dark:text-black border-transparent",
 				!equilateral(shape) && {
 					"px-3": size === "sm",
 					"px-4": size === "md",
