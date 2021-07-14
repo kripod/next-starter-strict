@@ -12,7 +12,7 @@
 		"prettier",
 		"prettier/prettier"
 	],
-	"plugins": ["simple-import-sort", "tailwindcss"],
+	"plugins": ["simple-import-sort"],
 
 	"rules": {
 		/* Auto-sort imports and exports */

@@ -19,8 +19,8 @@ function ThemingShowcase({ children }: ThemingShowcaseProps) {
 	return (
 		<>
 			<div className="text-gray-700 bg-white">{children}</div>
-			<div className="text-gray-300 bg-gray-900 dark">{children}</div>
-			<div className="text-gray-300 bg-black dark">{children}</div>
+			<div className="dark text-gray-300 bg-gray-900">{children}</div>
+			<div className="dark text-gray-300 bg-black">{children}</div>
 		</>
 	);
 }

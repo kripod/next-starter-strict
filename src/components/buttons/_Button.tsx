@@ -12,6 +12,7 @@ export type ButtonOwnProps = {
 	size?: "sm" | "md";
 	shape?: "rectangle" | "pill" | "square" | "circle";
 	intent?: "neutral" | "danger";
+	disabled?: boolean;
 };
 
 export type ButtonProps<
