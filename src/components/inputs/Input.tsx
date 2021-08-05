@@ -32,7 +32,7 @@ export function Input({
 			/>
 			<span
 				className={clsx(
-					"col-start-1 row-start-1 rounded-md border peer-invalid:border-2 border-gray-500 peer-invalid:border-red-500 peer-focus:peer-valid:border-blue-500 dark:peer-invalid:border-red-400 dark:peer-focus:peer-valid:border-blue-400 pointer-events-none",
+					"col-start-1 row-start-1 rounded-md ring-1 peer-invalid:ring-2 ring-inset ring-gray-500 peer-invalid:ring-red-500 peer-focus:peer-valid:ring-blue-500 dark:peer-invalid:ring-red-400 dark:peer-focus:peer-valid:ring-blue-400 transition-shadow motion-reduce:transition-none pointer-events-none",
 				)}
 			/>
 
