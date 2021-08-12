@@ -4,9 +4,12 @@ const withPlugins = require("next-compose-plugins");
 module.exports = withPlugins(
 	[withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" })],
 	{
-		reactStrictMode: true,
+		experimental: {
+			esmExternals: true,
+		},
 		future: {
 			strictPostcssConfiguration: true,
 		},
+		reactStrictMode: true,
 	},
 );
