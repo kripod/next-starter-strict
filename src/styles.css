@@ -1,3 +1,14 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+	html {
+		scrollbar-gutter: stable both-edges;
+		tab-size: 2;
+	}
+
+	pre {
+		white-space: pre-wrap;
+	}
+}
