@@ -4,8 +4,15 @@
 		"baseUrl": "./src/",
 		"paths": { "@/*": ["*"], "*": [""] },
 		"importsNotUsedAsValues": "error",
-		"strict": true
+		"strict": true,
+		"incremental": true // TODO: Remove, see tsconfig/bases#78
 	},
-	"include": ["*.config.js", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": [
+		"*.config.js",
+		"*.config.mjs",
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx"
+	],
 	"exclude": ["node_modules"]
 }

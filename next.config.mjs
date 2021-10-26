@@ -1,5 +1,5 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer");
-const withPlugins = require("next-compose-plugins");
+import withBundleAnalyzer from "@next/bundle-analyzer";
+import withPlugins from "next-compose-plugins";
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
@@ -12,7 +12,7 @@ const nextConfig = {
 	reactStrictMode: true,
 };
 
-module.exports = withPlugins(
+export default withPlugins(
 	[withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" })],
 	nextConfig,
 );
