@@ -24,7 +24,6 @@
 		"@heroicons/react": "^1.0.5",
 		"@next/bundle-analyzer": "^12.0.0",
 		"autoprefixer": "^10.3.7",
-		"babel-plugin-optimize-clsx": "^2.6.2",
 		"clsx": "^1.1.1",
 		"focus-visible": "^5.2.0",
 		"next": "^12.0.0",
