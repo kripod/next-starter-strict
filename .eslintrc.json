@@ -1,6 +1,5 @@
 {
 	"root": true,
-	"parserOptions": { "project": "./tsconfig.json" },
 	"extends": [
 		"next",
 		"airbnb",
@@ -13,6 +12,10 @@
 		"prettier",
 		"prettier/prettier"
 	],
+	"parserOptions": {
+		"project": "./tsconfig.json",
+		"extraFileExtensions": [".mjs"] // TODO: Remove, see typescript-eslint/typescript-eslint#4059
+	},
 	"plugins": ["simple-import-sort"],
 
 	"rules": {
@@ -60,14 +63,14 @@
 			}
 		},
 		{
-			"files": ["./src/pages/**"],
+			"files": ["./src/pages/**", "*.config.mjs"],
 			"rules": {
 				"import/no-default-export": "off",
 				"import/prefer-default-export": "error"
 			}
 		},
 		{
-			"files": ["./src/pages/api/**"],
+			"files": ["./src/pages/api/**", "*.config.mjs"],
 			"rules": {
 				"import/no-anonymous-default-export": "off",
 				"import/prefer-default-export": "off"
