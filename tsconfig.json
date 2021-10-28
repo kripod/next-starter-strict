@@ -4,8 +4,7 @@
 		"baseUrl": "./src/",
 		"paths": { "@/*": ["*"], "*": [""] },
 		"importsNotUsedAsValues": "error",
-		"strict": true,
-		"incremental": true // TODO: Remove, see tsconfig/bases#78
+		"strict": true
 	},
 	"include": [
 		"*.config.js",

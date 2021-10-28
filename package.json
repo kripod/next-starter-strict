@@ -22,11 +22,11 @@
 	},
 	"dependencies": {
 		"@heroicons/react": "^1.0.5",
-		"@next/bundle-analyzer": "^12.0.0",
+		"@next/bundle-analyzer": "^12.0.1",
 		"autoprefixer": "^10.3.7",
 		"clsx": "^1.1.1",
 		"focus-visible": "^5.2.0",
-		"next": "^12.0.0",
+		"next": "^12.0.1",
 		"next-compose-plugins": "^2.2.1",
 		"postcss-focus-visible": "^6.0.1",
 		"postcss-import": "^14.0.2",
@@ -36,7 +36,7 @@
 		"tailwindcss": "^2.2.17"
 	},
 	"devDependencies": {
-		"@tsconfig/next": "^1.0.0",
+		"@tsconfig/next": "^1.0.1",
 		"@types/node": "^16.11.6",
 		"@types/react": "^17.0.33",
 		"@typescript-eslint/eslint-plugin": "^4.33.0",
@@ -45,7 +45,7 @@
 		"eslint": "^7.32.0",
 		"eslint-config-airbnb": "^18.2.1",
 		"eslint-config-airbnb-typescript": "^14.0.1",
-		"eslint-config-next": "^12.0.0",
+		"eslint-config-next": "^12.0.1",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-eslint-comments": "^3.2.0",
 		"eslint-plugin-etc": "^1.5.4",
