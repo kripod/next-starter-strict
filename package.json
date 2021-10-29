@@ -23,7 +23,7 @@
 	"dependencies": {
 		"@heroicons/react": "^1.0.5",
 		"@next/bundle-analyzer": "^12.0.1",
-		"autoprefixer": "^10.3.7",
+		"autoprefixer": "^10.4.0",
 		"clsx": "^1.1.1",
 		"focus-visible": "^5.2.0",
 		"next": "^12.0.1",
@@ -33,7 +33,7 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-polymorphic-types": "^2.0.0",
-		"tailwindcss": "^2.2.17"
+		"tailwindcss": "^2.2.19"
 	},
 	"devDependencies": {
 		"@tsconfig/next": "^1.0.1",
