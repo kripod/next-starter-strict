@@ -6,7 +6,6 @@
 		"airbnb-typescript",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:eslint-comments/recommended",
-		"plugin:etc/recommended",
 		"plugin:react/jsx-runtime",
 		"plugin:react-etc/recommended",
 		"plugin:tailwindcss/recommended",
