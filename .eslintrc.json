@@ -32,6 +32,7 @@
 			"index-signature" // Prevent ambiguity with Records & Tuples
 		],
 		"@typescript-eslint/consistent-type-assertions": "error",
+		"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 		"@typescript-eslint/method-signature-style": "error", // Force type safety
 		"@typescript-eslint/no-dynamic-delete": "error", // Use Map/Set structures
 		"@typescript-eslint/no-invalid-void-type": "error", // Force type safety
@@ -63,8 +64,13 @@
 		{
 			"files": ["*.tsx"],
 			"rules": {
-				"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 				"react/jsx-props-no-spreading": "off" // TypeScript makes this safe
+			}
+		},
+		{
+			"files": ["*.d.ts"],
+			"rules": {
+				"@typescript-eslint/consistent-type-definitions": "off" // Augmentation
 			}
 		},
 		{
