@@ -10,8 +10,8 @@
 		"fix:eslint": "npm run lint:eslint -- --fix",
 		"fix:prettier": "npm run lint:prettier -- --write",
 		"lint": "run-p lint:*",
-		"lint:eslint": "eslint --ext .js,.ts,.tsx --ignore-path ./.gitignore .",
-		"lint:prettier": "prettier --check --ignore-path ./.gitignore .",
+		"lint:eslint": "eslint --ext .js,.ts,.tsx --ignore-path .gitignore .",
+		"lint:prettier": "prettier --check --ignore-path .gitignore .",
 		"lint:typescript": "tsc",
 		"prepare": "husky install",
 		"start": "next start"
