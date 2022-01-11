@@ -6,12 +6,6 @@
     "strict": true,
     "importsNotUsedAsValues": "error"
   },
-  "include": [
-    "*.config.js",
-    "*.config.mjs",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
   "exclude": ["node_modules"]
 }
