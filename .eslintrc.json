@@ -45,9 +45,9 @@
 
   "overrides": [
     {
-      "files": ["*.js"],
+      "files": ["*.d.ts"],
       "rules": {
-        "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
+        "@typescript-eslint/consistent-type-definitions": "off" // Augmentation
       }
     },
     {
@@ -57,9 +57,9 @@
       }
     },
     {
-      "files": ["*.d.ts"],
+      "files": ["*.js"],
       "rules": {
-        "@typescript-eslint/consistent-type-definitions": "off" // Augmentation
+        "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
       }
     },
     {
