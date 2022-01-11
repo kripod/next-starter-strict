@@ -13,8 +13,7 @@
     "prettier/prettier"
   ],
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "extraFileExtensions": [".mjs"] // TODO: Remove, see typescript-eslint/typescript-eslint#4059
+    "project": "./tsconfig.json"
   },
   "plugins": ["simple-import-sort"],
 
@@ -64,14 +63,14 @@
       }
     },
     {
-      "files": ["./src/pages/**", "*.config.mjs"],
+      "files": ["./src/pages/**"],
       "rules": {
         "import/no-default-export": "off",
         "import/prefer-default-export": "error"
       }
     },
     {
-      "files": ["./src/pages/api/**", "*.config.mjs"],
+      "files": ["./src/pages/api/**"],
       "rules": {
         "import/prefer-default-export": "off"
       }
