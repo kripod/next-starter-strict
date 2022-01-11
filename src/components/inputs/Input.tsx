@@ -22,7 +22,7 @@ export function Input({
     <span className={clsx("inline-grid", className)} style={style}>
       <input
         className={clsx(
-          "col-start-1 row-start-1 bg-transparent rounded-md focus:ring ring-offset-1 dark:ring-offset-black transition-shadow motion-reduce:transition-none appearance-none focus:outline-none placeholder-gray-600/80 dark:placeholder-gray-400/80 peer ring-blue-500/50 dark:ring-blue-400/50 invalid:ring-red-500/50 dark:invalid:ring-red-400/50",
+          "peer col-start-1 row-start-1 placeholder:text-gray-600/80 dark:placeholder:text-gray-400/80 bg-transparent rounded-md focus:outline-none focus:ring ring-blue-500/50 invalid:ring-red-500/50 dark:ring-blue-400/50 dark:invalid:ring-red-400/50 ring-offset-1 dark:ring-offset-black transition-shadow motion-reduce:transition-none appearance-none",
           {
             "px-2.5 invalid:pr-8 h-8 text-sm": size === "sm",
             "px-3.5 invalid:pr-11 h-11": size === "md",

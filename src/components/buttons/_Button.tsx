@@ -48,7 +48,7 @@ export const Button: PolymorphicForwardRefExoticComponent<
       type={Element === "button" ? "button" : undefined}
       disabled={disabled}
       className={clsx(
-        "inline-flex justify-center items-center font-medium leading-tight text-center border focus-visible:ring ring-offset-1 dark:ring-offset-black transition motion-reduce:transition-none focus:outline-none",
+        "inline-flex justify-center items-center font-medium leading-tight text-center border focus:outline-none focus-visible:ring ring-offset-1 dark:ring-offset-black transition motion-reduce:transition-none",
         {
           [clsx(
             "text-sm",

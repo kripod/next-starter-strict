@@ -38,20 +38,10 @@
     "@typescript-eslint/no-invalid-void-type": "error", // Force type safety
     "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
-    "import/no-anonymous-default-export": "error", // For named React components
     "import/no-default-export": "error", // Default exports are confusing
     "import/prefer-default-export": "off",
     "jsx-a11y/anchor-is-valid": "off", // Doesn't play well with Next `<Link>`
-    "react/require-default-props": "off", // React `defaultProps` are deprecated
-
-    /* TODO: Remove these, see airbnb/javascript#2501 */
-    "react/function-component-definition": [
-      "error",
-      {
-        "namedComponents": "function-declaration",
-        "unnamedComponents": "function-expression"
-      }
-    ]
+    "react/require-default-props": "off" // React `defaultProps` are deprecated
   },
 
   "overrides": [
@@ -83,7 +73,6 @@
     {
       "files": ["./src/pages/api/**", "*.config.mjs"],
       "rules": {
-        "import/no-anonymous-default-export": "off",
         "import/prefer-default-export": "off"
       }
     }
