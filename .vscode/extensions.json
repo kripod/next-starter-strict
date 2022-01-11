@@ -1,9 +1,9 @@
 {
-	"recommendations": [
-		"bradlc.vscode-tailwindcss",
-		"csstools.postcss",
-		"dbaeumer.vscode-eslint",
-		"EditorConfig.EditorConfig",
-		"esbenp.prettier-vscode"
-	]
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode"
+  ]
 }

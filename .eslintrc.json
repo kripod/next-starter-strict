@@ -1,91 +1,91 @@
 {
-	"root": true,
-	"extends": [
-		"next",
-		"airbnb",
-		"airbnb-typescript",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:eslint-comments/recommended",
-		"plugin:react/jsx-runtime",
-		"plugin:react-etc/recommended",
-		"plugin:tailwindcss/recommended",
-		"prettier",
-		"prettier/prettier"
-	],
-	"parserOptions": {
-		"project": "./tsconfig.json",
-		"extraFileExtensions": [".mjs"] // TODO: Remove, see typescript-eslint/typescript-eslint#4059
-	},
-	"plugins": ["simple-import-sort"],
+  "root": true,
+  "extends": [
+    "next",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-etc/recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier",
+    "prettier/prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".mjs"] // TODO: Remove, see typescript-eslint/typescript-eslint#4059
+  },
+  "plugins": ["simple-import-sort"],
 
-	"rules": {
-		/* Auto-sort imports and exports */
-		"simple-import-sort/imports": "error",
-		"simple-import-sort/exports": "error",
-		"sort-imports": "off",
-		"import/order": "off",
+  "rules": {
+    /* Auto-sort imports and exports */
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "sort-imports": "off",
+    "import/order": "off",
 
-		/* Custom preferences */
-		"@typescript-eslint/array-type": "error",
-		"@typescript-eslint/consistent-indexed-object-style": [
-			"error",
-			"index-signature" // Prevent ambiguity with Records & Tuples
-		],
-		"@typescript-eslint/consistent-type-assertions": "error",
-		"@typescript-eslint/consistent-type-definitions": ["error", "type"],
-		"@typescript-eslint/method-signature-style": "error", // Force type safety
-		"@typescript-eslint/no-dynamic-delete": "error", // Use Map/Set structures
-		"@typescript-eslint/no-invalid-void-type": "error", // Force type safety
-		"@typescript-eslint/prefer-optional-chain": "error",
-		"@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
-		"import/no-anonymous-default-export": "error", // For named React components
-		"import/no-default-export": "error", // Default exports are confusing
-		"import/prefer-default-export": "off",
-		"jsx-a11y/anchor-is-valid": "off", // Doesn't play well with Next `<Link>`
-		"react/require-default-props": "off", // React `defaultProps` are deprecated
+    /* Custom preferences */
+    "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/consistent-indexed-object-style": [
+      "error",
+      "index-signature" // Prevent ambiguity with Records & Tuples
+    ],
+    "@typescript-eslint/consistent-type-assertions": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/method-signature-style": "error", // Force type safety
+    "@typescript-eslint/no-dynamic-delete": "error", // Use Map/Set structures
+    "@typescript-eslint/no-invalid-void-type": "error", // Force type safety
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
+    "import/no-anonymous-default-export": "error", // For named React components
+    "import/no-default-export": "error", // Default exports are confusing
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off", // Doesn't play well with Next `<Link>`
+    "react/require-default-props": "off", // React `defaultProps` are deprecated
 
-		/* TODO: Remove these, see airbnb/javascript#2501 */
-		"react/function-component-definition": [
-			"error",
-			{
-				"namedComponents": "function-declaration",
-				"unnamedComponents": "function-expression"
-			}
-		]
-	},
+    /* TODO: Remove these, see airbnb/javascript#2501 */
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "function-declaration",
+        "unnamedComponents": "function-expression"
+      }
+    ]
+  },
 
-	"overrides": [
-		{
-			"files": ["*.js"],
-			"rules": {
-				"@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
-			}
-		},
-		{
-			"files": ["*.tsx"],
-			"rules": {
-				"react/jsx-props-no-spreading": "off" // TypeScript makes this safe
-			}
-		},
-		{
-			"files": ["*.d.ts"],
-			"rules": {
-				"@typescript-eslint/consistent-type-definitions": "off" // Augmentation
-			}
-		},
-		{
-			"files": ["./src/pages/**", "*.config.mjs"],
-			"rules": {
-				"import/no-default-export": "off",
-				"import/prefer-default-export": "error"
-			}
-		},
-		{
-			"files": ["./src/pages/api/**", "*.config.mjs"],
-			"rules": {
-				"import/no-anonymous-default-export": "off",
-				"import/prefer-default-export": "off"
-			}
-		}
-	]
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
+      }
+    },
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "react/jsx-props-no-spreading": "off" // TypeScript makes this safe
+      }
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "@typescript-eslint/consistent-type-definitions": "off" // Augmentation
+      }
+    },
+    {
+      "files": ["./src/pages/**", "*.config.mjs"],
+      "rules": {
+        "import/no-default-export": "off",
+        "import/prefer-default-export": "error"
+      }
+    },
+    {
+      "files": ["./src/pages/api/**", "*.config.mjs"],
+      "rules": {
+        "import/no-anonymous-default-export": "off",
+        "import/prefer-default-export": "off"
+      }
+    }
+  ]
 }

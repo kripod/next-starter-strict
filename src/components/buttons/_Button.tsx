@@ -1,82 +1,82 @@
 import clsx from "clsx";
 import * as React from "react";
 import type {
-	PolymorphicForwardRefExoticComponent,
-	PolymorphicPropsWithoutRef,
-	PolymorphicPropsWithRef,
+  PolymorphicForwardRefExoticComponent,
+  PolymorphicPropsWithoutRef,
+  PolymorphicPropsWithRef,
 } from "react-polymorphic-types";
 
 const ButtonDefaultElement = "button";
 
 export type ButtonOwnProps = {
-	size?: "sm" | "md";
-	shape?: "rectangle" | "pill" | "square" | "circle";
-	intent?: "neutral" | "danger";
-	disabled?: boolean;
+  size?: "sm" | "md";
+  shape?: "rectangle" | "pill" | "square" | "circle";
+  intent?: "neutral" | "danger";
+  disabled?: boolean;
 };
 
 export type ButtonProps<
-	T extends React.ElementType = typeof ButtonDefaultElement,
+  T extends React.ElementType = typeof ButtonDefaultElement,
 > = PolymorphicPropsWithRef<ButtonOwnProps, T>;
 
 export function equilateral(shape: ButtonOwnProps["shape"]) {
-	return shape === "square" || shape === "circle";
+  return shape === "square" || shape === "circle";
 }
 
 export const Button: PolymorphicForwardRefExoticComponent<
-	ButtonOwnProps,
-	typeof ButtonDefaultElement
+  ButtonOwnProps,
+  typeof ButtonDefaultElement
 > = React.forwardRef(function Button<
-	T extends React.ElementType = typeof ButtonDefaultElement,
+  T extends React.ElementType = typeof ButtonDefaultElement,
 >(
-	{
-		as,
-		size = "md",
-		shape = "rectangle",
-		intent = "neutral",
-		disabled,
-		className,
-		children,
-		...restProps
-	}: PolymorphicPropsWithoutRef<ButtonOwnProps, T>,
-	ref: React.ForwardedRef<Element>,
+  {
+    as,
+    size = "md",
+    shape = "rectangle",
+    intent = "neutral",
+    disabled,
+    className,
+    children,
+    ...restProps
+  }: PolymorphicPropsWithoutRef<ButtonOwnProps, T>,
+  ref: React.ForwardedRef<Element>,
 ) {
-	const Element: React.ElementType = as || ButtonDefaultElement;
-	return (
-		<Element
-			ref={ref}
-			type={Element === "button" ? "button" : undefined}
-			disabled={disabled}
-			className={clsx(
-				"inline-flex justify-center items-center font-medium leading-tight text-center border focus-visible:ring ring-offset-1 dark:ring-offset-black transition motion-reduce:transition-none focus:outline-none",
-				{
-					[clsx(
-						"text-sm",
-						shape === "circle"
-							? "w-9 h-9"
-							: ["h-8", shape === "square" && "w-8"],
-					)]: size === "sm",
-					[clsx(
-						shape === "circle"
-							? "w-12 h-12"
-							: ["h-11", shape === "square" && "w-11"],
-					)]: size === "md",
-				},
-				{
-					"rounded-md": shape === "rectangle" || shape === "square",
-					"rounded-full": shape === "pill" || shape === "circle",
-				},
-				{
-					/* Ring colors match background colors of a `PrimaryButton` */
-					"ring-gray-900/50 dark:ring-gray-100/50": intent === "neutral",
-					"ring-red-500/50 dark:ring-red-400/50": intent === "danger",
-				},
-				disabled ? "cursor-not-allowed" : "cursor-pointer",
-				className,
-			)}
-			{...restProps}
-		>
-			<span className="-mx-px">{children}</span>
-		</Element>
-	);
+  const Element: React.ElementType = as || ButtonDefaultElement;
+  return (
+    <Element
+      ref={ref}
+      type={Element === "button" ? "button" : undefined}
+      disabled={disabled}
+      className={clsx(
+        "inline-flex justify-center items-center font-medium leading-tight text-center border focus-visible:ring ring-offset-1 dark:ring-offset-black transition motion-reduce:transition-none focus:outline-none",
+        {
+          [clsx(
+            "text-sm",
+            shape === "circle"
+              ? "w-9 h-9"
+              : ["h-8", shape === "square" && "w-8"],
+          )]: size === "sm",
+          [clsx(
+            shape === "circle"
+              ? "w-12 h-12"
+              : ["h-11", shape === "square" && "w-11"],
+          )]: size === "md",
+        },
+        {
+          "rounded-md": shape === "rectangle" || shape === "square",
+          "rounded-full": shape === "pill" || shape === "circle",
+        },
+        {
+          /* Ring colors match background colors of a `PrimaryButton` */
+          "ring-gray-900/50 dark:ring-gray-100/50": intent === "neutral",
+          "ring-red-500/50 dark:ring-red-400/50": intent === "danger",
+        },
+        disabled ? "cursor-not-allowed" : "cursor-pointer",
+        className,
+      )}
+      {...restProps}
+    >
+      <span className="-mx-px">{children}</span>
+    </Element>
+  );
 });
