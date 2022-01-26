@@ -52,9 +52,9 @@ export const SecondaryButton: PolymorphicForwardRefExoticComponent<
         },
         {
           /* Colors match or complement the backgrounds in `PrimaryButton` */
-          "text-gray-900 dark:text-gray-100 hover:bg-gray-500/20 dark:hover:bg-gray-400/20":
+          "text-gray-900 hover:bg-gray-500/20 dark:text-gray-100 dark:hover:bg-gray-400/20":
             intent === "neutral",
-          "text-red-500 dark:text-red-400 hover:bg-red-500/20 dark:hover:bg-red-400/20":
+          "text-red-500 hover:bg-red-500/20 dark:text-red-400 dark:hover:bg-red-400/20":
             intent === "danger",
         },
         outlined ? "border-gray-500" : "border-transparent",

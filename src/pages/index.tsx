@@ -18,9 +18,9 @@ type ThemingShowcaseProps = {
 function ThemingShowcase({ children }: ThemingShowcaseProps) {
   return (
     <>
-      <div className="text-gray-700 bg-white">{children}</div>
-      <div className="dark text-gray-300 bg-gray-900">{children}</div>
-      <div className="dark text-gray-300 bg-black">{children}</div>
+      <div className="bg-white text-gray-700">{children}</div>
+      <div className="dark bg-gray-900 text-gray-300">{children}</div>
+      <div className="dark bg-black text-gray-300">{children}</div>
     </>
   );
 }
@@ -31,7 +31,7 @@ type CanvasProps = {
 
 function Canvas({ children }: CanvasProps) {
   return (
-    <div className="p-8 space-y-4">
+    <div className="space-y-4 p-8">
       <p>Sample text to visualize average contrast to the background</p>
       {children}
     </div>
@@ -40,7 +40,7 @@ function Canvas({ children }: CanvasProps) {
 
 export default function Page() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-500">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-500">
       <ThemingShowcase>
         <Canvas>
           <div className="flex flex-col space-y-4">

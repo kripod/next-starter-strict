@@ -38,15 +38,15 @@ export const PrimaryButton: PolymorphicForwardRefExoticComponent<
       shape={shape}
       intent={intent}
       className={clsx(
-        "text-white dark:text-black border-transparent",
+        "border-transparent text-white dark:text-black",
         !equilateral(shape) && {
           "px-3": size === "sm",
           "px-4": size === "md",
         },
         {
-          "bg-gray-900 dark:bg-gray-100 hover:bg-gray-600 dark:hover:bg-gray-300":
+          "bg-gray-900 hover:bg-gray-600 dark:bg-gray-100 dark:hover:bg-gray-300":
             intent === "neutral",
-          "bg-red-500 dark:bg-red-400 hover:bg-red-400 dark:hover:bg-red-500":
+          "bg-red-500 hover:bg-red-400 dark:bg-red-400 dark:hover:bg-red-500":
             intent === "danger",
         },
         className,

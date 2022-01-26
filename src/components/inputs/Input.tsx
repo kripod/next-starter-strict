@@ -22,27 +22,27 @@ export function Input({
     <span className={clsx("inline-grid", className)} style={style}>
       <input
         className={clsx(
-          "peer col-start-1 row-start-1 placeholder:text-gray-600/80 dark:placeholder:text-gray-400/80 bg-transparent rounded-md focus:outline-none focus:ring ring-blue-500/50 invalid:ring-red-500/50 dark:ring-blue-400/50 dark:invalid:ring-red-400/50 ring-offset-1 dark:ring-offset-black transition-shadow motion-reduce:transition-none appearance-none",
+          "peer col-start-1 row-start-1 appearance-none rounded-md bg-transparent ring-blue-500/50 ring-offset-1 transition-shadow placeholder:text-gray-600/80 invalid:ring-red-500/50 focus:outline-none focus:ring motion-reduce:transition-none dark:ring-blue-400/50 dark:ring-offset-black dark:placeholder:text-gray-400/80 dark:invalid:ring-red-400/50",
           {
-            "px-2.5 invalid:pr-8 h-8 text-sm": size === "sm",
-            "px-3.5 invalid:pr-11 h-11": size === "md",
+            "h-8 px-2.5 text-sm invalid:pr-8": size === "sm",
+            "h-11 px-3.5 invalid:pr-11": size === "md",
           },
         )}
         {...restProps}
       />
       <span
         className={clsx(
-          "col-start-1 row-start-1 rounded-md ring-1 peer-invalid:ring-2 ring-inset ring-gray-500 peer-invalid:ring-red-500 peer-focus:peer-valid:ring-blue-500 dark:peer-invalid:ring-red-400 dark:peer-focus:peer-valid:ring-blue-400 transition-shadow motion-reduce:transition-none pointer-events-none",
+          "pointer-events-none col-start-1 row-start-1 rounded-md ring-1 ring-inset ring-gray-500 transition-shadow peer-invalid:ring-2 peer-invalid:ring-red-500 peer-focus:peer-valid:ring-blue-500 motion-reduce:transition-none dark:peer-invalid:ring-red-400 dark:peer-focus:peer-valid:ring-blue-400",
         )}
       />
 
       <ExclamationCircle
         aria-hidden
         className={clsx(
-          "invisible peer-invalid:visible col-start-1 row-start-1 justify-self-end self-center text-red-500 dark:text-red-400 pointer-events-none",
+          "pointer-events-none invisible col-start-1 row-start-1 self-center justify-self-end text-red-500 peer-invalid:visible dark:text-red-400",
           {
-            "px-2 h-5": size === "sm",
-            "px-3 h-6": size === "md",
+            "h-5 px-2": size === "sm",
+            "h-6 px-3": size === "md",
           },
         )}
       />
