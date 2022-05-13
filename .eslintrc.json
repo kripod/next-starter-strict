@@ -15,6 +15,9 @@
     "project": "./tsconfig.json"
   },
   "plugins": ["simple-import-sort"],
+  "settings": {
+    "linkComponents": ["Link"]
+  },
 
   "rules": {
     /* Auto-sort imports and exports */
@@ -38,7 +41,6 @@
     "@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
     "import/no-default-export": "error", // Default exports are confusing
     "import/prefer-default-export": "off",
-    "jsx-a11y/anchor-is-valid": "off", // Doesn't play well with Next `<Link>`
     "react/require-default-props": "off" // React `defaultProps` are deprecated
   },
 

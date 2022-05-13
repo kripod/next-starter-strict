@@ -4,10 +4,7 @@ const withPlugins = require("next-compose-plugins");
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   experimental: {
-    esmExternals: true,
-  },
-  future: {
-    strictPostcssConfiguration: true,
+    newNextLinkBehavior: true,
   },
   reactStrictMode: true,
 };
