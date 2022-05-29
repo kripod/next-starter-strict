@@ -5,6 +5,7 @@
     "airbnb",
     "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/strict",
     "plugin:eslint-comments/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-etc/recommended",
@@ -27,18 +28,12 @@
     "import/order": "off",
 
     /* Custom preferences */
-    "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-indexed-object-style": [
-      "error",
+      "warn",
       "index-signature" // Prevent ambiguity with Records & Tuples
     ],
-    "@typescript-eslint/consistent-type-assertions": "error",
-    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-    "@typescript-eslint/method-signature-style": "error", // Force type safety
-    "@typescript-eslint/no-dynamic-delete": "error", // Use Map/Set structures
-    "@typescript-eslint/no-invalid-void-type": "error", // Force type safety
-    "@typescript-eslint/prefer-optional-chain": "error",
-    "@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
+    "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
+    "@typescript-eslint/method-signature-style": "warn", // Force type safety
     "import/no-default-export": "error", // Default exports are confusing
     "import/prefer-default-export": "off",
     "react/require-default-props": "off" // React `defaultProps` are deprecated
