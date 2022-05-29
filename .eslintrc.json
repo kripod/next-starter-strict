@@ -22,8 +22,8 @@
 
   "rules": {
     /* Auto-sort imports and exports */
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
     "sort-imports": "off",
     "import/order": "off",
 
@@ -34,7 +34,7 @@
     ],
     "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
     "@typescript-eslint/method-signature-style": "warn", // Force type safety
-    "import/no-default-export": "error", // Default exports are confusing
+    "import/no-default-export": "warn", // Default exports are confusing
     "import/prefer-default-export": "off",
     "react/require-default-props": "off" // React `defaultProps` are deprecated
   },
@@ -62,7 +62,7 @@
       "files": ["./src/pages/**"],
       "rules": {
         "import/no-default-export": "off",
-        "import/prefer-default-export": "error"
+        "import/prefer-default-export": "warn"
       }
     },
     {
