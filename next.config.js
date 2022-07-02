@@ -3,9 +3,6 @@ const withPlugins = require("next-compose-plugins");
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-  experimental: {
-    newNextLinkBehavior: true,
-  },
   reactStrictMode: true,
 };
 
