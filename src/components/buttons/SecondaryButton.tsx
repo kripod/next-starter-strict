@@ -3,7 +3,7 @@
  * - https://webaim.org/temp/1-4-11examples.htm
  */
 
-import clsx from "clsx";
+import { clsx } from "clsx";
 import * as React from "react";
 import type {
   PolymorphicForwardRefExoticComponent,
