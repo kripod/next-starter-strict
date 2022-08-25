@@ -17,7 +17,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.6",
+    "@heroicons/react": "^2.0.0",
     "@next/bundle-analyzer": "^12.2.5",
     "clsx": "^1.2.1",
     "focus-visible": "^5.2.0",
