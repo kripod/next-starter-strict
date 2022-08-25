@@ -1,11 +1,11 @@
 import {
-  CogIcon as CogIconMd,
-  TrashIcon as TrashIconMd,
-} from "@heroicons/react/outline";
-import {
   CogIcon as CogIconSm,
   TrashIcon as TrashIconSm,
-} from "@heroicons/react/solid";
+} from "@heroicons/react/20/solid";
+import {
+  CogIcon as CogIconMd,
+  TrashIcon as TrashIconMd,
+} from "@heroicons/react/24/outline";
 
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/buttons/SecondaryButton";
