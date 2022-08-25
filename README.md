@@ -7,14 +7,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped from [next-starter
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript), enforced through [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) for consistency and clean diffs
 
-Auto-fixes are performed on save with [Visual Studio Code](https://code.visualstudio.com/) or by using `npm run fix`.
+Auto-fixes are performed on save with [Visual Studio Code](https://code.visualstudio.com/) or by using `pnpm run fix`.
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

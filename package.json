@@ -3,15 +3,15 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "build:analyze": "cross-env ANALYZE=true npm run build",
+    "build:analyze": "cross-env ANALYZE=true pnpm run build",
     "clean": "git clean --interactive -dx --exclude .env.local --exclude .env.*.local --exclude node_modules/ --exclude .husky/",
     "dev": "next dev",
     "fix": "run-s fix:*",
-    "fix:eslint": "npm run lint:eslint -- --fix",
-    "fix:prettier": "npm run lint:prettier -- --write",
+    "fix:eslint": "pnpm run lint:eslint --fix",
+    "fix:prettier": "pnpm run lint:prettier --write",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx --ignore-path .gitignore .",
-    "lint:prettier": "prettier --check --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
     "lint:typescript": "tsc",
     "prepare": "husky install",
     "start": "next start"
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@tsconfig/next": "1.0.2",
-    "@types/node": "18.7.2",
+    "@types/node": "16.11.56",
     "@types/react": "18.0.17",
     "@typescript-eslint/eslint-plugin": "5.35.1",
     "@typescript-eslint/parser": "5.35.1",
@@ -55,8 +55,16 @@
     "prettier-plugin-tailwindcss": "0.1.13",
     "typescript": "4.7.4"
   },
+  "packageManager": "pnpm@7.9.4",
   "nano-staged": {
     "*": "prettier --write --ignore-unknown",
     "*.{ts,tsx,js,jsx}": "eslint --fix"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "postcss"
+      ]
+    }
   }
 }
