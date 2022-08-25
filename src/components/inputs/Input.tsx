@@ -1,5 +1,5 @@
-import { ExclamationCircleIcon as ExclamationCircleIconMd } from "@heroicons/react/outline";
-import { ExclamationCircleIcon as ExclamationCircleIconSm } from "@heroicons/react/solid";
+import { ExclamationCircleIcon as ExclamationCircleIconSm } from "@heroicons/react/20/solid";
+import { ExclamationCircleIcon as ExclamationCircleIconMd } from "@heroicons/react/24/outline";
 import { clsx } from "clsx";
 
 export type InputProps = Omit<
