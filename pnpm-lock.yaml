@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@heroicons/react': 2.0.4
+  '@heroicons/react': 2.0.8
   '@next/bundle-analyzer': 12.2.5
   '@tsconfig/next': 1.0.2
   '@types/node': 16.11.56
@@ -38,7 +38,7 @@ specifiers:
   typescript: 4.7.4
 
 dependencies:
-  '@heroicons/react': 2.0.4_react@18.2.0
+  '@heroicons/react': 2.0.8_react@18.2.0
   '@next/bundle-analyzer': 12.2.5
   clsx: 1.2.1
   focus-visible: 5.2.0
@@ -294,8 +294,8 @@ packages:
       - supports-color
     dev: true
 
-  /@heroicons/react/2.0.4_react@18.2.0:
-    resolution: {integrity: sha512-6C3CPY0vfWSHIMH0lr2L0KUJpPnKAnxgnzsiW0hXp8k9xu95ZFX5Qx4JQqZbQ1LsaGRyFqtyAnW5VerDY2XUdA==}
+  /@heroicons/react/2.0.8_react@18.2.0:
+    resolution: {integrity: sha512-nJNOMjXQH0Ngk6Y7QllYBH5VLB3+HMJyGBVQPZYUXGalYmN9kgEcVIxMjOiVjwuzee0GvZzmMRB0VQRJPHe8eg==}
     peerDependencies:
       react: '>= 16'
     dependencies:
