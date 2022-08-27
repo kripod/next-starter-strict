@@ -5,7 +5,7 @@ import {
 import {
   CogIcon as CogIconMd,
   TrashIcon as TrashIconMd,
-} from "@heroicons/react/24/outline";
+} from "@heroicons/react/24/solid";
 
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/buttons/SecondaryButton";
