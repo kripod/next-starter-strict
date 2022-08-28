@@ -9,10 +9,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="format-detection" content="telephone=no" />
-        <meta
-          name="color-scheme"
-          content="normal" // TODO: Set to "dark" or "light" based on theme
-        />
       </Head>
 
       <Component {...pageProps} />
