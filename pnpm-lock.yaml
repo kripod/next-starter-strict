@@ -21,7 +21,7 @@ specifiers:
   eslint-plugin-react: 7.31.4
   eslint-plugin-react-etc: 2.0.0
   eslint-plugin-react-hooks: 4.6.0
-  eslint-plugin-simple-import-sort: 7.0.0
+  eslint-plugin-simple-import-sort: 8.0.0
   focus-visible: 5.2.0
   husky: 8.0.1
   nano-staged: 0.8.0
@@ -68,7 +68,7 @@ devDependencies:
   eslint-plugin-react: 7.31.4_eslint@8.23.0
   eslint-plugin-react-etc: 2.0.0_yqf6kl63nyoq5megxukfnom5rm
   eslint-plugin-react-hooks: 4.6.0_eslint@8.23.0
-  eslint-plugin-simple-import-sort: 7.0.0_eslint@8.23.0
+  eslint-plugin-simple-import-sort: 8.0.0_eslint@8.23.0
   husky: 8.0.1
   nano-staged: 0.8.0
   npm-run-all: 4.1.5
@@ -1603,8 +1603,8 @@ packages:
       string.prototype.matchall: 4.0.7
     dev: true
 
-  /eslint-plugin-simple-import-sort/7.0.0_eslint@8.23.0:
-    resolution: {integrity: sha512-U3vEDB5zhYPNfxT5TYR7u01dboFZp+HNpnGhkDB2g/2E4wZ/g1Q9Ton8UwCLfRV9yAKyYqDh62oHOamvkFxsvw==}
+  /eslint-plugin-simple-import-sort/8.0.0_eslint@8.23.0:
+    resolution: {integrity: sha512-bXgJQ+lqhtQBCuWY/FUWdB27j4+lqcvXv5rUARkzbeWLwea+S5eBZEQrhnO+WgX3ZoJHVj0cn943iyXwByHHQw==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
