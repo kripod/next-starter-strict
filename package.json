@@ -55,7 +55,7 @@
     "prettier-plugin-tailwindcss": "0.1.13",
     "typescript": "4.8.2"
   },
-  "packageManager": "pnpm@7.10.0",
+  "packageManager": "pnpm@7.11.0",
   "nano-staged": {
     "*": "prettier --write --ignore-unknown",
     "*.{ts,tsx,js,jsx}": "eslint --fix"
