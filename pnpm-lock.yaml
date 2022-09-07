@@ -28,7 +28,7 @@ specifiers:
   next: 12.2.5
   npm-run-all: 4.1.5
   postcss-import: 15.0.0
-  postcss-preset-env: 7.8.0
+  postcss-preset-env: 7.8.1
   prettier: 2.7.1
   prettier-plugin-tailwindcss: 0.1.13
   react: 18.2.0
@@ -44,7 +44,7 @@ dependencies:
   focus-visible: 5.2.0
   next: 12.2.5_biqbaboplfbrettd7655fr4n2y
   postcss-import: 15.0.0
-  postcss-preset-env: 7.8.0
+  postcss-preset-env: 7.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-polymorphic-types: 2.0.0_@types+react@18.0.18
@@ -93,8 +93,8 @@ packages:
       regenerator-runtime: 0.13.9
     dev: true
 
-  /@csstools/postcss-cascade-layers/1.0.5:
-    resolution: {integrity: sha512-Id/9wBT7FkgFzdEpiEWrsVd4ltDxN0rI0QS0SChbeQiSuux3z21SJCRLu6h2cvCEUmaRi+VD0mHFj+GJD4GFnw==}
+  /@csstools/postcss-cascade-layers/1.0.6:
+    resolution: {integrity: sha512-ei4Vh4AJwTCXTNj7uzwduoZDO7nLPksQ0TI7OzUlyFq4P4Uhu6hU7R4AlLimDP/s6D3PQdHmRL4f7UOy370UHA==}
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
@@ -2891,8 +2891,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: false
 
-  /postcss-preset-env/7.8.0:
-    resolution: {integrity: sha512-leqiqLOellpLKfbHkD06E04P6d9ZQ24mat6hu4NSqun7WG0UhspHR5Myiv/510qouCjoo4+YJtNOqg5xHaFnCA==}
+  /postcss-preset-env/7.8.1:
+    resolution: {integrity: sha512-8884CHxQaoN1i4iEK+JvzOe8emODb5R4p/0dw4yEdo7QM4RdUk2sBx0fnzFyJt8BLfZSCGeVkKZ4HC564waBpQ==}
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
@@ -2900,7 +2900,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      '@csstools/postcss-cascade-layers': 1.0.5
+      '@csstools/postcss-cascade-layers': 1.0.6
       '@csstools/postcss-color-function': 1.1.1
       '@csstools/postcss-font-format-keywords': 1.0.1
       '@csstools/postcss-hwb-function': 1.0.2
