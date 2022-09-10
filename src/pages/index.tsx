@@ -1,14 +1,4 @@
-import {
-  CogIcon as CogIconSm,
-  TrashIcon as TrashIconSm,
-} from "@heroicons/react/20/solid";
-import {
-  CogIcon as CogIconMd,
-  TrashIcon as TrashIconMd,
-} from "@heroicons/react/24/solid";
-
-import { PrimaryButton } from "@/components/buttons/PrimaryButton";
-import { SecondaryButton } from "@/components/buttons/SecondaryButton";
+import { PrimaryButton } from "@/components/buttons/SimplePrimaryButton";
 import { Input } from "@/components/inputs/Input";
 
 type ThemingShowcaseProps = {
@@ -44,6 +34,28 @@ export default function Page() {
       <ThemingShowcase>
         <Canvas>
           <div className="flex flex-col space-y-4">
+            <div className="space-x-3">
+              <PrimaryButton size="sm">Button</PrimaryButton>
+              <PrimaryButton size="sm" sentiment="negative">
+                Button
+              </PrimaryButton>
+              <PrimaryButton size="sm" disabled>
+                Button
+              </PrimaryButton>
+            </div>
+
+            <div className="space-x-3">
+              <PrimaryButton>Button</PrimaryButton>
+              <PrimaryButton sentiment="negative">Button</PrimaryButton>
+              <PrimaryButton disabled>Button</PrimaryButton>
+            </div>
+          </div>
+        </Canvas>
+      </ThemingShowcase>
+
+      <ThemingShowcase>
+        <Canvas>
+          <div className="flex flex-col space-y-4">
             <Input
               size="sm"
               placeholder="Small regular inputs look like this"
@@ -58,7 +70,7 @@ export default function Page() {
               placeholder="Medium required inputs look like this"
               required
             />
-            <PrimaryButton size="sm" intent="danger">
+            <PrimaryButton size="sm" sentiment="negative">
               Danger
             </PrimaryButton>
             <Input placeholder="Read-only inputs look like this █" readOnly />
@@ -67,7 +79,7 @@ export default function Page() {
         </Canvas>
       </ThemingShowcase>
 
-      <ThemingShowcase>
+      {/* <ThemingShowcase>
         <Canvas>
           <div className="space-x-3">
             <PrimaryButton size="sm">Button</PrimaryButton>
@@ -82,16 +94,21 @@ export default function Page() {
             </SecondaryButton>
           </div>
           <div className="space-x-3">
-            <PrimaryButton size="sm" intent="danger">
+            <PrimaryButton size="sm" sentiment="negative">
               Button
             </PrimaryButton>
-            <SecondaryButton outlined size="sm" intent="danger">
+            <SecondaryButton outlined size="sm" sentiment="negative">
               Button
             </SecondaryButton>
-            <PrimaryButton size="sm" shape="pill" intent="danger">
+            <PrimaryButton size="sm" shape="pill" sentiment="negative">
               Button
             </PrimaryButton>
-            <SecondaryButton outlined size="sm" shape="pill" intent="danger">
+            <SecondaryButton
+              outlined
+              size="sm"
+              shape="pill"
+              sentiment="negative"
+            >
               Button
             </SecondaryButton>
           </div>
@@ -104,14 +121,14 @@ export default function Page() {
             </SecondaryButton>
           </div>
           <div className="space-x-3">
-            <PrimaryButton intent="danger">Button</PrimaryButton>
-            <SecondaryButton outlined intent="danger">
+            <PrimaryButton sentiment="negative">Button</PrimaryButton>
+            <SecondaryButton outlined sentiment="negative">
               Button
             </SecondaryButton>
-            <PrimaryButton shape="pill" intent="danger">
+            <PrimaryButton shape="pill" sentiment="negative">
               Button
             </PrimaryButton>
-            <SecondaryButton outlined shape="pill" intent="danger">
+            <SecondaryButton outlined shape="pill" sentiment="negative">
               Button
             </SecondaryButton>
           </div>
@@ -144,7 +161,7 @@ export default function Page() {
             <PrimaryButton as="a" href="https://github.com/kripod" size="sm">
               Neutral link
             </PrimaryButton>
-            <PrimaryButton size="sm" intent="danger">
+            <PrimaryButton size="sm" sentiment="negative">
               Danger
             </PrimaryButton>
           </div>
@@ -157,7 +174,7 @@ export default function Page() {
             >
               Neutral link
             </PrimaryButton>
-            <PrimaryButton size="sm" shape="pill" intent="danger">
+            <PrimaryButton size="sm" shape="pill" sentiment="negative">
               Danger
             </PrimaryButton>
           </div>
@@ -171,7 +188,7 @@ export default function Page() {
             >
               <CogIconSm aria-label="Settings" className="h-5" />
             </PrimaryButton>
-            <PrimaryButton size="sm" shape="square" intent="danger">
+            <PrimaryButton size="sm" shape="square" sentiment="negative">
               <TrashIconSm aria-label="Delete" className="h-5" />
             </PrimaryButton>
           </div>
@@ -184,7 +201,7 @@ export default function Page() {
             >
               <CogIconSm aria-label="Settings" className="h-5" />
             </PrimaryButton>
-            <PrimaryButton size="sm" shape="circle" intent="danger">
+            <PrimaryButton size="sm" shape="circle" sentiment="negative">
               <TrashIconSm aria-label="Delete" className="h-5" />
             </PrimaryButton>
           </div>
@@ -193,13 +210,13 @@ export default function Page() {
             <PrimaryButton as="a" href="https://github.com/kripod">
               Neutral link
             </PrimaryButton>
-            <PrimaryButton intent="danger">Danger</PrimaryButton>
+            <PrimaryButton sentiment="negative">Danger</PrimaryButton>
           </div>
           <div className="space-x-4">
             <PrimaryButton as="a" href="https://github.com/kripod" shape="pill">
               Neutral link
             </PrimaryButton>
-            <PrimaryButton shape="pill" intent="danger">
+            <PrimaryButton shape="pill" sentiment="negative">
               Danger
             </PrimaryButton>
           </div>
@@ -212,7 +229,7 @@ export default function Page() {
             >
               <CogIconMd aria-label="Settings" className="h-6" />
             </PrimaryButton>
-            <PrimaryButton shape="square" intent="danger">
+            <PrimaryButton shape="square" sentiment="negative">
               <TrashIconMd aria-label="Delete" className="h-6" />
             </PrimaryButton>
           </div>
@@ -224,7 +241,7 @@ export default function Page() {
             >
               <CogIconMd aria-label="Settings" className="h-6" />
             </PrimaryButton>
-            <PrimaryButton shape="circle" intent="danger">
+            <PrimaryButton shape="circle" sentiment="negative">
               <TrashIconMd aria-label="Delete" className="h-6" />
             </PrimaryButton>
           </div>
@@ -237,7 +254,7 @@ export default function Page() {
             <SecondaryButton as="a" href="https://github.com/kripod" size="sm">
               Neutral link
             </SecondaryButton>
-            <SecondaryButton size="sm" intent="danger">
+            <SecondaryButton size="sm" sentiment="negative">
               Danger
             </SecondaryButton>
           </div>
@@ -250,7 +267,7 @@ export default function Page() {
             >
               Neutral link
             </SecondaryButton>
-            <SecondaryButton size="sm" intent="danger" outlined>
+            <SecondaryButton size="sm" sentiment="negative" outlined>
               Danger
             </SecondaryButton>
           </div>
@@ -264,7 +281,12 @@ export default function Page() {
             >
               Neutral link
             </SecondaryButton>
-            <SecondaryButton size="sm" shape="pill" intent="danger" outlined>
+            <SecondaryButton
+              size="sm"
+              shape="pill"
+              sentiment="negative"
+              outlined
+            >
               Danger
             </SecondaryButton>
           </div>
@@ -278,7 +300,7 @@ export default function Page() {
             >
               <CogIconSm aria-label="Settings" className="h-5" />
             </SecondaryButton>
-            <SecondaryButton size="sm" shape="square" intent="danger">
+            <SecondaryButton size="sm" shape="square" sentiment="negative">
               <TrashIconSm aria-label="Delete" className="h-5" />
             </SecondaryButton>
           </div>
@@ -292,7 +314,12 @@ export default function Page() {
             >
               <CogIconSm aria-label="Settings" className="h-5" />
             </SecondaryButton>
-            <SecondaryButton size="sm" shape="square" intent="danger" outlined>
+            <SecondaryButton
+              size="sm"
+              shape="square"
+              sentiment="negative"
+              outlined
+            >
               <TrashIconSm aria-label="Delete" className="h-5" />
             </SecondaryButton>
           </div>
@@ -306,7 +333,12 @@ export default function Page() {
             >
               <CogIconSm aria-label="Settings" className="h-5" />
             </SecondaryButton>
-            <SecondaryButton size="sm" shape="circle" intent="danger" outlined>
+            <SecondaryButton
+              size="sm"
+              shape="circle"
+              sentiment="negative"
+              outlined
+            >
               <TrashIconSm aria-label="Delete" className="h-5" />
             </SecondaryButton>
           </div>
@@ -315,13 +347,13 @@ export default function Page() {
             <SecondaryButton as="a" href="https://github.com/kripod">
               Neutral link
             </SecondaryButton>
-            <SecondaryButton intent="danger">Danger</SecondaryButton>
+            <SecondaryButton sentiment="negative">Danger</SecondaryButton>
           </div>
           <div className="space-x-4">
             <SecondaryButton as="a" href="https://github.com/kripod" outlined>
               Neutral link
             </SecondaryButton>
-            <SecondaryButton intent="danger" outlined>
+            <SecondaryButton sentiment="negative" outlined>
               Danger
             </SecondaryButton>
           </div>
@@ -334,7 +366,7 @@ export default function Page() {
             >
               Neutral link
             </SecondaryButton>
-            <SecondaryButton shape="pill" intent="danger" outlined>
+            <SecondaryButton shape="pill" sentiment="negative" outlined>
               Danger
             </SecondaryButton>
           </div>
@@ -347,7 +379,7 @@ export default function Page() {
             >
               <CogIconMd aria-label="Settings" className="h-6" />
             </SecondaryButton>
-            <SecondaryButton shape="square" intent="danger">
+            <SecondaryButton shape="square" sentiment="negative">
               <TrashIconMd aria-label="Delete" className="h-6" />
             </SecondaryButton>
           </div>
@@ -360,7 +392,7 @@ export default function Page() {
             >
               <CogIconMd aria-label="Settings" className="h-6" />
             </SecondaryButton>
-            <SecondaryButton shape="square" intent="danger" outlined>
+            <SecondaryButton shape="square" sentiment="negative" outlined>
               <TrashIconMd aria-label="Delete" className="h-6" />
             </SecondaryButton>
           </div>
@@ -373,12 +405,12 @@ export default function Page() {
             >
               <CogIconMd aria-label="Settings" className="h-6" />
             </SecondaryButton>
-            <SecondaryButton shape="circle" intent="danger" outlined>
+            <SecondaryButton shape="circle" sentiment="negative" outlined>
               <TrashIconMd aria-label="Delete" className="h-6" />
             </SecondaryButton>
           </div>
         </Canvas>
-      </ThemingShowcase>
+      </ThemingShowcase> */}
     </div>
   );
 }
