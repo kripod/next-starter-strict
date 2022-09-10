@@ -41,11 +41,7 @@ export const PrimaryButton = React.forwardRef(function PrimaryButton(
               },
             ]
           : [
-              "cursor-not-allowed text-gray-600 dark:text-gray-400",
-              {
-                "bg-gray-300 dark:bg-gray-700": sentiment === "neutral",
-                "bg-red-600 dark:bg-red-400": sentiment === "negative",
-              },
+              "cursor-not-allowed bg-gray-300 text-gray-600 dark:bg-gray-700 dark:text-gray-400",
             ],
         className,
       )}
