@@ -43,6 +43,7 @@
     "@typescript-eslint/method-signature-style": "warn", // Force type safety
     "import/no-default-export": "warn", // Default exports are confusing
     "import/prefer-default-export": "off",
+    "react/prop-types": "off", // TypeScript makes this safe
     "react/require-default-props": "off" // React `defaultProps` are deprecated
   },
 
