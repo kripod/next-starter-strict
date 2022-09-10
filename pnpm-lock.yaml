@@ -5,7 +5,7 @@ specifiers:
   '@next/bundle-analyzer': 12.3.0
   '@tsconfig/next': 1.0.2
   '@types/node': 16.11.58
-  '@types/react': 18.0.18
+  '@types/react': 18.0.19
   '@typescript-eslint/eslint-plugin': 5.36.2
   '@typescript-eslint/parser': 5.36.2
   clsx: 1.2.1
@@ -47,13 +47,13 @@ dependencies:
   postcss-preset-env: 7.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-polymorphic-types: 2.0.0_@types+react@18.0.18
+  react-polymorphic-types: 2.0.0_@types+react@18.0.19
   tailwindcss: 3.1.8
 
 devDependencies:
   '@tsconfig/next': 1.0.2
   '@types/node': 16.11.58
-  '@types/react': 18.0.18
+  '@types/react': 18.0.19
   '@typescript-eslint/eslint-plugin': 5.36.2_2l2r3i3lm6jysqd4ac3ql4n2mm
   '@typescript-eslint/parser': 5.36.2_itqs5654cmlnjraw6gjzqacppi
   cross-env: 7.0.3
@@ -513,8 +513,8 @@ packages:
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
-  /@types/react/18.0.18:
-    resolution: {integrity: sha512-6hI08umYs6NaiHFEEGioXnxJ+oEhY3eRz8VCUaudZmGdtvPviCJB8mgaMxaDWAdPSYd4eFavrPk2QIolwbLYrg==}
+  /@types/react/18.0.19:
+    resolution: {integrity: sha512-BDc3Q+4Q3zsn7k9xZrKfjWyJsSlEDMs38gD1qp2eDazLCdcPqAT+vq1ND+Z8AGel/UiwzNUk8ptpywgNQcJ1MQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -3069,12 +3069,12 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
-  /react-polymorphic-types/2.0.0_@types+react@18.0.18:
+  /react-polymorphic-types/2.0.0_@types+react@18.0.19:
     resolution: {integrity: sha512-Xfz5qfEzLAvB2ijL9hZfHRa9bsQG6te262KHjnbezZ2XyubnSDzh3TV6OgvBsQsz7FCRHjbDbqA5UTkNEziTlw==}
     peerDependencies:
       '@types/react': '>=16.8.6'
     dependencies:
-      '@types/react': 18.0.18
+      '@types/react': 18.0.19
     dev: false
 
   /react/18.2.0:
