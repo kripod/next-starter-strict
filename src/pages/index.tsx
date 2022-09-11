@@ -28,7 +28,7 @@ type CanvasProps = {
 
 function Canvas({ children }: CanvasProps) {
   return (
-    <div className="space-y-4 p-8">
+    <div className="space-y-6 p-8">
       <p>Sample text to visualize average contrast to the background</p>
       {children}
     </div>
@@ -40,41 +40,39 @@ export default function Page() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-500">
       <ThemingShowcase>
         <Canvas>
-          <div className="flex flex-col space-y-4">
-            <div className="flex space-x-3">
-              <PrimaryButton size="sm">
-                Multi-line
-                <br />
-                button
-              </PrimaryButton>
-              <PrimaryButton size="sm" sentiment="negative">
-                <TrashIconSm className="h-4" />
-                Negative button
-              </PrimaryButton>
-              <PrimaryButton size="sm" disabled>
-                Button
-              </PrimaryButton>
-            </div>
+          <div className="flex flex-wrap gap-3">
+            <PrimaryButton size="sm">
+              Multi-line
+              <br />
+              button
+            </PrimaryButton>
+            <PrimaryButton size="sm" sentiment="negative">
+              <TrashIconSm className="h-4" />
+              Negative button
+            </PrimaryButton>
+            <PrimaryButton size="sm" disabled>
+              Button
+            </PrimaryButton>
+          </div>
 
-            <div className="flex space-x-3">
-              <PrimaryButton>
-                Multi-line
-                <br />
-                button
-              </PrimaryButton>
-              <PrimaryButton sentiment="negative">
-                <TrashIconSm className="h-5" />
-                Negative button
-              </PrimaryButton>
-              <PrimaryButton disabled>Button</PrimaryButton>
-            </div>
+          <div className="flex flex-wrap gap-3">
+            <PrimaryButton>
+              Multi-line
+              <br />
+              button
+            </PrimaryButton>
+            <PrimaryButton sentiment="negative">
+              <TrashIconSm className="h-5" />
+              Negative button
+            </PrimaryButton>
+            <PrimaryButton disabled>Button</PrimaryButton>
           </div>
         </Canvas>
       </ThemingShowcase>
 
       <ThemingShowcase>
         <Canvas>
-          <div className="space-x-3">
+          <div className="flex flex-wrap items-center gap-3">
             <IconButton aria-label="Close" size="sm">
               <XMarkIconSm className="h-5" />
             </IconButton>
@@ -90,7 +88,7 @@ export default function Page() {
 
       <ThemingShowcase>
         <Canvas>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col gap-4">
             <Input
               size="sm"
               placeholder="Small regular inputs look like this"
