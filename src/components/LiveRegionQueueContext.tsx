@@ -24,10 +24,7 @@ type LiveRegionProps = LiveRegionOptions & {
 };
 
 const LiveRegionQueueContext = React.createContext<
-  | {
-      add: (message: string, options?: LiveRegionOptions) => number;
-      delete: (id: number) => void;
-    }
+  | { add: (message: string, options?: LiveRegionOptions) => () => void }
   | undefined
 >(undefined);
 
@@ -41,25 +38,18 @@ export function LiveRegionQueueProvider({
   children,
 }: LiveRegionQueueProviderProps) {
   const mounted = useMounted();
-  const [propsById, setPropsById] = React.useState<{
-    [id: number]: LiveRegionProps;
-  }>({});
-  const lastIdRef = React.useRef(0);
+  const [items, setItems] = React.useState<LiveRegionProps[]>([]);
 
   return (
     <LiveRegionQueueContext.Provider
       value={React.useMemo(
         () => ({
           add: (message, options) => {
-            lastIdRef.current += 1;
-            setPropsById((prev) => ({
-              ...prev,
-              [lastIdRef.current]: { ...options, children: message },
-            }));
-            return lastIdRef.current;
-          },
-          delete: (id) => {
-            setPropsById(({ [id]: deleted, ...rest }) => rest);
+            const newItem = { ...options, children: message };
+            setItems((prev) => [...prev, newItem]);
+            return () => {
+              setItems((prev) => prev.filter((item) => item !== newItem));
+            };
           },
         }),
         [],
@@ -69,7 +59,7 @@ export function LiveRegionQueueProvider({
       {mounted
         ? ReactDOM.createPortal(
             <div data-live-region-container>
-              {Object.values(propsById).map((props) => (
+              {Object.values(items).map((props) => (
                 <div {...props} />
               ))}
             </div>,
