@@ -1,4 +1,7 @@
-import { XMarkIcon as XMarkIconSm } from "@heroicons/react/20/solid";
+import {
+  TrashIcon as TrashIconSm,
+  XMarkIcon as XMarkIconSm,
+} from "@heroicons/react/20/solid";
 import { XMarkIcon as XMarkIconMd } from "@heroicons/react/24/solid";
 
 import { IconButton } from "@/components/buttons/IconButton";
@@ -39,11 +42,16 @@ export default function Page() {
         <Canvas>
           <div className="flex flex-col space-y-4">
             <div className="flex space-x-3">
-              <PrimaryButton size="sm">Button</PrimaryButton>
-              <PrimaryButton size="sm" sentiment="negative">
-                Negative
+              <PrimaryButton size="sm">
+                Multi-line
                 <br />
                 button
+              </PrimaryButton>
+              <PrimaryButton size="sm" sentiment="negative">
+                <span className="inline-flex items-center gap-x-1.5">
+                  <TrashIconSm aria-hidden className="h-4" />
+                  <span>Negative button</span>
+                </span>
               </PrimaryButton>
               <PrimaryButton size="sm" disabled>
                 Button
@@ -51,11 +59,16 @@ export default function Page() {
             </div>
 
             <div className="flex space-x-3">
-              <PrimaryButton>Button</PrimaryButton>
-              <PrimaryButton sentiment="negative">
-                Negative
+              <PrimaryButton>
+                Multi-line
                 <br />
                 button
+              </PrimaryButton>
+              <PrimaryButton sentiment="negative">
+                <span className="inline-flex items-center gap-x-2">
+                  <TrashIconSm aria-hidden className="h-5" />
+                  <span>Negative button</span>
+                </span>
               </PrimaryButton>
               <PrimaryButton disabled>Button</PrimaryButton>
             </div>
