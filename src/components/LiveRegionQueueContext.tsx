@@ -89,6 +89,8 @@ export function useLiveRegion() {
     ...args: Parameters<NonNullable<LiveRegionQueueContextValue>["add"]>
   ) => {
     removePrevRegion.current?.();
-    removePrevRegion.current = liveRegionQueue.add(...args);
+    const newLiveRegion = liveRegionQueue.add(...args);
+    removePrevRegion.current = newLiveRegion;
+    return newLiveRegion;
   };
 }
