@@ -48,10 +48,8 @@ export default function Page() {
                 button
               </PrimaryButton>
               <PrimaryButton size="sm" sentiment="negative">
-                <span className="inline-flex items-center gap-x-1.5">
-                  <TrashIconSm aria-hidden className="h-4" />
-                  <span>Negative button</span>
-                </span>
+                <TrashIconSm aria-hidden className="h-4" />
+                Negative button
               </PrimaryButton>
               <PrimaryButton size="sm" disabled>
                 Button
@@ -65,10 +63,8 @@ export default function Page() {
                 button
               </PrimaryButton>
               <PrimaryButton sentiment="negative">
-                <span className="inline-flex items-center gap-x-2">
-                  <TrashIconSm aria-hidden className="h-5" />
-                  <span>Negative button</span>
-                </span>
+                <TrashIconSm aria-hidden className="h-5" />
+                Negative button
               </PrimaryButton>
               <PrimaryButton disabled>Button</PrimaryButton>
             </div>
