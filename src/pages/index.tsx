@@ -66,6 +66,9 @@ export default function Page() {
             <IconButton>
               <XMarkIconMd aria-label="Close" />
             </IconButton>
+            <IconButton disabled>
+              <XMarkIconMd aria-label="Close" />
+            </IconButton>
           </div>
         </Canvas>
       </ThemingShowcase>
