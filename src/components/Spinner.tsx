@@ -20,16 +20,22 @@ const iconBySize: {
 
 export function Spinner({ size = "md" }: SpinnerProps) {
   const liveRegionQueue = useLiveRegionQueue();
+  const removeLoadingCompleteRegion = React.useRef<() => void>();
   React.useEffect(() => {
-    liveRegionQueue.add("Loading…", {
+    removeLoadingCompleteRegion.current?.();
+    const removeLoadingRegion = liveRegionQueue.add("Loading…", {
       role: "status",
       "aria-live": "assertive",
     });
     return () => {
-      liveRegionQueue.add("Loading complete", {
-        role: "status",
-        "aria-live": "assertive",
-      });
+      removeLoadingRegion();
+      removeLoadingCompleteRegion.current = liveRegionQueue.add(
+        "Loading complete",
+        {
+          role: "status",
+          "aria-live": "assertive",
+        },
+      );
     };
   });
 
