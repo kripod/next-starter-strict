@@ -11,7 +11,4 @@ module.exports = {
       },
     },
   },
-  corePlugins: {
-    animation: false,
-  },
 };
