@@ -6,6 +6,7 @@ specifiers:
   '@tsconfig/next': 1.0.2
   '@types/node': 16.11.58
   '@types/react': 18.0.19
+  '@types/react-dom': ^18.0.6
   '@typescript-eslint/eslint-plugin': 5.36.2
   '@typescript-eslint/parser': 5.36.2
   clsx: 1.2.1
@@ -52,6 +53,7 @@ devDependencies:
   '@tsconfig/next': 1.0.2
   '@types/node': 16.11.58
   '@types/react': 18.0.19
+  '@types/react-dom': 18.0.6
   '@typescript-eslint/eslint-plugin': 5.36.2_2l2r3i3lm6jysqd4ac3ql4n2mm
   '@typescript-eslint/parser': 5.36.2_itqs5654cmlnjraw6gjzqacppi
   cross-env: 7.0.3
@@ -510,6 +512,12 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: true
+
+  /@types/react-dom/18.0.6:
+    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
+    dependencies:
+      '@types/react': 18.0.19
     dev: true
 
   /@types/react/18.0.19:
