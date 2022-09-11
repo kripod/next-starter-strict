@@ -23,10 +23,12 @@ type LiveRegionProps = LiveRegionOptions & {
   children: string;
 };
 
-const LiveRegionQueueContext = React.createContext<
+type LiveRegionQueueContextValue =
   | { add: (message: string, options?: LiveRegionOptions) => () => void }
-  | undefined
->(undefined);
+  | undefined;
+
+const LiveRegionQueueContext =
+  React.createContext<LiveRegionQueueContextValue>(undefined);
 
 export type LiveRegionQueueProviderProps = {
   container?: () => Element | DocumentFragment;
@@ -78,4 +80,15 @@ export function useLiveRegionQueue() {
     );
   }
   return context;
+}
+
+export function useLiveRegion() {
+  const liveRegionQueue = useLiveRegionQueue();
+  const removePrevRegion = React.useRef<() => void>();
+  return (
+    ...args: Parameters<NonNullable<LiveRegionQueueContextValue>["add"]>
+  ) => {
+    removePrevRegion.current?.();
+    removePrevRegion.current = liveRegionQueue.add(...args);
+  };
 }

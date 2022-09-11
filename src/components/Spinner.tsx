@@ -3,7 +3,7 @@ import { ArrowPathIcon as ArrowPathIconMd } from "@heroicons/react/24/solid";
 import { clsx } from "clsx";
 import * as React from "react";
 
-import { useLiveRegionQueue } from "./LiveRegionQueueContext";
+import { useLiveRegion } from "./LiveRegionQueueContext";
 
 export type SpinnerProps = {
   size?: "sm" | "md";
@@ -19,23 +19,17 @@ const iconBySize: {
 };
 
 export function Spinner({ size = "md" }: SpinnerProps) {
-  const liveRegionQueue = useLiveRegionQueue();
-  const removeLoadingCompleteRegion = React.useRef<() => void>();
+  const setLiveRegion = useLiveRegion();
   React.useEffect(() => {
-    removeLoadingCompleteRegion.current?.();
-    const removeLoadingRegion = liveRegionQueue.add("Loading…", {
+    setLiveRegion("Loading…", {
       role: "status",
       "aria-live": "assertive",
     });
     return () => {
-      removeLoadingRegion();
-      removeLoadingCompleteRegion.current = liveRegionQueue.add(
-        "Loading complete",
-        {
-          role: "status",
-          "aria-live": "assertive",
-        },
-      );
+      setLiveRegion("Loading complete", {
+        role: "status",
+        "aria-live": "assertive",
+      });
     };
   });
 
