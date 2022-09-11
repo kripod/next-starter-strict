@@ -23,8 +23,8 @@ export const PrimaryButton = React.forwardRef(function PrimaryButton(
   return (
     <Button
       ref={ref}
-      disabled={disabled}
       loading={loading}
+      disabled={disabled}
       className={clsx(
         !disabled
           ? [
