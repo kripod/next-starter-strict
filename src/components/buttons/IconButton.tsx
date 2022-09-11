@@ -24,7 +24,7 @@ export const IconButton = React.forwardRef(function IconButton(
           "h-12 w-12 rounded-lg": size === "md",
         },
         !disabled
-          ? "text-black ring-gray-400/75 hover:bg-gray-300 dark:text-white dark:ring-gray-500/75 dark:hover:bg-gray-700"
+          ? "text-black ring-gray-400/75 hover:bg-gray-200 dark:text-white dark:ring-gray-500/75 dark:hover:bg-gray-800"
           : "cursor-not-allowed text-gray-400 dark:text-gray-500",
         className,
       )}
