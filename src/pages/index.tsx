@@ -6,7 +6,10 @@ import { XMarkIcon as XMarkIconMd } from "@heroicons/react/24/solid";
 import * as React from "react";
 
 import { IconButton } from "@/components/buttons/IconButton";
-import { PrimaryButton } from "@/components/buttons/PrimaryButton";
+import {
+  PrimaryButton,
+  PrimaryButtonProps,
+} from "@/components/buttons/PrimaryButton";
 import { Input } from "@/components/inputs/Input";
 
 type ThemingShowcaseProps = {
@@ -36,50 +39,57 @@ function Canvas({ children }: CanvasProps) {
   );
 }
 
-export default function Page() {
-  const [buttonsLoading, setButtonsLoading] = React.useState(false);
+function SimulatedLoadingPrimaryButton({
+  onClick,
+  ...restProps
+}: PrimaryButtonProps) {
+  const [loading, setLoading] = React.useState(false);
+  return (
+    <PrimaryButton
+      {...restProps}
+      loading={loading}
+      onClick={(event) => {
+        onClick?.(event);
+        setLoading(true);
+        window.setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+      }}
+    />
+  );
+}
 
+export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-500">
       <ThemingShowcase>
         <Canvas>
           <div className="flex flex-wrap gap-3">
-            <PrimaryButton
-              size="sm"
-              loading={buttonsLoading}
-              onClick={() => {
-                setButtonsLoading(true);
-              }}
-            >
+            <SimulatedLoadingPrimaryButton size="sm">
               Simulate
               <br />
               loading
-            </PrimaryButton>
-            <PrimaryButton size="sm" sentiment="negative">
+            </SimulatedLoadingPrimaryButton>
+            <SimulatedLoadingPrimaryButton size="sm" sentiment="negative">
               <TrashIconSm className="h-4" />
               Negative
               <br />
               button
-            </PrimaryButton>
+            </SimulatedLoadingPrimaryButton>
             <PrimaryButton size="sm" disabled>
               Button
             </PrimaryButton>
           </div>
           <div className="flex flex-wrap gap-3">
-            <PrimaryButton
-              loading={buttonsLoading}
-              onClick={() => {
-                setButtonsLoading(true);
-              }}
-            >
+            <SimulatedLoadingPrimaryButton>
               Simulate
               <br />
               loading
-            </PrimaryButton>
-            <PrimaryButton sentiment="negative">
+            </SimulatedLoadingPrimaryButton>
+            <SimulatedLoadingPrimaryButton sentiment="negative">
               <TrashIconSm className="h-5" />
               Negative button
-            </PrimaryButton>
+            </SimulatedLoadingPrimaryButton>
             <PrimaryButton disabled>Button</PrimaryButton>
           </div>
         </Canvas>
