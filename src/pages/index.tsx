@@ -38,8 +38,13 @@ export default function Page() {
       <ThemingShowcase>
         <Canvas>
           <div className="flex flex-col space-y-4">
-            <div className="space-x-3">
+            <div className="flex space-x-3">
               <PrimaryButton size="sm">Button</PrimaryButton>
+              <PrimaryButton size="sm">
+                Multi-line
+                <br />
+                test
+              </PrimaryButton>
               <PrimaryButton size="sm" sentiment="negative">
                 Button
               </PrimaryButton>
@@ -48,8 +53,13 @@ export default function Page() {
               </PrimaryButton>
             </div>
 
-            <div className="space-x-3">
+            <div className="flex space-x-3">
               <PrimaryButton>Button</PrimaryButton>
+              <PrimaryButton>
+                Multi-line
+                <br />
+                test
+              </PrimaryButton>
               <PrimaryButton sentiment="negative">Button</PrimaryButton>
               <PrimaryButton disabled>Button</PrimaryButton>
             </div>

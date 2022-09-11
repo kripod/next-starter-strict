@@ -1,8 +1,9 @@
 import { clsx } from "clsx";
 import * as React from "react";
 
-export type PrimaryButtonOwnProps = {
-  size?: "sm" | "md";
+import { Button, ButtonOwnProps } from "./_Button";
+
+export type PrimaryButtonOwnProps = Pick<ButtonOwnProps, "size"> & {
   sentiment?: "neutral" | "negative";
 };
 
@@ -11,7 +12,6 @@ export type PrimaryButtonProps = React.ComponentPropsWithRef<"button"> &
 
 export const PrimaryButton = React.forwardRef(function PrimaryButton(
   {
-    size = "md",
     sentiment = "neutral",
     disabled,
     className,
@@ -20,16 +20,10 @@ export const PrimaryButton = React.forwardRef(function PrimaryButton(
   ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
   return (
-    <button
+    <Button
       ref={ref}
-      type="button"
       disabled={disabled}
       className={clsx(
-        "font-medium leading-tight ring-offset-2 transition focus:outline-none focus-visible:ring dark:ring-offset-black",
-        {
-          "h-8 rounded-md px-3 text-sm": size === "sm",
-          "h-12 rounded-lg px-5 text-base": size === "md",
-        },
         !disabled
           ? [
               "text-white dark:text-black",
