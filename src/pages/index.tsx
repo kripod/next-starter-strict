@@ -1,3 +1,7 @@
+import { XMarkIcon as XMarkIconSm } from "@heroicons/react/20/solid";
+import { XMarkIcon as XMarkIconMd } from "@heroicons/react/24/solid";
+
+import { IconButton } from "@/components/buttons/IconButton";
 import { PrimaryButton } from "@/components/buttons/SimplePrimaryButton";
 import { Input } from "@/components/inputs/Input";
 
@@ -49,6 +53,19 @@ export default function Page() {
               <PrimaryButton sentiment="negative">Button</PrimaryButton>
               <PrimaryButton disabled>Button</PrimaryButton>
             </div>
+          </div>
+        </Canvas>
+      </ThemingShowcase>
+
+      <ThemingShowcase>
+        <Canvas>
+          <div className="space-x-3">
+            <IconButton size="sm">
+              <XMarkIconSm aria-label="Close" />
+            </IconButton>
+            <IconButton>
+              <XMarkIconMd aria-label="Close" />
+            </IconButton>
           </div>
         </Canvas>
       </ThemingShowcase>
