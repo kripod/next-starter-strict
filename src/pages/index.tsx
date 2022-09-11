@@ -3,6 +3,7 @@ import {
   XMarkIcon as XMarkIconSm,
 } from "@heroicons/react/20/solid";
 import { XMarkIcon as XMarkIconMd } from "@heroicons/react/24/solid";
+import * as React from "react";
 
 import { IconButton } from "@/components/buttons/IconButton";
 import { PrimaryButton } from "@/components/buttons/SimplePrimaryButton";
@@ -36,30 +37,44 @@ function Canvas({ children }: CanvasProps) {
 }
 
 export default function Page() {
+  const [buttonsLoading, setButtonsLoading] = React.useState(false);
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-500">
       <ThemingShowcase>
         <Canvas>
           <div className="flex flex-wrap gap-3">
-            <PrimaryButton size="sm">
-              Multi-line
+            <PrimaryButton
+              size="sm"
+              loading={buttonsLoading}
+              onClick={() => {
+                setButtonsLoading(true);
+              }}
+            >
+              Simulate
               <br />
-              button
+              loading
             </PrimaryButton>
             <PrimaryButton size="sm" sentiment="negative">
               <TrashIconSm className="h-4" />
-              Negative button
+              Negative
+              <br />
+              button
             </PrimaryButton>
             <PrimaryButton size="sm" disabled>
               Button
             </PrimaryButton>
           </div>
-
           <div className="flex flex-wrap gap-3">
-            <PrimaryButton>
-              Multi-line
+            <PrimaryButton
+              loading={buttonsLoading}
+              onClick={() => {
+                setButtonsLoading(true);
+              }}
+            >
+              Simulate
               <br />
-              button
+              loading
             </PrimaryButton>
             <PrimaryButton sentiment="negative">
               <TrashIconSm className="h-5" />

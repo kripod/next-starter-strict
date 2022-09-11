@@ -20,13 +20,10 @@ export function Spinner({ size = "md" }: SpinnerProps) {
   return (
     <span role="status" aria-live="assertive">
       <Icon
-        className={clsx(
-          "inline-block animate-spin motion-reduce:animate-none",
-          {
-            "h-5": size === "sm",
-            "h-6": size === "md",
-          },
-        )}
+        className={clsx("animate-spin motion-reduce:animate-none", {
+          "h-5": size === "sm",
+          "h-6": size === "md",
+        })}
       />
       <span className="sr-only">Loading…</span>
     </span>
