@@ -19,12 +19,16 @@ export const Button = React.forwardRef(function Button(
       type="button"
       disabled={disabled}
       className={clsx(
-        "inline-flex items-center justify-center font-medium leading-tight ring-offset-2 transition focus:outline-none focus-visible:ring dark:ring-offset-black",
+        "inline-flex items-center justify-center font-medium ring-offset-2 transition focus:outline-none focus-visible:ring dark:ring-offset-black",
         {
-          [clsx("h-8 rounded-md text-sm", equilateral ? "w-8" : "px-3")]:
-            size === "sm",
-          [clsx("h-12 rounded-lg text-base", equilateral ? "w-12" : "px-5")]:
-            size === "md",
+          [clsx(
+            "h-8 rounded-md text-sm leading-4",
+            equilateral ? "w-8" : "px-3",
+          )]: size === "sm",
+          [clsx(
+            "h-12 rounded-lg text-base leading-5",
+            equilateral ? "w-12" : "px-5",
+          )]: size === "md",
         },
         disabled && "cursor-not-allowed",
         className,
