@@ -6,7 +6,7 @@ import { XMarkIcon as XMarkIconMd } from "@heroicons/react/24/solid";
 import * as React from "react";
 
 import { IconButton } from "@/components/buttons/IconButton";
-import { PrimaryButton } from "@/components/buttons/SimplePrimaryButton";
+import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { Input } from "@/components/inputs/Input";
 
 type ThemingShowcaseProps = {
