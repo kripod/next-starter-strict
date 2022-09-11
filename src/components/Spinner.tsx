@@ -1,8 +1,9 @@
 import { ArrowPathIcon as ArrowPathIconSm } from "@heroicons/react/20/solid";
 import { ArrowPathIcon as ArrowPathIconMd } from "@heroicons/react/24/solid";
-import { announce } from "@react-aria/live-announcer";
 import { clsx } from "clsx";
 import * as React from "react";
+
+import { useLiveRegionQueue } from "./LiveRegionQueueContext";
 
 export type SpinnerProps = {
   size?: "sm" | "md";
@@ -18,10 +19,17 @@ const iconBySize: {
 };
 
 export function Spinner({ size = "md" }: SpinnerProps) {
+  const liveRegionQueue = useLiveRegionQueue();
   React.useEffect(() => {
-    announce("Loading…", "assertive");
+    liveRegionQueue.add("Loading…", {
+      role: "status",
+      "aria-live": "assertive",
+    });
     return () => {
-      announce("Loading complete", "assertive");
+      liveRegionQueue.add("Loading complete", {
+        role: "status",
+        "aria-live": "assertive",
+      });
     };
   });
 

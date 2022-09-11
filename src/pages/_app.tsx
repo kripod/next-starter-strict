@@ -4,6 +4,8 @@ import "@/polyfills";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
+import { LiveRegionQueueProvider } from "@/components/LiveRegionQueueContext";
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -11,7 +13,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="format-detection" content="telephone=no" />
       </Head>
 
-      <Component {...pageProps} />
+      <LiveRegionQueueProvider>
+        <Component {...pageProps} />
+      </LiveRegionQueueProvider>
     </>
   );
 }
