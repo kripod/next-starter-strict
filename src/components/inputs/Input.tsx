@@ -37,7 +37,6 @@ export function Input({
       />
 
       <ExclamationCircle
-        aria-hidden
         className={clsx(
           "pointer-events-none invisible col-start-1 row-start-1 self-center justify-self-end text-red-500 peer-invalid:visible dark:text-red-400",
           {

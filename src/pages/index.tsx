@@ -48,7 +48,7 @@ export default function Page() {
                 button
               </PrimaryButton>
               <PrimaryButton size="sm" sentiment="negative">
-                <TrashIconSm aria-hidden className="h-4" />
+                <TrashIconSm className="h-4" />
                 Negative button
               </PrimaryButton>
               <PrimaryButton size="sm" disabled>
@@ -63,7 +63,7 @@ export default function Page() {
                 button
               </PrimaryButton>
               <PrimaryButton sentiment="negative">
-                <TrashIconSm aria-hidden className="h-5" />
+                <TrashIconSm className="h-5" />
                 Negative button
               </PrimaryButton>
               <PrimaryButton disabled>Button</PrimaryButton>
@@ -75,14 +75,14 @@ export default function Page() {
       <ThemingShowcase>
         <Canvas>
           <div className="space-x-3">
-            <IconButton size="sm">
-              <XMarkIconSm aria-label="Close" className="h-5" />
+            <IconButton aria-label="Close" size="sm">
+              <XMarkIconSm className="h-5" />
             </IconButton>
-            <IconButton>
-              <XMarkIconMd aria-label="Close" className="h-6" />
+            <IconButton aria-label="Close">
+              <XMarkIconMd className="h-6" />
             </IconButton>
-            <IconButton disabled>
-              <XMarkIconMd aria-label="Close" className="h-6" />
+            <IconButton aria-label="Close" disabled>
+              <XMarkIconMd className="h-6" />
             </IconButton>
           </div>
         </Canvas>
