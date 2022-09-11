@@ -40,13 +40,10 @@ export default function Page() {
           <div className="flex flex-col space-y-4">
             <div className="flex space-x-3">
               <PrimaryButton size="sm">Button</PrimaryButton>
-              <PrimaryButton size="sm">
-                Multi-line
-                <br />
-                test
-              </PrimaryButton>
               <PrimaryButton size="sm" sentiment="negative">
-                Button
+                Negative
+                <br />
+                button
               </PrimaryButton>
               <PrimaryButton size="sm" disabled>
                 Button
@@ -55,12 +52,11 @@ export default function Page() {
 
             <div className="flex space-x-3">
               <PrimaryButton>Button</PrimaryButton>
-              <PrimaryButton>
-                Multi-line
+              <PrimaryButton sentiment="negative">
+                Negative
                 <br />
-                test
+                button
               </PrimaryButton>
-              <PrimaryButton sentiment="negative">Button</PrimaryButton>
               <PrimaryButton disabled>Button</PrimaryButton>
             </div>
           </div>
