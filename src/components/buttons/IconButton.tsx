@@ -9,7 +9,7 @@ export type IconButtonProps = React.ComponentPropsWithRef<"button"> &
   IconButtonOwnProps;
 
 export const IconButton = React.forwardRef(function IconButton(
-  { size = "md", disabled, className, children, ...restProps }: IconButtonProps,
+  { size = "md", disabled, className, ...restProps }: IconButtonProps,
   ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
   return (
@@ -25,15 +25,6 @@ export const IconButton = React.forwardRef(function IconButton(
         className,
       )}
       {...restProps}
-    >
-      <span
-        className={clsx({
-          "w-5": size === "sm",
-          "w-6": size === "md",
-        })}
-      >
-        {children}
-      </span>
-    </Button>
+    />
   );
 });

@@ -67,13 +67,13 @@ export default function Page() {
         <Canvas>
           <div className="space-x-3">
             <IconButton size="sm">
-              <XMarkIconSm aria-label="Close" />
+              <XMarkIconSm aria-label="Close" className="h-5" />
             </IconButton>
             <IconButton>
-              <XMarkIconMd aria-label="Close" />
+              <XMarkIconMd aria-label="Close" className="h-6" />
             </IconButton>
             <IconButton disabled>
-              <XMarkIconMd aria-label="Close" />
+              <XMarkIconMd aria-label="Close" className="h-6" />
             </IconButton>
           </div>
         </Canvas>
