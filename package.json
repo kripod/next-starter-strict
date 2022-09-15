@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@tsconfig/next": "1.0.2",
-    "@types/node": "16.11.58",
+    "@types/node": "16.11.59",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "5.37.0",
