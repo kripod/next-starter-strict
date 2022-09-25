@@ -10,6 +10,10 @@ import {
   PrimaryButton,
   PrimaryButtonProps,
 } from "@/components/buttons/PrimaryButton";
+import {
+  SimpleButton,
+  SimpleButtonProps,
+} from "@/components/buttons/SimpleButton";
 import { Input } from "@/components/inputs/Input";
 
 type ThemingShowcaseProps = {
@@ -59,11 +63,39 @@ function SimulatedLoadingPrimaryButton({
   );
 }
 
+function SimulatedLoadingSimpleButton({
+  onClick,
+  ...restProps
+}: SimpleButtonProps) {
+  const [loading, setLoading] = React.useState(false);
+  return (
+    <SimpleButton
+      {...restProps}
+      loading={loading}
+      onClick={(event) => {
+        onClick?.(event);
+        setLoading(true);
+        window.setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+      }}
+    />
+  );
+}
+
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-500">
       <ThemingShowcase>
         <Canvas>
+          <div className="flex flex-wrap gap-3">
+            <SimulatedLoadingSimpleButton className="bg-gray-500">
+              Simulate
+              <br />
+              loading
+            </SimulatedLoadingSimpleButton>
+          </div>
+
           <div className="flex flex-wrap gap-3">
             <SimulatedLoadingPrimaryButton size="sm">
               Simulate
