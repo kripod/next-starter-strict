@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@heroicons/react': 2.0.11
   '@next/bundle-analyzer': 12.3.1
-  '@react-aria/live-announcer': 3.1.1
   '@tsconfig/next': 1.0.2
   '@types/node': 16.11.62
   '@types/react': 18.0.21
@@ -41,7 +40,6 @@ specifiers:
 dependencies:
   '@heroicons/react': 2.0.11_react@18.2.0
   '@next/bundle-analyzer': 12.3.1
-  '@react-aria/live-announcer': 3.1.1
   clsx: 1.2.1
   focus-visible: 5.2.0
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
@@ -93,6 +91,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.9
+    dev: true
 
   /@csstools/postcss-cascade-layers/1.1.0:
     resolution: {integrity: sha512-XpA7g2KViA2ia23A5kZ/EQw+Sy308kLbvMlDPjFZmojwaJ9DYdJuwujFcDGK9v1QhHRmMEHbV2brVSQSLkN/7A==}
@@ -483,12 +482,6 @@ packages:
 
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
-    dev: false
-
-  /@react-aria/live-announcer/3.1.1:
-    resolution: {integrity: sha512-e7b+dRh1SUTla42vzjdbhGYkeLD7E6wIYjYaHW9zZ37rBkSqLHUhTigh3eT3k5NxFlDD/uRxTYuwaFnWQgR+4g==}
-    dependencies:
-      '@babel/runtime': 7.18.9
     dev: false
 
   /@rushstack/eslint-patch/1.1.4:
@@ -3116,6 +3109,7 @@ packages:
 
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
+    dev: true
 
   /regexp.prototype.flags/1.4.3:
     resolution: {integrity: sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==}
