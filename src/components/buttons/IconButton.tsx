@@ -9,7 +9,7 @@ export type IconButtonProps = React.ComponentPropsWithRef<"button"> &
   IconButtonOwnProps;
 
 export const IconButton = React.forwardRef(function IconButton(
-  { size = "md", disabled, className, ...restProps }: IconButtonProps,
+  { size = "md", disabled = false, className, ...restProps }: IconButtonProps,
   ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
   return (
@@ -19,10 +19,8 @@ export const IconButton = React.forwardRef(function IconButton(
       equilateral
       disabled={disabled}
       className={clsx(
-        "mix-blend-luminosity",
-        !disabled
-          ? "text-black ring-gray-400/75 hover:bg-gray-200 dark:text-white dark:ring-gray-500/75 dark:hover:bg-gray-800"
-          : "text-gray-400 dark:text-gray-500",
+        "text-black mix-blend-luminosity ring-gray-400/75 dark:text-white dark:ring-gray-500/75",
+        !disabled && "hover:bg-gray-200 dark:hover:bg-gray-800",
         className,
       )}
       {...restProps}

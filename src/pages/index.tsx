@@ -79,6 +79,9 @@ export default function Page() {
             <PrimaryButton size="sm" disabled>
               Button
             </PrimaryButton>
+            <PrimaryButton size="sm" sentiment="negative" disabled>
+              Button
+            </PrimaryButton>
           </div>
           <div className="flex flex-wrap gap-3">
             <SimulatedLoadingPrimaryButton>
