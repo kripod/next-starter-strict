@@ -19,6 +19,7 @@ export const IconButton = React.forwardRef(function IconButton(
       equilateral
       disabled={disabled}
       className={clsx(
+        "mix-blend-luminosity",
         !disabled
           ? "text-black ring-gray-400/75 hover:bg-gray-200 dark:text-white dark:ring-gray-500/75 dark:hover:bg-gray-800"
           : "text-gray-400 dark:text-gray-500",

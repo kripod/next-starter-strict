@@ -40,7 +40,7 @@ export const PrimaryButton = React.forwardRef(function PrimaryButton(
                 )]: sentiment === "negative",
               },
             ]
-          : "bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400",
+          : "bg-gray-300 text-gray-500 mix-blend-luminosity dark:bg-gray-700 dark:text-gray-400",
         className,
       )}
       {...restProps}
