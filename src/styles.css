@@ -3,7 +3,8 @@
 @import "tailwindcss/utilities";
 
 @layer base {
-  html {
+  :root {
+    @apply bg-white dark:bg-gray-900;
     scrollbar-gutter: stable both-edges;
     tab-size: 2;
   }
