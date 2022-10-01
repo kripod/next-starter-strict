@@ -38,7 +38,7 @@ export const Button = React.forwardRef(function Button(
             size === "md",
         },
         disabled
-          ? "cursor-not-allowed opacity-50"
+          ? "cursor-not-allowed opacity-40"
           : loading && "cursor-wait opacity-80",
         className,
       )}
