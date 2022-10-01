@@ -32,9 +32,9 @@ export const Button = React.forwardRef(function Button(
       className={clsx(
         "inline-grid items-center justify-items-center font-medium ring-offset-2 transition focus:outline-none focus-visible:ring dark:ring-offset-black",
         {
-          [clsx("h-8 rounded-md text-sm leading-4", equilateral && "w-8")]:
+          [clsx("h-7 rounded-md text-sm leading-3", equilateral && "w-7")]:
             size === "sm",
-          [clsx("h-10 rounded-lg leading-5", equilateral && "w-10")]:
+          [clsx("h-9 rounded-lg leading-4", equilateral && "w-9")]:
             size === "md",
         },
         disabled
