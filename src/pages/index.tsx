@@ -72,9 +72,7 @@ export default function Page() {
             </SimulatedLoadingPrimaryButton>
             <SimulatedLoadingPrimaryButton size="sm" sentiment="negative">
               <TrashIconSm className="h-4" />
-              Negative
-              <br />
-              button
+              Delete
             </SimulatedLoadingPrimaryButton>
             <PrimaryButton size="sm" disabled>
               Button
@@ -91,7 +89,7 @@ export default function Page() {
             </SimulatedLoadingPrimaryButton>
             <SimulatedLoadingPrimaryButton sentiment="negative">
               <TrashIconSm className="h-5" />
-              Negative button
+              Delete
             </SimulatedLoadingPrimaryButton>
             <PrimaryButton disabled>Button</PrimaryButton>
           </div>
