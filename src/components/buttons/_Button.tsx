@@ -48,8 +48,8 @@ export const Button = React.forwardRef(function Button(
         className={clsx(
           "col-start-1 row-start-1 inline-flex items-center",
           !equilateral && {
-            "gap-x-1.5 px-3": size === "sm",
-            "gap-x-2 px-5": size === "md",
+            "gap-x-1 px-3": size === "sm",
+            "gap-x-1.5 px-4": size === "md",
           },
           loading && "invisible",
         )}
