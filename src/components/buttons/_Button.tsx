@@ -30,7 +30,7 @@ export const Button = React.forwardRef(function Button(
       type="button"
       disabled={disabled || loading}
       className={clsx(
-        "inline-grid items-center justify-items-center font-medium ring-offset-2 transition focus:outline-none focus-visible:ring dark:ring-offset-black",
+        "inline-grid place-items-center font-medium ring-offset-2 transition focus:outline-none focus-visible:ring dark:ring-offset-black",
         {
           [clsx("h-7 rounded-md text-sm leading-3", equilateral && "w-7")]:
             size === "sm",
