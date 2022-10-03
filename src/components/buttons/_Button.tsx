@@ -61,7 +61,7 @@ export const Button = React.forwardRef(function Button(
       </span>
 
       {loading ? (
-        <span className="col-start-1 row-start-1 inline-flex">
+        <span className="col-start-1 row-start-1">
           <Spinner size={size} />
         </span>
       ) : null}
