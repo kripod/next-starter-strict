@@ -95,6 +95,9 @@ export default function Page() {
               Delete me
             </SimulatedLoadingPrimaryButton>
             <PrimaryButton disabled>Button</PrimaryButton>
+            <PrimaryButton sentiment="negative" disabled>
+              Button
+            </PrimaryButton>
           </div>
           <div className="flex flex-wrap gap-3">
             <SimulatedLoadingPrimaryButton size="lg">
