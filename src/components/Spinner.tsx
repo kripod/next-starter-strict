@@ -21,7 +21,7 @@ export function Spinner({ size = "md" }: SpinnerProps) {
   const Icon = iconBySize[size];
   return (
     <Icon
-      className={clsx("inline-block animate-spin motion-reduce:animate-none", {
+      className={clsx("animate-spin motion-reduce:animate-none", {
         "h-4": size === "sm",
         "h-5": size === "md",
         "h-6": size === "lg",
