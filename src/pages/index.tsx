@@ -2,7 +2,10 @@ import {
   TrashIcon as TrashIconSm,
   XMarkIcon as XMarkIconSm,
 } from "@heroicons/react/20/solid";
-import { XMarkIcon as XMarkIconMd } from "@heroicons/react/24/solid";
+import {
+  TrashIcon as TrashIconMd,
+  XMarkIcon as XMarkIconMd,
+} from "@heroicons/react/24/solid";
 import * as React from "react";
 
 import { IconButton } from "@/components/buttons/IconButton";
@@ -72,7 +75,7 @@ export default function Page() {
             </SimulatedLoadingPrimaryButton>
             <SimulatedLoadingPrimaryButton size="sm" sentiment="negative">
               <TrashIconSm className="h-4" />
-              Delete button
+              Delete me
             </SimulatedLoadingPrimaryButton>
             <PrimaryButton size="sm" disabled>
               Button
@@ -89,9 +92,23 @@ export default function Page() {
             </SimulatedLoadingPrimaryButton>
             <SimulatedLoadingPrimaryButton sentiment="negative">
               <TrashIconSm className="h-5" />
-              Delete button
+              Delete me
             </SimulatedLoadingPrimaryButton>
             <PrimaryButton disabled>Button</PrimaryButton>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <SimulatedLoadingPrimaryButton size="lg">
+              Simulate
+              <br />
+              loading
+            </SimulatedLoadingPrimaryButton>
+            <SimulatedLoadingPrimaryButton size="lg" sentiment="negative">
+              <TrashIconMd className="h-6" />
+              Delete me
+            </SimulatedLoadingPrimaryButton>
+            <PrimaryButton size="lg" disabled>
+              Button
+            </PrimaryButton>
           </div>
         </Canvas>
       </ThemingShowcase>
@@ -102,10 +119,19 @@ export default function Page() {
             <IconButton aria-label="Close" size="sm">
               <XMarkIconSm className="h-5" />
             </IconButton>
+            <IconButton aria-label="Close" size="sm" disabled>
+              <XMarkIconSm className="h-5" />
+            </IconButton>
             <IconButton aria-label="Close">
               <XMarkIconMd className="h-6" />
             </IconButton>
             <IconButton aria-label="Close" disabled>
+              <XMarkIconMd className="h-6" />
+            </IconButton>
+            <IconButton aria-label="Close" size="lg">
+              <XMarkIconMd className="h-6" />
+            </IconButton>
+            <IconButton aria-label="Close" size="lg" disabled>
               <XMarkIconMd className="h-6" />
             </IconButton>
           </div>

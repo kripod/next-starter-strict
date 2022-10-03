@@ -4,7 +4,7 @@ import * as React from "react";
 import { Spinner } from "../Spinner";
 
 export type ButtonOwnProps = {
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "lg";
   equilateral?: boolean;
   loading?: boolean;
 };
@@ -36,6 +36,8 @@ export const Button = React.forwardRef(function Button(
             size === "sm",
           [clsx("h-10 rounded-lg leading-4", equilateral && "w-10")]:
             size === "md",
+          [clsx("h-14 rounded-xl text-lg leading-5", equilateral && "w-14")]:
+            size === "lg",
         },
         disabled
           ? "cursor-not-allowed opacity-40"
@@ -50,6 +52,7 @@ export const Button = React.forwardRef(function Button(
           !equilateral && {
             "gap-x-1 px-3": size === "sm",
             "gap-x-1.5 px-4": size === "md",
+            "gap-x-2 px-5": size === "lg",
           },
           loading && "invisible",
         )}

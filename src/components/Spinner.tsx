@@ -4,7 +4,7 @@ import { clsx } from "clsx";
 import * as React from "react";
 
 export type SpinnerProps = {
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "lg";
 };
 
 const iconBySize: {
@@ -13,7 +13,8 @@ const iconBySize: {
   >;
 } = {
   sm: ArrowPathIconSm,
-  md: ArrowPathIconMd,
+  md: ArrowPathIconSm,
+  lg: ArrowPathIconMd,
 };
 
 export function Spinner({ size = "md" }: SpinnerProps) {
@@ -21,8 +22,9 @@ export function Spinner({ size = "md" }: SpinnerProps) {
   return (
     <Icon
       className={clsx("animate-spin motion-reduce:animate-none", {
-        "h-5": size === "sm",
-        "h-6": size === "md",
+        "h-4": size === "sm",
+        "h-5": size === "md",
+        "h-6": size === "lg",
       })}
     />
   );
