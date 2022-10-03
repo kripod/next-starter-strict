@@ -34,7 +34,7 @@ export const Button = React.forwardRef(function Button(
         {
           [clsx("h-7 rounded-md text-sm leading-3", equilateral && "w-7")]:
             size === "sm",
-          [clsx("h-9 rounded-lg leading-4", equilateral && "w-9")]:
+          [clsx("h-10 rounded-lg leading-4", equilateral && "w-10")]:
             size === "md",
         },
         disabled
