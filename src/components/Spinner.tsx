@@ -21,14 +21,11 @@ export function Spinner({ size = "md" }: SpinnerProps) {
   const Icon = iconBySize[size];
   return (
     <Icon
-      className={clsx(
-        "animate-spin will-change-transform motion-reduce:animate-none",
-        {
-          "h-4": size === "sm",
-          "h-5": size === "md",
-          "h-6": size === "lg",
-        },
-      )}
+      className={clsx("animate-spin motion-reduce:animate-none", {
+        "h-4": size === "sm",
+        "h-5": size === "md",
+        "h-6": size === "lg",
+      })}
     />
   );
 }
