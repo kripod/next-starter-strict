@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@heroicons/react': 2.0.12
   '@next/bundle-analyzer': 12.3.1
-  '@tsconfig/next': 1.0.2
+  '@tsconfig/next': 1.0.3
   '@types/node': 16.11.64
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
@@ -50,7 +50,7 @@ dependencies:
   tailwindcss: 3.1.8
 
 devDependencies:
-  '@tsconfig/next': 1.0.2
+  '@tsconfig/next': 1.0.3
   '@types/node': 16.11.64
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
@@ -490,8 +490,8 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /@tsconfig/next/1.0.2:
-    resolution: {integrity: sha512-8/iOg2XM5hZqs6+2asWLv04vzZ8eue7xe/ZWvLZD1cTSpulkTZLFKP+WEDzHGEZYeWpR+JlStWBZZJ7SL4a6pA==}
+  /@tsconfig/next/1.0.3:
+    resolution: {integrity: sha512-GbRRYrVMVHGwZLwCdaksOhAVPcYgUZGP3UhGnIxW54IpTynMY72bWWlUm1Jwh6BcJ66boYeQENpZ5CsEpltUnQ==}
     dev: true
 
   /@types/json-schema/7.0.11:
