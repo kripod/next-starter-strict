@@ -8,7 +8,7 @@ export type SpinnerProps = {
 };
 
 const iconBySize: {
-  [key in NonNullable<SpinnerProps["size"]>]: React.JSXElementConstructor<
+  [key in NonNullable<SpinnerProps["size"]>]: React.ComponentType<
     React.ComponentPropsWithRef<"svg">
   >;
 } = {
