@@ -39,9 +39,9 @@ export const Button = React.forwardRef(function Button(
           [clsx("h-14 rounded-xl text-lg leading-5", equilateral && "w-14")]:
             size === "lg",
         },
-        disabled
-          ? "cursor-not-allowed opacity-40"
-          : loading && "cursor-wait opacity-80",
+        loading
+          ? "cursor-wait opacity-80"
+          : disabled && "cursor-not-allowed opacity-40",
         className,
       )}
       {...restProps}
