@@ -5,6 +5,9 @@ module.exports = {
   content: ["./src/**/*.{ts,tsx,js,jsx}"],
   future: {
     hoverOnlyWhenSupported: true,
+    respectDefaultRingColorOpacity: true,
+    disableColorOpacityUtilitiesByDefault: true,
+    relativeContentPathsByDefault: true,
   },
   darkMode: "class",
   theme: {
