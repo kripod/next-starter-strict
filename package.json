@@ -26,7 +26,7 @@
     "postcss-preset-env": "7.8.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.2.0"
+    "tailwindcss": "3.2.1"
   },
   "devDependencies": {
     "@tsconfig/next": "1.0.3",
