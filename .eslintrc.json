@@ -41,8 +41,15 @@
     ],
     "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
     "@typescript-eslint/method-signature-style": "warn", // Force type safety
+    "curly": ["error", "all"],
+    "func-names": ["warn", "as-needed"],
     "import/no-default-export": "warn", // Default exports are confusing
     "import/prefer-default-export": "off",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      { "assert": "either" } // Allow nesting
+    ],
+    "react/jsx-props-no-spreading": "off", // TypeScript makes this safe
     "react/prop-types": "off", // TypeScript makes this safe
     "react/require-default-props": "off" // React `defaultProps` are deprecated
   },
@@ -55,26 +62,20 @@
       }
     },
     {
-      "files": ["*.tsx"],
-      "rules": {
-        "react/jsx-props-no-spreading": "off" // TypeScript makes this safe
-      }
-    },
-    {
       "files": ["*.js"],
       "rules": {
         "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
       }
     },
     {
-      "files": ["./src/pages/**"],
+      "files": ["src/pages/**"],
       "rules": {
         "import/no-default-export": "off",
         "import/prefer-default-export": "warn"
       }
     },
     {
-      "files": ["./src/pages/api/**"],
+      "files": ["src/pages/api/**"],
       "rules": {
         "import/prefer-default-export": "off"
       }
