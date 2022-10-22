@@ -68,6 +68,17 @@
       }
     },
     {
+      "files": ["*.config.*"],
+      "excludedFiles": "next.config.*",
+      "rules": {
+        "import/no-default-export": "off",
+        "import/no-extraneous-dependencies": [
+          "error",
+          { "optionalDependencies": false }
+        ]
+      }
+    },
+    {
       "files": ["src/pages/**"],
       "rules": {
         "import/no-default-export": "off",
