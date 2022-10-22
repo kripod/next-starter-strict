@@ -58,7 +58,7 @@
   "packageManager": "pnpm@7.13.6",
   "nano-staged": {
     "*": "prettier --write --ignore-unknown",
-    "*.{ts,tsx,js,jsx}": "eslint --fix"
+    "*.{js,jsx,mjs,ts,tsx,mts}": "eslint --fix"
   },
   "pnpm": {
     "peerDependencyRules": {

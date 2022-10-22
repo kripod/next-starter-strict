@@ -6,6 +6,13 @@
     "strict": true,
     "importsNotUsedAsValues": "error"
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+  "include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.mjs",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mts"
+  ],
   "exclude": ["node_modules/", ".next/"]
 }
