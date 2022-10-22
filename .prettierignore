@@ -1,17 +1,5 @@
-# lockfile
 pnpm-lock.yaml
-
-# testing
-/coverage/
-
-# next.js
 /.next/
-
-# production
+/.vercel/
 /build/
-
-# vercel
-.vercel/
-
-# typescript
-*.tsbuildinfo
+/coverage/
