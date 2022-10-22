@@ -56,19 +56,19 @@
 
   "overrides": [
     {
-      "files": ["*.d.ts"],
+      "files": "*.d.ts",
       "rules": {
         "@typescript-eslint/consistent-type-definitions": "off" // Augmentation
       }
     },
     {
-      "files": ["*.js"],
+      "files": "*.js",
       "rules": {
         "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
       }
     },
     {
-      "files": ["*.config.*"],
+      "files": "*.config.*",
       "excludedFiles": "next.config.*",
       "rules": {
         "import/no-default-export": "off",
@@ -79,14 +79,14 @@
       }
     },
     {
-      "files": ["src/pages/**"],
+      "files": "src/pages/**",
       "rules": {
         "import/no-default-export": "off",
         "import/prefer-default-export": "warn"
       }
     },
     {
-      "files": ["src/pages/api/**"],
+      "files": "src/pages/api/**",
       "rules": {
         "import/prefer-default-export": "off"
       }
