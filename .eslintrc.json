@@ -56,6 +56,17 @@
 
   "overrides": [
     {
+      "files": "*.config.*",
+      "excludedFiles": "next.config.*",
+      "rules": {
+        "import/no-default-export": "off",
+        "import/no-extraneous-dependencies": [
+          "error",
+          { "optionalDependencies": false }
+        ]
+      }
+    },
+    {
       "files": "*.d.ts",
       "rules": {
         "@typescript-eslint/consistent-type-definitions": "off" // Augmentation
@@ -65,17 +76,6 @@
       "files": "*.js",
       "rules": {
         "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
-      }
-    },
-    {
-      "files": "*.config.*",
-      "excludedFiles": "next.config.*",
-      "rules": {
-        "import/no-default-export": "off",
-        "import/no-extraneous-dependencies": [
-          "error",
-          { "optionalDependencies": false }
-        ]
       }
     },
     {
