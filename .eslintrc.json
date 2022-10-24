@@ -9,6 +9,7 @@
     "plugin:eslint-comments/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-etc/recommended",
+    "plugin:tailwindcss/recommended",
     "prettier",
     "prettier/prettier"
   ],
@@ -51,7 +52,9 @@
     ],
     "react/jsx-props-no-spreading": "off", // TypeScript makes this safe
     "react/prop-types": "off", // TypeScript makes this safe
-    "react/require-default-props": "off" // React `defaultProps` are deprecated
+    "react/require-default-props": "off", // React `defaultProps` are deprecated
+    "tailwindcss/classnames-order": "off", // Enforced by Prettier
+    "tailwindcss/no-custom-classname": "off" // Avoid distractions while typing
   },
 
   "overrides": [
