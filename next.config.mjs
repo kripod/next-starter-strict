@@ -1,4 +1,4 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer");
+import withBundleAnalyzer from "@next/bundle-analyzer";
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
@@ -9,6 +9,6 @@ const nextConfig = {
   },
 };
 
-module.exports = withBundleAnalyzer({
+export default withBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 })(nextConfig);

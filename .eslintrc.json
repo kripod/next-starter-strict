@@ -62,7 +62,6 @@
       "files": "*.config.*",
       "excludedFiles": "next.config.*",
       "rules": {
-        "import/no-default-export": "off",
         "import/no-extraneous-dependencies": [
           "error",
           { "optionalDependencies": false }
@@ -82,7 +81,7 @@
       }
     },
     {
-      "files": "src/pages/**",
+      "files": ["src/pages/**", "*.config.*"],
       "rules": {
         "import/no-default-export": "off",
         "import/prefer-default-export": "warn"
