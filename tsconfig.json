@@ -4,9 +4,11 @@
     "baseUrl": "./src/",
     "paths": { "@/*": ["*"], "*": [""] },
     "strict": true,
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "error",
+    "plugins": [{ "name": "next" }]
   },
   "include": [
+    ".next/types/**/*.ts",
     "**/*.js",
     "**/*.jsx",
     "**/*.mjs",
