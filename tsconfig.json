@@ -11,10 +11,10 @@
     ".next/types/**/*.ts",
     "**/*.js",
     "**/*.jsx",
-    "**/*.mjs",
+    "**/*.cjs",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.mts"
+    "**/*.cts"
   ],
   "exclude": ["node_modules/", ".next/"]
 }

@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import("tailwindcss").Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,mjs,ts,tsx,mts}"],
+  content: ["./src/**/*.{js,jsx,cjs,ts,tsx,cts}"],
   future: {
     hoverOnlyWhenSupported: true,
     respectDefaultRingColorOpacity: true,

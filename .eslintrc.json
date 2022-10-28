@@ -59,6 +59,12 @@
 
   "overrides": [
     {
+      "files": "*.cjs",
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
+      }
+    },
+    {
       "files": "*.config.*",
       "excludedFiles": "next.config.*",
       "rules": {
@@ -72,12 +78,6 @@
       "files": "*.d.ts",
       "rules": {
         "@typescript-eslint/consistent-type-definitions": "off" // Augmentation
-      }
-    },
-    {
-      "files": "*.js",
-      "rules": {
-        "@typescript-eslint/no-var-requires": "off" // Allow CommonJS imports
       }
     },
     {
