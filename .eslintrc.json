@@ -81,7 +81,7 @@
       }
     },
     {
-      "files": ["src/pages/**", "*.config.*"],
+      "files": ["src/{app,pages}/**", "*.config.*"],
       "rules": {
         "import/no-default-export": "off",
         "import/prefer-default-export": "warn"
