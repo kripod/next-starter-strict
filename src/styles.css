@@ -5,11 +5,11 @@
 @layer base {
   :root {
     scrollbar-gutter: stable;
-    tab-size: 2;
   }
 
   body {
-    @apply bg-white dark:bg-gray-900;
+    @apply break-words bg-white dark:bg-gray-900;
+    tab-size: 2;
   }
 
   pre {
