@@ -4,9 +4,12 @@
 
 @layer base {
   :root {
-    @apply bg-white dark:bg-gray-900;
-    scrollbar-gutter: stable both-edges;
+    scrollbar-gutter: stable;
     tab-size: 2;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-900;
   }
 
   pre {
