@@ -18,7 +18,7 @@
     "lint:fix:format": "prettier --write ."
   },
   "dependencies": {
-    "@heroicons/react": "2.0.12",
+    "@heroicons/react": "2.0.13",
     "@next/bundle-analyzer": "13.0.0",
     "clsx": "1.2.1",
     "focus-visible": "5.2.0",
