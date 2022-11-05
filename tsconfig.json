@@ -3,9 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./src/",
     "paths": { "@/*": ["*"], "*": [""] },
-    "strict": true,
-    "importsNotUsedAsValues": "error",
-    "plugins": [{ "name": "next" }]
+    "importsNotUsedAsValues": "error"
   },
   "include": [
     ".next/types/**/*.ts",
