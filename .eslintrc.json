@@ -13,10 +13,10 @@
     "prettier",
     "prettier/prettier"
   ],
+  "plugins": ["simple-import-sort"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["simple-import-sort"],
   "settings": {
     "jsx-a11y": {
       "components": {
