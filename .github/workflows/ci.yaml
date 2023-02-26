@@ -15,7 +15,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: pnpm
-      - run: pnpm install --ignore-scripts
+      - run: pnpm install
       - run: pnpm run build
       - run: pnpm run lint
       - run: pnpm run --if-present test
