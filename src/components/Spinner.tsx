@@ -7,14 +7,12 @@ export type SpinnerProps = {
   size?: "sm" | "md" | "lg";
 };
 
-const iconBySize: {
-  [key in NonNullable<SpinnerProps["size"]>]: React.ComponentType<
-    React.ComponentPropsWithRef<"svg">
-  >;
-} = {
+const iconBySize = {
   sm: ArrowPathIconSm,
   md: ArrowPathIconSm,
   lg: ArrowPathIconMd,
+} satisfies {
+  [key in NonNullable<SpinnerProps["size"]>]: React.ComponentType;
 };
 
 export function Spinner({ size = "md" }: SpinnerProps) {

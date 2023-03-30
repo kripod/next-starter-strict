@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import * as React from "react";
 
-import { Button, ButtonOwnProps } from "./_Button";
+import { Button, type ButtonOwnProps } from "./_Button";
 
 export type IconButtonOwnProps = Pick<ButtonOwnProps, "size">;
 

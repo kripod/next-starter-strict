@@ -3,10 +3,9 @@
   "compilerOptions": {
     "baseUrl": "./src/",
     "paths": { "@/*": ["*"], "*": [""] },
-    "importsNotUsedAsValues": "error"
+    "verbatimModuleSyntax": true
   },
   "include": [
-    ".next/types/**/*.ts",
     "**/*.js",
     "**/*.jsx",
     "**/*.cjs",

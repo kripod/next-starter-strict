@@ -6,6 +6,7 @@ const nextConfig = {
   experimental: {
     fallbackNodePolyfills: false,
     adjustFontFallbacks: true,
+    adjustFontFallbacksWithSizeAdjust: true,
   },
 };
 

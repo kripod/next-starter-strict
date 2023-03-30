@@ -1,7 +1,7 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
-/** @type {import("tailwindcss").Config} */
-module.exports = {
+export default {
   content: ["./src/**/*.{js,jsx,cjs,ts,tsx,cts}"],
   future: {
     hoverOnlyWhenSupported: true,
@@ -17,4 +17,4 @@ module.exports = {
       },
     },
   },
-};
+} satisfies Config;
