@@ -2,9 +2,7 @@
   "extends": "@tsconfig/next/tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./src/",
-    "paths": { "@/*": ["*"], "*": [""] },
-    "verbatimModuleSyntax": true,
-    "isolatedModules": false
+    "paths": { "@/*": ["*"], "*": [""] }
   },
   "include": [
     "**/*.js",
