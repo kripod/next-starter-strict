@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": "./src/",
     "paths": { "@/*": ["*"], "*": [""] },
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "isolatedModules": false
   },
   "include": [
     "**/*.js",
